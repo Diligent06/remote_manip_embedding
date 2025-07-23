@@ -20,6 +20,10 @@
  ******************************************************************************
  */
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* Includes */
 #include <sys/stat.h>
 #include <stdlib.h>
@@ -153,3 +157,33 @@ int _execve(char *name, char **argv, char **env)
 	errno = ENOMEM;
 	return -1;
 }
+
+// typedef char* caddr_t;
+
+// // 提供 malloc 所需的堆空间支持
+// extern char _end; // 链接器符号
+// char *heap_end = 0;
+// caddr_t _sbrk(int incr) {
+//     extern char _end; // Defined by the linker
+//     extern char _estack;
+//     char *prev_heap_end;
+
+//     if (heap_end == 0) {
+//         heap_end = &_end;
+//     }
+
+//     if (heap_end + incr > &_estack) {
+//         // Heap and stack collision
+//         errno = ENOMEM;
+//         return (caddr_t) -1;
+//     }
+
+//     prev_heap_end = heap_end;
+//     heap_end += incr;
+
+//     return (caddr_t) prev_heap_end;
+// }
+
+#ifdef __cplusplus
+}
+#endif
