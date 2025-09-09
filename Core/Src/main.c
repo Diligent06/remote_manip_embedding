@@ -21,7 +21,6 @@
 #include "can.h"
 #include "dma.h"
 #include "usart.h"
-#include "usb_device.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -93,7 +92,7 @@ int main(void)
   MX_DMA_Init();
   MX_USART2_UART_Init();
   MX_CAN_Init();
-  // MX_USB_DEVICE_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   // char *msg = "Hello from STM32F103 via USB CDC\r\n";
   // CDC_Transmit_FS((uint8_t*)msg, strlen(msg));
@@ -125,6 +124,9 @@ int main(void)
   TxHeader.RTR = CAN_RTR_DATA;
   TxHeader.IDE = CAN_ID_STD;
   TxHeader.DLC = 8;
+
+  uint8_t uart1_rec_buffer[100] = {0};
+  uint8_t uart1_trans_buffer[100] = {0};
   
   // while ((CAN1->TSR & CAN_TSR_TME) == 0) {
   //   int x = 0;
@@ -136,14 +138,23 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    if(HAL_OK!=HAL_UART_Receive(&huart1, uart1_rec_buffer, 10, 100)){ // len is 10 and timeout is 100
+      continue;
+    }else{
+      uint16_t can_id = (uint16_t)(uart1_rec_buffer[0] << 8) | uart1_rec_buffer[1];
+      switch(can_id) {
+        case 0x06: 
+          servo_write_flag = 1;
+          memcpy(servo_can_rx, uart1_rec_buffer + 2, 8);
+          break;
+        case 0x07:
+          servo_read_flag_12 = 1;
+        case 0x08:
+          servo_read_flag_3 = 1;
+          break;
+      }
+    }
 
-    // if(HAL_CAN_AddTxMessage(&hcan, &TxHeader, TxData, &TxMailbox) != HAL_OK) {
-    //   int test = 0;
-    // }
-    // HAL_Delay(1000);
-
-    // STS_syn_read();
-    // HAL_Delay(1000);
 
     if(servo_read_flag_12 == 1) {
       STS_syn_read();
@@ -154,9 +165,11 @@ int main(void)
         servo_can_tx[4 * i + 2] = (uint8_t)(servo_speed[i] >> 8);
         servo_can_tx[4 * i + 3] = (uint8_t)(servo_speed[i] & 0xFF);
       }
-      if(HAL_CAN_AddTxMessage(&hcan, &TxHeader, servo_can_tx, &TxMailbox) != HAL_OK) {
-        int test = 0;
-      }
+      // if(HAL_CAN_AddTxMessage(&hcan, &TxHeader, servo_can_tx, &TxMailbox) != HAL_OK) {
+      //   int test = 0;
+      // }
+      memcpy(uart1_trans_buffer + 2, servo_can_tx, 8);
+      HAL_UART_Transmit(&huart1, uart1_trans_buffer, 10, 100);
       servo_read_flag_12 = 0;
     }
 
@@ -171,9 +184,11 @@ int main(void)
       servo_can_tx[5] = 0;
       servo_can_tx[6] = 0;
       servo_can_tx[7] = 0;
-      if(HAL_CAN_AddTxMessage(&hcan, &TxHeader, servo_can_tx, &TxMailbox) != HAL_OK) {
-        int test = 0;
-      }
+      // if(HAL_CAN_AddTxMessage(&hcan, &TxHeader, servo_can_tx, &TxMailbox) != HAL_OK) {
+      //   int test = 0;
+      // }
+      memcpy(uart1_trans_buffer + 2, servo_can_tx, 8);
+      HAL_UART_Transmit(&huart1, uart1_trans_buffer, 10, 100);
       servo_read_flag_3 = 0;
     }
 
@@ -185,25 +200,6 @@ int main(void)
       servo_write_flag = 0;
     }
 
-
-    /* servo read and control demo
-    if(cur_i % 200 == 0) {
-      STS_syn_read();
-    }
-    if(cur_i % 1000 == 0) {
-      if(cur_target == 0) {
-        cur_target = 4096;
-      }
-      else {
-        cur_target = 0;
-      }
-      cur_i = 0;
-    }
-    servo_set_position[0] = cur_target;
-    STS_syn_write();
-    HAL_Delay(1);
-    cur_i += 1;
-    */
 
     /* USER CODE END WHILE */
 
@@ -220,7 +216,6 @@ void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
@@ -247,12 +242,6 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
-  PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLL_DIV1_5;
-  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
   }
