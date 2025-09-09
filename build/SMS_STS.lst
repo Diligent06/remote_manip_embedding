@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
   39              		.cfi_def_cfa_offset 32
   40 0004 00AF     		add	r7, sp, #0
   41              	.LCFI2:
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 2
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 2
 
 
   42              		.cfi_def_cfa_register 7
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
   87 0062 1846     		mov	r0, r3
   88 0064 FFF7FEFF 		bl	Host2SCS
   27:User/SCSLib/SMS_STS.c **** 	Host2SCS(bBuf+5, bBuf+6, Speed);
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 3
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 3
 
 
   89              		.loc 1 27 2
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
  139 0004 00AF     		add	r7, sp, #0
  140              	.LCFI7:
  141              		.cfi_def_cfa_register 7
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 4
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 4
 
 
  142 0006 0446     		mov	r4, r0
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
  187 0064 FFF7FEFF 		bl	Host2SCS
   43:User/SCSLib/SMS_STS.c **** 	Host2SCS(bBuf+5, bBuf+6, Speed);
  188              		.loc 1 43 2
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 5
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 5
 
 
  189 0068 07F10803 		add	r3, r7, #8
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
  239              		.cfi_def_cfa 7, 256
  240 0006 F860     		str	r0, [r7, #12]
  241 0008 7A60     		str	r2, [r7, #4]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 6
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 6
 
 
  242 000a 3B60     		str	r3, [r7]
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
  289 0068 6FEA5343 		mvn	r3, r3, lsr #17
  290 006c 1BB2     		sxth	r3, r3
  291 006e 1380     		strh	r3, [r2]	@ movhi
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 7
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 7
 
 
  292              	.L9:
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
  335 00bc DB00     		lsls	r3, r3, #3
  336 00be 9B1A     		subs	r3, r3, r2
  337              		.loc 1 67 16
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 8
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 8
 
 
  338 00c0 F833     		adds	r3, r3, #248
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
  389              		.loc 1 70 5 discriminator 2
  390 0120 07F11402 		add	r2, r7, #20
  391 0124 1344     		add	r3, r3, r2
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 9
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 9
 
 
  392 0126 0022     		movs	r2, #0
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
  440              		.cfi_def_cfa_offset 8
  441 0188 BD46     		mov	sp, r7
  442              	.LCFI14:
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 10
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 10
 
 
  443              		.cfi_def_cfa_register 13
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
  495              		.section	.text.WriteSpe,"ax",%progbits
  496              		.align	1
  497              		.global	WriteSpe
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 11
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 11
 
 
  498              		.syntax unified
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
  543              		.loc 1 89 2
  544 0032 07F10C02 		add	r2, r7, #12
  545 0036 F879     		ldrb	r0, [r7, #7]	@ zero_extendqisi2
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 12
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 12
 
 
  546 0038 0123     		movs	r3, #1
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
  593              		.cfi_offset 7, -8
  594              		.cfi_offset 14, -4
  595 0002 82B0     		sub	sp, sp, #8
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 13
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 13
 
 
  596              	.LCFI26:
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
  647 0006 0346     		mov	r3, r0
  648 0008 FB71     		strb	r3, [r7, #7]
  104:User/SCSLib/SMS_STS.c **** 	return writeByte(ID, SMS_STS_LOCK, 0);
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 14
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 14
 
 
  649              		.loc 1 104 9
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
  700 0012 FFF7FEFF 		bl	writeByte
  701 0016 0346     		mov	r3, r0
  110:User/SCSLib/SMS_STS.c **** }
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 15
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 15
 
 
  702              		.loc 1 110 1
@@ -857,27 +857,27 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 1
  716              	.Letext0:
  717              		.file 2 "/Applications/ARM/arm-none-eabi/include/machine/_default_types.h"
  718              		.file 3 "/Applications/ARM/arm-none-eabi/include/sys/_stdint.h"
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s 			page 16
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 SMS_STS.c
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:18     .text.WritePosEx:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:24     .text.WritePosEx:0000000000000000 WritePosEx
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:118    .text.RegWritePosEx:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:124    .text.RegWritePosEx:0000000000000000 RegWritePosEx
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:217    .text.SyncWritePosEx:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:223    .text.SyncWritePosEx:0000000000000000 SyncWritePosEx
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:450    .text.WheelMode:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:456    .text.WheelMode:0000000000000000 WheelMode
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:496    .text.WriteSpe:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:502    .text.WriteSpe:0000000000000000 WriteSpe
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:578    .text.CalibrationOfs:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:584    .text.CalibrationOfs:0000000000000000 CalibrationOfs
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:624    .text.unLockEpromEx:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:630    .text.unLockEpromEx:0000000000000000 unLockEpromEx
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:670    .text.LockEpromEx:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccRvNO3u.s:676    .text.LockEpromEx:0000000000000000 LockEpromEx
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:18     .text.WritePosEx:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:24     .text.WritePosEx:0000000000000000 WritePosEx
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:118    .text.RegWritePosEx:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:124    .text.RegWritePosEx:0000000000000000 RegWritePosEx
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:217    .text.SyncWritePosEx:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:223    .text.SyncWritePosEx:0000000000000000 SyncWritePosEx
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:450    .text.WheelMode:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:456    .text.WheelMode:0000000000000000 WheelMode
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:496    .text.WriteSpe:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:502    .text.WriteSpe:0000000000000000 WriteSpe
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:578    .text.CalibrationOfs:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:584    .text.CalibrationOfs:0000000000000000 CalibrationOfs
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:624    .text.unLockEpromEx:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:630    .text.unLockEpromEx:0000000000000000 unLockEpromEx
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:670    .text.LockEpromEx:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrlL2SF.s:676    .text.LockEpromEx:0000000000000000 LockEpromEx
 
 UNDEFINED SYMBOLS
 Host2SCS

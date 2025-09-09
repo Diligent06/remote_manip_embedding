@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
   30:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c **** /** @defgroup USBD_REQ
   31:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****   * @brief USB standard requests module
   32:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****   * @{
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 2
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 2
 
 
   33:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****   */
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
   87:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****                            USBD_SetupReqTypedef *req);
   88:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c **** 
   89:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c **** static void USBD_SetFeature(USBD_HandleTypeDef *pdev,
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 3
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 3
 
 
   90:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****                             USBD_SetupReqTypedef *req);
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
   51 0012 03F06003 		and	r3, r3, #96
   52              		.loc 1 119 3
   53 0016 402B     		cmp	r3, #64
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 4
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 4
 
 
   54 0018 05D0     		beq	.L2
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
   97 006c 3968     		ldr	r1, [r7]
   98 006e 7868     		ldr	r0, [r7, #4]
   99 0070 FFF7FEFF 		bl	USBD_GetDescriptor
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 5
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 5
 
 
  131:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****           break;
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  134 00a2 FFF7FEFF 		bl	USBD_SetFeature
  151:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****           break;
  135              		.loc 1 151 11
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 6
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 6
 
 
  136 00a6 09E0     		b	.L15
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  172              		@ sp needed
  173 00d0 80BD     		pop	{r7, pc}
  174              		.cfi_endproc
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 7
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 7
 
 
  175              	.LFE68:
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  217 0020 01D0     		beq	.L18
  218 0022 202B     		cmp	r3, #32
  219 0024 2AD1     		bne	.L19
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 8
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 8
 
 
  220              	.L18:
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  257 005c 7868     		ldr	r0, [r7, #4]
  258 005e FFF7FEFF 		bl	USBD_CtlSendStatus
  201:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****             }
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 9
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 9
 
 
  202:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****           }
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  291              		.loc 1 221 1
  292 0088 1846     		mov	r0, r3
  293 008a 1037     		adds	r7, r7, #16
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 10
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 10
 
 
  294              	.LCFI8:
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  335 0010 9B88     		ldrh	r3, [r3, #4]
  336              		.loc 1 236 12
  337 0012 BB73     		strb	r3, [r7, #14]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 11
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 11
 
 
  237:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c **** 
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  379              		.loc 1 249 35
  380 0054 3968     		ldr	r1, [r7]
  381 0056 7868     		ldr	r0, [r7, #4]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 12
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 12
 
 
  382 0058 9847     		blx	r3
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  423 009a 7868     		ldr	r0, [r7, #4]
  424 009c FFF7FEFF 		bl	USBD_LL_StallEP
  263:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****                 USBD_LL_StallEP(pdev, 0x80U);
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 13
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 13
 
 
  425              		.loc 1 263 17
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  464              	.L44:
  278:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****                 }
  279:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****               }
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 14
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 14
 
 
  280:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****               USBD_CtlSendStatus(pdev);
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  501 010e 7868     		ldr	r0, [r7, #4]
  502 0110 FFF7FEFF 		bl	USBD_LL_StallEP
  298:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****                 USBD_LL_StallEP(pdev, 0x80U);
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 15
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 15
 
 
  503              		.loc 1 298 17
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  539 014a 04E0     		b	.L72
  540              	.L70:
  316:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c **** 
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 16
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 16
 
 
  317:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****             default:
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  578              		.loc 1 332 40
  579 0180 97F90E30 		ldrsb	r3, [r7, #14]
  580              		.loc 1 332 82
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 17
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 17
 
 
  581 0184 002B     		cmp	r3, #0
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  340:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****             case USBD_STATE_CONFIGURED:
  341:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****               if ((ep_addr & 0x80U) == 0x80U)
  626              		.loc 1 341 37
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 18
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 18
 
 
  627 01ce 97F90E30 		ldrsb	r3, [r7, #14]
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  669 0216 3968     		ldr	r1, [r7]
  670 0218 7868     		ldr	r0, [r7, #4]
  671 021a FFF7FEFF 		bl	USBD_CtlError
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 19
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 19
 
 
  354:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****                   break;
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  716 0264 03D1     		bne	.L66
  717              	.L65:
  362:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****               {
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 20
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 20
 
 
  363:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****                 pep->status = 0x0000U;
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  756 029c 7868     		ldr	r0, [r7, #4]
  757 029e FFF7FEFF 		bl	USBD_CtlError
  379:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****               break;
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 21
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 21
 
 
  758              		.loc 1 379 15
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  797              		.section	.text.USBD_GetDescriptor,"ax",%progbits
  798              		.align	1
  799              		.syntax unified
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 22
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 22
 
 
  800              		.thumb
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  838 001e 013B     		subs	r3, r3, #1
  839 0020 062B     		cmp	r3, #6
  840 0022 00F22881 		bhi	.L74
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 23
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 23
 
 
  841 0026 01A2     		adr	r2, .L76
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  875 0066 0DD1     		bne	.L82
  433:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****       {
  434:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****         pbuf = pdev->pClass->GetHSConfigDescriptor(&len);
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 24
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 24
 
 
  876              		.loc 1 434 20
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  444:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****     case USB_DESC_TYPE_STRING:
  445:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****       switch ((uint8_t)(req->wValue))
  916              		.loc 1 445 28
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 25
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 25
 
 
  917 00a0 3B68     		ldr	r3, [r7]
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  454:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****             err++;
  959              		.loc 1 454 13
  960 00f0 3968     		ldr	r1, [r7]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 26
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 26
 
 
  961 00f2 7868     		ldr	r0, [r7, #4]
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1000 012e 0133     		adds	r3, r3, #1
  1001 0130 FB72     		strb	r3, [r7, #11]
  1002              		.loc 1 469 11
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 27
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 27
 
 
  1003 0132 6FE0     		b	.L94
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1040              		.loc 1 484 19
  1041 0168 7B68     		ldr	r3, [r7, #4]
  1042 016a D3F8B032 		ldr	r3, [r3, #688]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 28
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 28
 
 
  1043              		.loc 1 484 26
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  497:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****           {
  498:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****             pbuf = pdev->pDesc->GetConfigurationStrDescriptor(pdev->dev_speed, &len);
  1083              		.loc 1 498 24
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 29
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 29
 
 
  1084 01a8 7B68     		ldr	r3, [r7, #4]
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1124 01e4 7A68     		ldr	r2, [r7, #4]
  1125 01e6 127C     		ldrb	r2, [r2, #16]	@ zero_extendqisi2
  1126 01e8 07F10801 		add	r1, r7, #8
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 30
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 30
 
 
  1127 01ec 1046     		mov	r0, r2
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1153              		.loc 1 536 7
  1154 0212 38E0     		b	.L81
  1155              	.L94:
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 31
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 31
 
 
  1156 0214 37E0     		b	.L81
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1193 0246 002B     		cmp	r3, #0
  1194 0248 0DD1     		bne	.L107
  552:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****       {
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 32
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 32
 
 
  553:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****         pbuf = pdev->pClass->GetOtherSpeedConfigDescriptor(&len);
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  566:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****       break;
  1234              		.loc 1 566 7
  1235 0284 00BF     		nop
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 33
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 33
 
 
  1236              	.L81:
@@ -1978,7 +1978,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1275 02bc 04D1     		bne	.L73
  582:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****     {
  583:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****       (void)USBD_CtlSendStatus(pdev);
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 34
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 34
 
 
  1276              		.loc 1 583 13
@@ -2038,7 +2038,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1317              	.LCFI22:
  1318              		.cfi_def_cfa_register 7
  1319 0006 7860     		str	r0, [r7, #4]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 35
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 35
 
 
  1320 0008 3960     		str	r1, [r7]
@@ -2098,7 +2098,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1360              		.loc 1 610 25
  1361 0042 7B68     		ldr	r3, [r7, #4]
  1362 0044 FA7B     		ldrb	r2, [r7, #15]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 36
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 36
 
 
  1363 0046 83F89E22 		strb	r2, [r3, #670]
@@ -2158,7 +2158,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1397 007e 00BF     		nop
  1398 0080 1037     		adds	r7, r7, #16
  1399              	.LCFI23:
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 37
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 37
 
 
  1400              		.cfi_def_cfa_offset 8
@@ -2218,7 +2218,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  643:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****   if (cfgidx > USBD_MAX_NUM_CONFIGURATION)
  1442              		.loc 1 643 14
  1443 0014 404B     		ldr	r3, .L134
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 38
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 38
 
 
  1444 0016 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -2278,7 +2278,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1485 0058 FFF7FEFF 		bl	USBD_SetClassConfig
  1486 005c 0346     		mov	r3, r0
  1487              		.loc 1 656 14
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 39
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 39
 
 
  1488 005e 022B     		cmp	r3, #2
@@ -2338,7 +2338,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1524 0094 5A60     		str	r2, [r3, #4]
  674:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****           USBD_ClrClassConfig(pdev, cfgidx);
  1525              		.loc 1 674 11
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 40
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 40
 
 
  1526 0096 204B     		ldr	r3, .L134
@@ -2398,7 +2398,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1554 00c2 FFF7FEFF 		bl	USBD_ClrClassConfig
  683:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****           if (USBD_SetClassConfig(pdev, cfgidx) == USBD_FAIL)
  1555              		.loc 1 683 28
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 41
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 41
 
 
  1556 00c6 144B     		ldr	r3, .L134
@@ -2458,7 +2458,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  700:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****         break;
  1600              		.loc 1 700 9
  1601 0110 00BF     		nop
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 42
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 42
 
 
  1602              	.L120:
@@ -2518,7 +2518,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1644              		.loc 1 714 10
  1645 000a 3B68     		ldr	r3, [r7]
  1646 000c DB88     		ldrh	r3, [r3, #6]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 43
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 43
 
 
  1647              		.loc 1 714 6
@@ -2578,7 +2578,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  725:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****         break;
  1675              		.loc 1 725 51
  1676 0038 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 44
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 44
 
 
  1677 003a 0833     		adds	r3, r3, #8
@@ -2638,7 +2638,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  738:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c **** 
  739:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c **** /**
  740:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c **** * @brief  USBD_GetStatus
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 45
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 45
 
 
  741:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c **** *         Handle Get Status request
@@ -2698,7 +2698,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  758:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c **** 
  759:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c **** #if (USBD_SELF_POWERED == 1U)
  760:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****       pdev->dev_config_status = USB_CONFIG_SELF_POWERED;
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 46
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 46
 
 
  1763              		.loc 1 760 31
@@ -2758,7 +2758,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1800 0060 0837     		adds	r7, r7, #8
  1801              	.LCFI38:
  1802              		.cfi_def_cfa_offset 8
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 47
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 47
 
 
  1803 0062 BD46     		mov	sp, r7
@@ -2818,7 +2818,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1844 0014 0122     		movs	r2, #1
  1845 0016 C3F8A422 		str	r2, [r3, #676]
  793:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****     USBD_CtlSendStatus(pdev);
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 48
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 48
 
 
  1846              		.loc 1 793 5
@@ -2878,7 +2878,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  808:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****   switch (pdev->dev_state)
  1888              		.loc 1 808 15
  1889 000a 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 49
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 49
 
 
  1890 000c 93F89C32 		ldrb	r3, [r3, #668]	@ zero_extendqisi2
@@ -2938,7 +2938,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1927              	.LCFI49:
  1928              		.cfi_def_cfa_register 13
  1929              		@ sp needed
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 50
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 50
 
 
  1930 0040 80BD     		pop	{r7, pc}
@@ -2998,7 +2998,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  1972 001a 3B68     		ldr	r3, [r7]
  1973 001c 0233     		adds	r3, r3, #2
  1974 001e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 51
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 51
 
 
  1975 0020 9AB2     		uxth	r2, r3
@@ -3058,7 +3058,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  2025              	.LCFI54:
  2026              		.cfi_def_cfa_register 13
  2027              		@ sp needed
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 52
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 52
 
 
  2028 0074 80BC     		pop	{r7}
@@ -3118,7 +3118,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  857:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c **** }
  2070              		.loc 1 857 1
  2071 001a 00BF     		nop
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 53
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 53
 
 
  2072 001c 0837     		adds	r7, r7, #8
@@ -3178,7 +3178,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  2113              		.loc 1 872 6
  2114 0010 FB68     		ldr	r3, [r7, #12]
  2115 0012 002B     		cmp	r3, #0
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 54
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 54
 
 
  2116 0014 32D0     		beq	.L163
@@ -3238,7 +3238,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  2162 0056 511C     		adds	r1, r2, #1
  2163 0058 F975     		strb	r1, [r7, #23]
  2164 005a 1146     		mov	r1, r2
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 55
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 55
 
 
  2165              		.loc 1 880 14
@@ -3298,7 +3298,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  888:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****   *         return the string length
  889:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****    * @param  buf : pointer to the ascii string buffer
  890:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****   * @retval string length
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 56
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 56
 
 
  891:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c ****   */
@@ -3358,7 +3358,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  2251              		.loc 1 903 1
  2252 0024 1846     		mov	r0, r3
  2253 0026 1437     		adds	r7, r7, #20
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 57
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 57
 
 
  2254              	.LCFI69:
@@ -3382,48 +3382,48 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 1
  2275              		.file 2 "/Applications/ARM/arm-none-eabi/include/machine/_default_types.h"
  2276              		.file 3 "/Applications/ARM/arm-none-eabi/include/sys/_stdint.h"
  2277              		.file 4 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s 			page 58
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s 			page 58
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usbd_ctlreq.c
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:18     .text.USBD_StdDevReq:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:24     .text.USBD_StdDevReq:0000000000000000 USBD_StdDevReq
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:84     .text.USBD_StdDevReq:0000000000000044 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:94     .text.USBD_StdDevReq:000000000000006c $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:803    .text.USBD_GetDescriptor:0000000000000000 USBD_GetDescriptor
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:1302   .text.USBD_SetAddress:0000000000000000 USBD_SetAddress
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:1415   .text.USBD_SetConfig:0000000000000000 USBD_SetConfig
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:1625   .text.USBD_GetConfig:0000000000000000 USBD_GetConfig
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:1724   .text.USBD_GetStatus:0000000000000000 USBD_GetStatus
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:1817   .text.USBD_SetFeature:0000000000000000 USBD_SetFeature
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:1869   .text.USBD_ClrFeature:0000000000000000 USBD_ClrFeature
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:2043   .text.USBD_CtlError:0000000000000000 USBD_CtlError
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:178    .text.USBD_StdItfReq:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:184    .text.USBD_StdItfReq:0000000000000000 USBD_StdItfReq
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:305    .text.USBD_StdEPReq:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:311    .text.USBD_StdEPReq:0000000000000000 USBD_StdEPReq
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:798    .text.USBD_GetDescriptor:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:845    .text.USBD_GetDescriptor:000000000000002c $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:852    .text.USBD_GetDescriptor:0000000000000048 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:927    .text.USBD_GetDescriptor:00000000000000b4 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:933    .text.USBD_GetDescriptor:00000000000000cc $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:1297   .text.USBD_SetAddress:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:1410   .text.USBD_SetConfig:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:1615   .text.USBD_SetConfig:0000000000000118 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:2271   .bss.cfgidx.0:0000000000000000 cfgidx.0
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:1620   .text.USBD_GetConfig:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:1719   .text.USBD_GetStatus:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:1812   .text.USBD_SetFeature:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:1864   .text.USBD_ClrFeature:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:1935   .text.USBD_ParseSetupRequest:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:1941   .text.USBD_ParseSetupRequest:0000000000000000 USBD_ParseSetupRequest
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:2037   .text.USBD_CtlError:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:2084   .text.USBD_GetString:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:2090   .text.USBD_GetString:0000000000000000 USBD_GetString
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:2210   .text.USBD_GetLen:0000000000000000 USBD_GetLen
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:2205   .text.USBD_GetLen:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccqGUWAi.s:2272   .bss.cfgidx.0:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:18     .text.USBD_StdDevReq:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:24     .text.USBD_StdDevReq:0000000000000000 USBD_StdDevReq
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:84     .text.USBD_StdDevReq:0000000000000044 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:94     .text.USBD_StdDevReq:000000000000006c $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:803    .text.USBD_GetDescriptor:0000000000000000 USBD_GetDescriptor
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:1302   .text.USBD_SetAddress:0000000000000000 USBD_SetAddress
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:1415   .text.USBD_SetConfig:0000000000000000 USBD_SetConfig
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:1625   .text.USBD_GetConfig:0000000000000000 USBD_GetConfig
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:1724   .text.USBD_GetStatus:0000000000000000 USBD_GetStatus
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:1817   .text.USBD_SetFeature:0000000000000000 USBD_SetFeature
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:1869   .text.USBD_ClrFeature:0000000000000000 USBD_ClrFeature
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:2043   .text.USBD_CtlError:0000000000000000 USBD_CtlError
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:178    .text.USBD_StdItfReq:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:184    .text.USBD_StdItfReq:0000000000000000 USBD_StdItfReq
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:305    .text.USBD_StdEPReq:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:311    .text.USBD_StdEPReq:0000000000000000 USBD_StdEPReq
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:798    .text.USBD_GetDescriptor:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:845    .text.USBD_GetDescriptor:000000000000002c $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:852    .text.USBD_GetDescriptor:0000000000000048 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:927    .text.USBD_GetDescriptor:00000000000000b4 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:933    .text.USBD_GetDescriptor:00000000000000cc $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:1297   .text.USBD_SetAddress:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:1410   .text.USBD_SetConfig:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:1615   .text.USBD_SetConfig:0000000000000118 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:2271   .bss.cfgidx.0:0000000000000000 cfgidx.0
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:1620   .text.USBD_GetConfig:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:1719   .text.USBD_GetStatus:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:1812   .text.USBD_SetFeature:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:1864   .text.USBD_ClrFeature:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:1935   .text.USBD_ParseSetupRequest:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:1941   .text.USBD_ParseSetupRequest:0000000000000000 USBD_ParseSetupRequest
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:2037   .text.USBD_CtlError:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:2084   .text.USBD_GetString:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:2090   .text.USBD_GetString:0000000000000000 USBD_GetString
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:2210   .text.USBD_GetLen:0000000000000000 USBD_GetLen
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:2205   .text.USBD_GetLen:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cczv04jT.s:2272   .bss.cfgidx.0:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 USBD_CtlSendStatus

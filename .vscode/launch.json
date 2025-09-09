@@ -12,6 +12,7 @@
       "device": "STM32F103C8",
       "configFiles": [
         "/opt/homebrew/opt/open-ocd/share/openocd/scripts/interface/stlink-v2.cfg",
+        // "/opt/homebrew/opt/open-ocd/share/openocd/scripts/interface/cmsis-dap.cfg",
         "/opt/homebrew/opt/open-ocd/share/openocd/scripts/target/stm32f1x.cfg" 
       ],
       "runToMain": true,

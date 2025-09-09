@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
   75              	syncReadRxBuffMax:
   76 0000 0000     		.space	2
   77              		.section	.text.setEnd,"ax",%progbits
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 2
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 2
 
 
   78              		.align	1
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  104              		.loc 1 29 6
  105 000a 044A     		ldr	r2, .L2
  106 000c FB79     		ldrb	r3, [r7, #7]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 3
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 3
 
 
  107 000e 1370     		strb	r3, [r2]
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  157              		.cfi_def_cfa_register 13
  158              		@ sp needed
  159 000c 80BC     		pop	{r7}
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 4
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 4
 
 
  160              	.LCFI9:
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  211              	.LCFI15:
  212              		.cfi_restore 7
  213              		.cfi_def_cfa_offset 0
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 5
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 5
 
 
  214 0018 7047     		bx	lr
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  266              		.global	getLastError
  267              		.syntax unified
  268              		.thumb
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 6
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 6
 
 
  269              		.thumb_func
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  316              		.cfi_startproc
  317              		@ args = 0, pretend = 0, frame = 16
  318              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 7
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 7
 
 
  319              		@ link register save eliminated.
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  362 0032 7B68     		ldr	r3, [r7, #4]
  363 0034 DAB2     		uxtb	r2, r3
  364 0036 FB68     		ldr	r3, [r7, #12]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 8
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 8
 
 
  365 0038 1A70     		strb	r2, [r3]
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  416 000e BB71     		strb	r3, [r7, #6]
   69:User/SCSLib/SCS.c **** 	int Data;
   70:User/SCSLib/SCS.c **** 	if(End){
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 9
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 9
 
 
  417              		.loc 1 70 5
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  461 0046 80BC     		pop	{r7}
  462              	.LCFI35:
  463              		.cfi_restore 7
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 10
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 10
 
 
  464              		.cfi_def_cfa_offset 0
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  512 001e FF23     		movs	r3, #255
  513 0020 3B74     		strb	r3, [r7, #16]
   89:User/SCSLib/SCS.c **** 	bBuf[1] = 0xff;
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 11
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 11
 
 
  514              		.loc 1 89 10
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  102:User/SCSLib/SCS.c **** 	CheckSum = ID + msgLen + Fun + MemAddr;
  556              		.loc 1 102 16
  557 0068 FA79     		ldrb	r2, [r7, #7]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 12
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 12
 
 
  558 006a BB7D     		ldrb	r3, [r7, #22]
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  605 00b0 FFF7FEFF 		bl	writeSCS
  606              	.L34:
  108:User/SCSLib/SCS.c **** 	}
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 13
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 13
 
 
  109:User/SCSLib/SCS.c **** 	CheckSum = ~CheckSum;
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  655 0008 1A46     		mov	r2, r3
  656 000a 0346     		mov	r3, r0
  657 000c FB71     		strb	r3, [r7, #7]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 14
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 14
 
 
  658 000e 0B46     		mov	r3, r1
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  704              		@ frame_needed = 1, uses_anonymous_args = 0
  705 0000 80B5     		push	{r7, lr}
  706              	.LCFI46:
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 15
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 15
 
 
  707              		.cfi_def_cfa_offset 8
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  757              		.syntax unified
  758              		.thumb
  759              		.thumb_func
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 16
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 16
 
 
  761              	regAction:
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  806 0032 80BD     		pop	{r7, pc}
  807              		.cfi_endproc
  808              	.LFE10:
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 17
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 17
 
 
  810              		.section	.text.syncWrite,"ax",%progbits
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  854 002a FF23     		movs	r3, #255
  855 002c 3B75     		strb	r3, [r7, #20]
  152:User/SCSLib/SCS.c **** 	bBuf[1] = 0xff;
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 18
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 18
 
 
  856              		.loc 1 152 10
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  898 0072 39E0     		b	.L44
  899              	.L47:
  165:User/SCSLib/SCS.c **** 		writeSCS(&ID[i], 1);
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 19
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 19
 
 
  900              		.loc 1 165 3
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  950 00ce DBB2     		uxtb	r3, r3
  951 00d0 3B77     		strb	r3, [r7, #28]
  168:User/SCSLib/SCS.c **** 		for(j=0; j<nLen; j++){
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 20
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 20
 
 
  952              		.loc 1 168 21 discriminator 3
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  998              		.align	1
  999              		.global	writeByte
  1000              		.syntax unified
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 21
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 21
 
 
  1001              		.thumb
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1048              		.cfi_def_cfa_offset 8
  1049 0038 BD46     		mov	sp, r7
  1050              	.LCFI65:
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 22
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 22
 
 
  1051              		.cfi_def_cfa_register 13
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1100 0030 0323     		movs	r3, #3
  1101 0032 0093     		str	r3, [sp]
  1102 0034 0223     		movs	r3, #2
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 23
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 23
 
 
  1103 0036 FFF7FEFF 		bl	writeBuf
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1151 000c FB71     		strb	r3, [r7, #7]
  1152 000e 0B46     		mov	r3, r1
  1153 0010 BB71     		strb	r3, [r7, #6]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 24
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 24
 
 
  1154 0012 1346     		mov	r3, r2
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  212:User/SCSLib/SCS.c **** 		u8Error = SCS_ERR_NO_REPLY;
  1195              		.loc 1 212 11
  1196 005a 334B     		ldr	r3, .L64
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 25
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 25
 
 
  1197 005c 0122     		movs	r2, #1
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1240 0094 1946     		mov	r1, r3
  1241 0096 3868     		ldr	r0, [r7]
  1242 0098 FFF7FEFF 		bl	readSCS
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 26
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 26
 
 
  1243 009c 3861     		str	r0, [r7, #16]
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1288 00dc FB75     		strb	r3, [r7, #23]
  233:User/SCSLib/SCS.c **** 	for(i=0; i<Size; i++){
  1289              		.loc 1 233 7
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 27
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 27
 
 
  1290 00de 0023     		movs	r3, #0
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1333              		.loc 1 241 17
  1334 0118 BA7B     		ldrb	r2, [r7, #14]	@ zero_extendqisi2
  1335              		.loc 1 241 11
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 28
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 28
 
 
  1336 011a 044B     		ldr	r3, .L64+4
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1386 000c 1346     		mov	r3, r2
  1387 000e BB71     		strb	r3, [r7, #6]
  248:User/SCSLib/SCS.c **** 	uint8_t bDat;
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 29
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 29
 
 
  249:User/SCSLib/SCS.c **** 	int Size = Read(ID, MemAddr, &bDat, 1);
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1433              	.LCFI81:
  1434              		.cfi_def_cfa_offset 8
  1435              		.cfi_offset 7, -8
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 30
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 30
 
 
  1436              		.cfi_offset 14, -4
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1481              	.LCFI85:
  1482              		.cfi_def_cfa_register 13
  1483              		@ sp needed
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 31
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 31
 
 
  1484 0044 80BD     		pop	{r7, pc}
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  279:User/SCSLib/SCS.c **** 	if(!checkHead()){
  1530              		.loc 1 279 6
  1531 0028 FFF7FEFF 		bl	checkHead
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 32
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 32
 
 
  1532 002c 0346     		mov	r3, r0
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1576 0070 154B     		ldr	r3, .L82+4
  1577 0072 0322     		movs	r2, #3
  1578 0074 1A70     		strb	r2, [r3]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 33
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 33
 
 
  290:User/SCSLib/SCS.c **** 		return -1;
@@ -1978,7 +1978,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1623 00b2 03E0     		b	.L81
  1624              	.L80:
  300:User/SCSLib/SCS.c **** 	}
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 34
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 34
 
 
  301:User/SCSLib/SCS.c **** 	u8Status = bBuf[2];
@@ -2038,7 +2038,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1674              		.cfi_def_cfa 7, 24
  1675 0006 0346     		mov	r3, r0
  1676 0008 FB71     		strb	r3, [r7, #7]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 35
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 35
 
 
  308:User/SCSLib/SCS.c **** 	uint8_t bBuf[4];
@@ -2098,7 +2098,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1719 0054 05D0     		beq	.L87
  320:User/SCSLib/SCS.c **** 		u8Error = SCS_ERR_NO_REPLY;
  1720              		.loc 1 320 11
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 36
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 36
 
 
  1721 0056 1C4B     		ldr	r3, .L92+4
@@ -2158,7 +2158,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1764 0092 1344     		add	r3, r3, r2
  1765 0094 DAB2     		uxtb	r2, r3
  1766              		.loc 1 331 33
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 37
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 37
 
 
  1767 0096 BB7A     		ldrb	r3, [r7, #10]	@ zero_extendqisi2
@@ -2218,7 +2218,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1815              		.align	1
  1816              		.global	checkHead
  1817              		.syntax unified
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 38
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 38
 
 
  1818              		.thumb
@@ -2278,7 +2278,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  350:User/SCSLib/SCS.c **** 		bBuf[0] = bDat;
  1862              		.loc 1 350 11
  1863 0026 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 39
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 39
 
 
  1864 0028 3B71     		strb	r3, [r7, #4]
@@ -2338,7 +2338,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1908              		.global	Ack
  1909              		.syntax unified
  1910              		.thumb
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 40
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 40
 
 
  1911              		.thumb_func
@@ -2398,7 +2398,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  1955              		.loc 1 371 11
  1956 002e 0023     		movs	r3, #0
  1957 0030 37E0     		b	.L112
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 41
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 41
 
 
  1958              	.L106:
@@ -2458,7 +2458,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  2000 006c 0F4B     		ldr	r3, .L113
  2001 006e 0422     		movs	r2, #4
  2002 0070 1A70     		strb	r2, [r3]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 42
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 42
 
 
  384:User/SCSLib/SCS.c **** 			return 0;
@@ -2518,7 +2518,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  2046 00a2 1846     		mov	r0, r3
  2047 00a4 1037     		adds	r7, r7, #16
  2048              	.LCFI104:
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 43
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 43
 
 
  2049              		.cfi_def_cfa_offset 8
@@ -2578,7 +2578,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  2099 001a FFF7FEFF 		bl	rFlushSCS
  401:User/SCSLib/SCS.c **** 	wFlushSCS();
  2100              		.loc 1 401 2
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 44
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 44
 
 
  2101 001e FFF7FEFF 		bl	wFlushSCS
@@ -2638,7 +2638,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  2145 006e 0023     		movs	r3, #0
  2146 0070 BB73     		strb	r3, [r7, #14]
  2147              		.loc 1 411 2
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 45
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 45
 
 
  2148 0072 10E0     		b	.L116
@@ -2698,7 +2698,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  2192 00b6 1B68     		ldr	r3, [r3]
  2193 00b8 094A     		ldr	r2, .L119+8
  2194 00ba 1288     		ldrh	r2, [r2]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 46
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 46
 
 
  2195 00bc 1146     		mov	r1, r2
@@ -2758,7 +2758,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  2246              		.cfi_def_cfa_offset 16
  2247 0004 00AF     		add	r7, sp, #0
  2248              	.LCFI113:
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 47
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 47
 
 
  2249              		.cfi_def_cfa_register 7
@@ -2818,7 +2818,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  2302              	syncReadEnd:
  2303              	.LFB23:
  428:User/SCSLib/SCS.c **** 
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 48
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 48
 
 
  429:User/SCSLib/SCS.c **** void syncReadEnd(void)
@@ -2878,7 +2878,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  2353              	syncReadPacketRx:
  2354              	.LFB24:
  436:User/SCSLib/SCS.c **** 
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 49
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 49
 
 
  437:User/SCSLib/SCS.c **** int syncReadPacketRx(uint8_t ID, uint8_t *nDat)
@@ -2938,7 +2938,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  445:User/SCSLib/SCS.c **** 		uint8_t calSum = 0;
  2401              		.loc 1 445 11
  2402 0036 0023     		movs	r3, #0
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 50
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 50
 
 
  2403 0038 7B75     		strb	r3, [r7, #21]
@@ -2998,7 +2998,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  2449              		.loc 1 446 28
  2450 006e 404B     		ldr	r3, .L143+24
  2451 0070 1B88     		ldrh	r3, [r3]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 51
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 51
 
 
  446:User/SCSLib/SCS.c **** 			bBuf[0] = bBuf[1];
@@ -3058,7 +3058,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  462:User/SCSLib/SCS.c **** 		}
  463:User/SCSLib/SCS.c **** 		u8Status = syncReadRxBuff[syncReadRxBuffIndex++];
  2496              		.loc 1 463 28
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 52
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 52
 
 
  2497 00a8 2F4B     		ldr	r3, .L143+16
@@ -3118,7 +3118,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  467:User/SCSLib/SCS.c **** 			calSum += syncReadRxPacket[i];
  2548              		.loc 1 467 30 discriminator 3
  2549 00ee 1A4B     		ldr	r3, .L143
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 53
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 53
 
 
  2550 00f0 1A68     		ldr	r2, [r3]
@@ -3178,7 +3178,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  2596              	.L139:
  473:User/SCSLib/SCS.c **** 		}
  474:User/SCSLib/SCS.c **** 		return syncReadRxPacketLen;
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 54
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 54
 
 
  2597              		.loc 1 474 10
@@ -3238,7 +3238,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  2644              		.cfi_endproc
  2645              	.LFE24:
  2647              		.section	.text.syncReadRxPacketToByte,"ax",%progbits
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 55
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 55
 
 
  2648              		.align	1
@@ -3298,7 +3298,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  2695 002a 1846     		mov	r0, r3
  2696 002c BD46     		mov	sp, r7
  2697              	.LCFI126:
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 56
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 56
 
 
  2698              		.cfi_def_cfa_register 13
@@ -3358,7 +3358,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  490:User/SCSLib/SCS.c **** 		return -1;
  2750              		.loc 1 490 10
  2751 0018 4FF0FF33 		mov	r3, #-1
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 57
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 57
 
 
  2752 001c 2BE0     		b	.L152
@@ -3418,7 +3418,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  2800 006c FB68     		ldr	r3, [r7, #12]
  2801 006e 1340     		ands	r3, r3, r2
  2802              		.loc 1 496 9
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 58
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 58
 
 
  2803 0070 5B42     		rsbs	r3, r3, #0
@@ -3454,105 +3454,105 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 1
  2830              		.file 2 "/Applications/ARM/arm-none-eabi/include/machine/_default_types.h"
  2831              		.file 3 "/Applications/ARM/arm-none-eabi/include/sys/_stdint.h"
  2832              		.file 4 "User/SCSLib/SCS.h"
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 59
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 59
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 SCS.c
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:20     .data.Level:0000000000000000 Level
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:25     .bss.End:0000000000000000 End
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:26     .bss.End:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:30     .bss.u8Status:0000000000000000 u8Status
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:31     .bss.u8Status:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:35     .bss.u8Error:0000000000000000 u8Error
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:36     .bss.u8Error:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:41     .bss.syncReadRxPacketIndex:0000000000000000 syncReadRxPacketIndex
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:42     .bss.syncReadRxPacketIndex:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:47     .bss.syncReadRxPacketLen:0000000000000000 syncReadRxPacketLen
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:48     .bss.syncReadRxPacketLen:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:54     .bss.syncReadRxPacket:0000000000000000 syncReadRxPacket
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:51     .bss.syncReadRxPacket:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:61     .bss.syncReadRxBuff:0000000000000000 syncReadRxBuff
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:58     .bss.syncReadRxBuff:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:68     .bss.syncReadRxBuffLen:0000000000000000 syncReadRxBuffLen
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:65     .bss.syncReadRxBuffLen:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:75     .bss.syncReadRxBuffMax:0000000000000000 syncReadRxBuffMax
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:72     .bss.syncReadRxBuffMax:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:78     .text.setEnd:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:84     .text.setEnd:0000000000000000 setEnd
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:125    .text.setEnd:000000000000001c $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:130    .text.getEnd:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:136    .text.getEnd:0000000000000000 getEnd
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:167    .text.getEnd:0000000000000010 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:172    .text.setLevel:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:178    .text.setLevel:0000000000000000 setLevel
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:218    .text.setLevel:000000000000001c $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:223    .text.getState:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:229    .text.getState:0000000000000000 getState
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:260    .text.getState:0000000000000010 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:265    .text.getLastError:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:271    .text.getLastError:0000000000000000 getLastError
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:302    .text.getLastError:0000000000000010 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:307    .text.Host2SCS:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:313    .text.Host2SCS:0000000000000000 Host2SCS
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:384    .text.Host2SCS:0000000000000044 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:389    .text.SCS2Host:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:395    .text.SCS2Host:0000000000000000 SCS2Host
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:469    .text.SCS2Host:000000000000004c $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:474    .text.writeBuf:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:480    .text.writeBuf:0000000000000000 writeBuf
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:631    .text.genWrite:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:637    .text.genWrite:0000000000000000 genWrite
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1913   .text.Ack:0000000000000000 Ack
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:693    .text.regWrite:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:699    .text.regWrite:0000000000000000 regWrite
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:755    .text.regAction:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:761    .text.regAction:0000000000000000 regAction
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:811    .text.syncWrite:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:817    .text.syncWrite:0000000000000000 syncWrite
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:998    .text.writeByte:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1004   .text.writeByte:0000000000000000 writeByte
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1058   .text.writeWord:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1064   .text.writeWord:0000000000000000 writeWord
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s 			page 60
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:20     .data.Level:0000000000000000 Level
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:25     .bss.End:0000000000000000 End
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:26     .bss.End:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:30     .bss.u8Status:0000000000000000 u8Status
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:31     .bss.u8Status:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:35     .bss.u8Error:0000000000000000 u8Error
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:36     .bss.u8Error:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:41     .bss.syncReadRxPacketIndex:0000000000000000 syncReadRxPacketIndex
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:42     .bss.syncReadRxPacketIndex:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:47     .bss.syncReadRxPacketLen:0000000000000000 syncReadRxPacketLen
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:48     .bss.syncReadRxPacketLen:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:54     .bss.syncReadRxPacket:0000000000000000 syncReadRxPacket
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:51     .bss.syncReadRxPacket:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:61     .bss.syncReadRxBuff:0000000000000000 syncReadRxBuff
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:58     .bss.syncReadRxBuff:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:68     .bss.syncReadRxBuffLen:0000000000000000 syncReadRxBuffLen
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:65     .bss.syncReadRxBuffLen:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:75     .bss.syncReadRxBuffMax:0000000000000000 syncReadRxBuffMax
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:72     .bss.syncReadRxBuffMax:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:78     .text.setEnd:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:84     .text.setEnd:0000000000000000 setEnd
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:125    .text.setEnd:000000000000001c $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:130    .text.getEnd:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:136    .text.getEnd:0000000000000000 getEnd
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:167    .text.getEnd:0000000000000010 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:172    .text.setLevel:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:178    .text.setLevel:0000000000000000 setLevel
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:218    .text.setLevel:000000000000001c $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:223    .text.getState:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:229    .text.getState:0000000000000000 getState
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:260    .text.getState:0000000000000010 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:265    .text.getLastError:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:271    .text.getLastError:0000000000000000 getLastError
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:302    .text.getLastError:0000000000000010 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:307    .text.Host2SCS:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:313    .text.Host2SCS:0000000000000000 Host2SCS
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:384    .text.Host2SCS:0000000000000044 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:389    .text.SCS2Host:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:395    .text.SCS2Host:0000000000000000 SCS2Host
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:469    .text.SCS2Host:000000000000004c $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:474    .text.writeBuf:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:480    .text.writeBuf:0000000000000000 writeBuf
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:631    .text.genWrite:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:637    .text.genWrite:0000000000000000 genWrite
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1913   .text.Ack:0000000000000000 Ack
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:693    .text.regWrite:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:699    .text.regWrite:0000000000000000 regWrite
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:755    .text.regAction:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:761    .text.regAction:0000000000000000 regAction
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:811    .text.syncWrite:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:817    .text.syncWrite:0000000000000000 syncWrite
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:998    .text.writeByte:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1004   .text.writeByte:0000000000000000 writeByte
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1058   .text.writeWord:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1064   .text.writeWord:0000000000000000 writeWord
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s 			page 60
 
 
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1125   .text.Read:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1131   .text.Read:0000000000000000 Read
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1821   .text.checkHead:0000000000000000 checkHead
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1354   .text.Read:0000000000000128 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1360   .text.readByte:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1366   .text.readByte:0000000000000000 readByte
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1420   .text.readWord:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1426   .text.readWord:0000000000000000 readWord
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1489   .text.Ping:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1495   .text.Ping:0000000000000000 Ping
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1646   .text.Ping:00000000000000c4 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1652   .text.Reset:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1658   .text.Reset:0000000000000000 Reset
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1809   .text.Reset:00000000000000c4 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1815   .text.checkHead:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:1907   .text.Ack:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2058   .text.Ack:00000000000000ac $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2065   .text.syncReadPacketTx:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2071   .text.syncReadPacketTx:0000000000000000 syncReadPacketTx
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2219   .text.syncReadPacketTx:00000000000000d8 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2227   .text.syncReadBegin:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2233   .text.syncReadBegin:0000000000000000 syncReadBegin
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2290   .text.syncReadBegin:0000000000000040 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2296   .text.syncReadEnd:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2302   .text.syncReadEnd:0000000000000000 syncReadEnd
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2338   .text.syncReadEnd:0000000000000020 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2343   .rodata:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2347   .text.syncReadPacketRx:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2353   .text.syncReadPacketRx:0000000000000000 syncReadPacketRx
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2636   .text.syncReadPacketRx:0000000000000158 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2648   .text.syncReadRxPacketToByte:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2654   .text.syncReadRxPacketToByte:0000000000000000 syncReadRxPacketToByte
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2708   .text.syncReadRxPacketToByte:0000000000000034 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2715   .text.syncReadRxPacketToWrod:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2721   .text.syncReadRxPacketToWrod:0000000000000000 syncReadRxPacketToWrod
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccjUsZdq.s:2822   .text.syncReadRxPacketToWrod:0000000000000080 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1125   .text.Read:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1131   .text.Read:0000000000000000 Read
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1821   .text.checkHead:0000000000000000 checkHead
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1354   .text.Read:0000000000000128 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1360   .text.readByte:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1366   .text.readByte:0000000000000000 readByte
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1420   .text.readWord:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1426   .text.readWord:0000000000000000 readWord
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1489   .text.Ping:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1495   .text.Ping:0000000000000000 Ping
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1646   .text.Ping:00000000000000c4 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1652   .text.Reset:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1658   .text.Reset:0000000000000000 Reset
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1809   .text.Reset:00000000000000c4 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1815   .text.checkHead:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:1907   .text.Ack:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2058   .text.Ack:00000000000000ac $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2065   .text.syncReadPacketTx:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2071   .text.syncReadPacketTx:0000000000000000 syncReadPacketTx
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2219   .text.syncReadPacketTx:00000000000000d8 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2227   .text.syncReadBegin:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2233   .text.syncReadBegin:0000000000000000 syncReadBegin
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2290   .text.syncReadBegin:0000000000000040 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2296   .text.syncReadEnd:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2302   .text.syncReadEnd:0000000000000000 syncReadEnd
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2338   .text.syncReadEnd:0000000000000020 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2343   .rodata:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2347   .text.syncReadPacketRx:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2353   .text.syncReadPacketRx:0000000000000000 syncReadPacketRx
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2636   .text.syncReadPacketRx:0000000000000158 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2648   .text.syncReadRxPacketToByte:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2654   .text.syncReadRxPacketToByte:0000000000000000 syncReadRxPacketToByte
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2708   .text.syncReadRxPacketToByte:0000000000000034 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2715   .text.syncReadRxPacketToWrod:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2721   .text.syncReadRxPacketToWrod:0000000000000000 syncReadRxPacketToWrod
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc68STjP.s:2822   .text.syncReadRxPacketToWrod:0000000000000080 $d
 
 UNDEFINED SYMBOLS
 writeSCS

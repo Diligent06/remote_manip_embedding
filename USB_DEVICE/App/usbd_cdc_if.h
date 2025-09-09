@@ -94,12 +94,7 @@
 extern USBD_CDC_ItfTypeDef USBD_Interface_fops_FS;
 
 /* USER CODE BEGIN EXPORTED_VARIABLES */
-// /** Received data over USB are stored in this buffer      */
-// extern uint8_t UserRxBufferFS[APP_RX_DATA_SIZE];
 
-// /** Data to send over USB CDC are stored in this buffer   */
-// extern uint8_t UserTxBufferFS[APP_TX_DATA_SIZE];
-extern USBD_CDC_ItfTypeDef USBD_Interface_fops_FS;
 /* USER CODE END EXPORTED_VARIABLES */
 
 /**

@@ -22,6 +22,7 @@
 #include "stm32f1xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "STS_control.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -41,12 +42,12 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-
+CAN_RxHeaderTypeDef RxHeader;
+uint8_t RxData[8];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN PFP */
-
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -231,29 +232,14 @@ void DMA1_Channel7_IRQHandler(void)
 }
 
 /**
-  * @brief This function handles USB high priority or CAN TX interrupts.
-  */
-void USB_HP_CAN1_TX_IRQHandler(void)
-{
-  /* USER CODE BEGIN USB_HP_CAN1_TX_IRQn 0 */
-
-  /* USER CODE END USB_HP_CAN1_TX_IRQn 0 */
-  HAL_CAN_IRQHandler(&hcan);
-  HAL_PCD_IRQHandler(&hpcd_USB_FS);
-  /* USER CODE BEGIN USB_HP_CAN1_TX_IRQn 1 */
-
-  /* USER CODE END USB_HP_CAN1_TX_IRQn 1 */
-}
-
-/**
   * @brief This function handles USB low priority or CAN RX0 interrupts.
   */
 void USB_LP_CAN1_RX0_IRQHandler(void)
 {
   /* USER CODE BEGIN USB_LP_CAN1_RX0_IRQn 0 */
-
+  
   /* USER CODE END USB_LP_CAN1_RX0_IRQn 0 */
-  HAL_CAN_IRQHandler(&hcan);
+  // HAL_CAN_IRQHandler(&hcan);
   HAL_PCD_IRQHandler(&hpcd_USB_FS);
   /* USER CODE BEGIN USB_LP_CAN1_RX0_IRQn 1 */
 
@@ -280,7 +266,6 @@ void CAN1_RX1_IRQHandler(void)
 void USART2_IRQHandler(void)
 {
   /* USER CODE BEGIN USART2_IRQn 0 */
-  extern uint8_t* rx_buffer;
   /* USER CODE END USART2_IRQn 0 */
   HAL_UART_IRQHandler(&huart2);
   /* USER CODE BEGIN USART2_IRQn 1 */
@@ -288,5 +273,29 @@ void USART2_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
-
+void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan)
+{
+  if (hcan->Instance == CAN1)
+  {
+    HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO1, &RxHeader, RxData);
+    if (RxHeader.StdId == 0x06) // Only process CAN ID 0x06
+    {
+      if(RxHeader.RTR == CAN_RTR_DATA) {
+        memcpy(servo_can_rx, RxData, RxHeader.DLC);
+        servo_write_flag = 1;
+      }
+      else if (RxHeader.RTR == CAN_RTR_REMOTE) {
+        servo_read_flag_12 = 1;
+      }
+    }
+    else if (RxHeader.StdId == 0x07)
+    {
+      servo_read_flag_12 = 1;
+    }
+    else if (RxHeader.StdId == 0x08)
+    {
+      servo_read_flag_3 = 1;
+    }
+  }
+}
 /* USER CODE END 1 */

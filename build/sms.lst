@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 1
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 1
   31:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h **** typedef int __gthread_key_t;
   32:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h **** typedef int __gthread_once_t;
   33:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h **** typedef int __gthread_mutex_t;
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 2
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s 			page 2
 
 
   34:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h **** typedef int __gthread_recursive_mutex_t;
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 1
   88:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h ****   return OBJC_THREAD_INTERACTIVE_PRIORITY;
   89:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h **** }
   90:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h **** 
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 3
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s 			page 3
 
 
   91:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h **** /* Yield our process time to another thread.  */
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 1
  145:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h **** }
  146:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h **** 
  147:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h **** /* Grab a lock on a mutex.  */
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 4
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s 			page 4
 
 
  148:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h **** static inline int
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 1
  202:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h **** static inline int
  203:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h **** __gthread_objc_condition_signal (objc_condition_t condition _GLIBCXX_UNUSED)
  204:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h **** {
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 5
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s 			page 5
 
 
  205:/Applications/ARM/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7-m/nofp/bits/gthr-default.h ****   return 0;
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 1
   52              		@ sp needed
   53 0010 80BC     		pop	{r7}
   54              	.LCFI5:
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 6
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s 			page 6
 
 
   55              		.cfi_restore 7
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 1
  140              		.section	.rodata._ZNSt15regex_constantsL15error_badrepeatE,"a"
  143              	_ZNSt15regex_constantsL15error_badrepeatE:
  144 0000 0A       		.byte	10
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 7
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s 			page 7
 
 
  145              		.section	.rodata._ZNSt15regex_constantsL16error_complexityE,"a"
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 1
  199              	.LCFI10:
  200              		.cfi_def_cfa_register 13
  201              		@ sp needed
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 8
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s 			page 8
 
 
  202 0018 80BC     		pop	{r7}
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 1
  256              		.align	1
  257              		.global	SMT_create
  258              		.syntax unified
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 9
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s 			page 9
 
 
  259              		.thumb
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 1
  310 0002 86B0     		sub	sp, sp, #24
  311              	.LCFI21:
  312              		.cfi_def_cfa_offset 32
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 10
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s 			page 10
 
 
  313 0004 00AF     		add	r7, sp, #0
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 1
  365              		.file 26 "/Applications/ARM/arm-none-eabi/include/machine/_default_types.h"
  366              		.file 27 "/Applications/ARM/arm-none-eabi/include/sys/_types.h"
  367              		.file 28 "/Applications/ARM/arm-none-eabi/include/sys/reent.h"
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 11
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s 			page 11
 
 
  368              		.file 29 "/Applications/ARM/arm-none-eabi/include/sys/lock.h"
@@ -617,48 +617,48 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 1
  381              		.file 42 "/Applications/ARM/arm-none-eabi/include/string.h"
  382              		.file 43 "User/SMS_STS_lib/sms.hpp"
  383              		.file 44 "<built-in>"
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s 			page 12
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 sms.cpp
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:18     .text._ZL20__gthread_key_deletei:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:23     .text._ZL20__gthread_key_deletei:0000000000000000 _ZL20__gthread_key_deletei
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:62     .rodata._ZN6__pstl9execution2v1L3seqE:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:65     .rodata._ZN6__pstl9execution2v1L3seqE:0000000000000000 _ZN6__pstl9execution2v1L3seqE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:68     .rodata._ZN6__pstl9execution2v1L3parE:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:71     .rodata._ZN6__pstl9execution2v1L3parE:0000000000000000 _ZN6__pstl9execution2v1L3parE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:74     .rodata._ZN6__pstl9execution2v1L9par_unseqE:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:77     .rodata._ZN6__pstl9execution2v1L9par_unseqE:0000000000000000 _ZN6__pstl9execution2v1L9par_unseqE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:80     .rodata._ZN6__pstl9execution2v1L5unseqE:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:83     .rodata._ZN6__pstl9execution2v1L5unseqE:0000000000000000 _ZN6__pstl9execution2v1L5unseqE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:88     .rodata._ZN9__gnu_cxxL21__default_lock_policyE:0000000000000000 _ZN9__gnu_cxxL21__default_lock_policyE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:89     .rodata._ZN9__gnu_cxxL21__default_lock_policyE:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:93     .rodata._ZNSt15regex_constantsL13error_collateE:0000000000000000 _ZNSt15regex_constantsL13error_collateE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:94     .rodata._ZNSt15regex_constantsL13error_collateE:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:98     .rodata._ZNSt15regex_constantsL11error_ctypeE:0000000000000000 _ZNSt15regex_constantsL11error_ctypeE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:103    .rodata._ZNSt15regex_constantsL12error_escapeE:0000000000000000 _ZNSt15regex_constantsL12error_escapeE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:108    .rodata._ZNSt15regex_constantsL13error_backrefE:0000000000000000 _ZNSt15regex_constantsL13error_backrefE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:113    .rodata._ZNSt15regex_constantsL11error_brackE:0000000000000000 _ZNSt15regex_constantsL11error_brackE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:118    .rodata._ZNSt15regex_constantsL11error_parenE:0000000000000000 _ZNSt15regex_constantsL11error_parenE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:123    .rodata._ZNSt15regex_constantsL11error_braceE:0000000000000000 _ZNSt15regex_constantsL11error_braceE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:128    .rodata._ZNSt15regex_constantsL14error_badbraceE:0000000000000000 _ZNSt15regex_constantsL14error_badbraceE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:133    .rodata._ZNSt15regex_constantsL11error_rangeE:0000000000000000 _ZNSt15regex_constantsL11error_rangeE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:138    .rodata._ZNSt15regex_constantsL11error_spaceE:0000000000000000 _ZNSt15regex_constantsL11error_spaceE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:143    .rodata._ZNSt15regex_constantsL15error_badrepeatE:0000000000000000 _ZNSt15regex_constantsL15error_badrepeatE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:148    .rodata._ZNSt15regex_constantsL16error_complexityE:0000000000000000 _ZNSt15regex_constantsL16error_complexityE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:153    .rodata._ZNSt15regex_constantsL11error_stackE:0000000000000000 _ZNSt15regex_constantsL11error_stackE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:156    .rodata._ZNSt8__detailL19_S_invalid_state_idE:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:159    .rodata._ZNSt8__detailL19_S_invalid_state_idE:0000000000000000 _ZNSt8__detailL19_S_invalid_state_idE
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:162    .text._ZN3SMT7smt_addEii:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:168    .text._ZN3SMT7smt_addEii:0000000000000000 _ZN3SMT7smt_addEii
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:211    .text._ZN3SMTC2Ev:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:217    .text._ZN3SMTC2Ev:0000000000000000 _ZN3SMTC2Ev
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:217    .text._ZN3SMTC2Ev:0000000000000000 _ZN3SMTC1Ev
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:256    .text.SMT_create:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:262    .text.SMT_create:0000000000000000 SMT_create
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:293    .text._c_smt_add:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccMI2JSk.s:299    .text._c_smt_add:0000000000000000 _c_smt_add
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:18     .text._ZL20__gthread_key_deletei:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:23     .text._ZL20__gthread_key_deletei:0000000000000000 _ZL20__gthread_key_deletei
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:62     .rodata._ZN6__pstl9execution2v1L3seqE:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:65     .rodata._ZN6__pstl9execution2v1L3seqE:0000000000000000 _ZN6__pstl9execution2v1L3seqE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:68     .rodata._ZN6__pstl9execution2v1L3parE:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:71     .rodata._ZN6__pstl9execution2v1L3parE:0000000000000000 _ZN6__pstl9execution2v1L3parE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:74     .rodata._ZN6__pstl9execution2v1L9par_unseqE:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:77     .rodata._ZN6__pstl9execution2v1L9par_unseqE:0000000000000000 _ZN6__pstl9execution2v1L9par_unseqE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:80     .rodata._ZN6__pstl9execution2v1L5unseqE:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:83     .rodata._ZN6__pstl9execution2v1L5unseqE:0000000000000000 _ZN6__pstl9execution2v1L5unseqE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:88     .rodata._ZN9__gnu_cxxL21__default_lock_policyE:0000000000000000 _ZN9__gnu_cxxL21__default_lock_policyE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:89     .rodata._ZN9__gnu_cxxL21__default_lock_policyE:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:93     .rodata._ZNSt15regex_constantsL13error_collateE:0000000000000000 _ZNSt15regex_constantsL13error_collateE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:94     .rodata._ZNSt15regex_constantsL13error_collateE:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:98     .rodata._ZNSt15regex_constantsL11error_ctypeE:0000000000000000 _ZNSt15regex_constantsL11error_ctypeE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:103    .rodata._ZNSt15regex_constantsL12error_escapeE:0000000000000000 _ZNSt15regex_constantsL12error_escapeE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:108    .rodata._ZNSt15regex_constantsL13error_backrefE:0000000000000000 _ZNSt15regex_constantsL13error_backrefE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:113    .rodata._ZNSt15regex_constantsL11error_brackE:0000000000000000 _ZNSt15regex_constantsL11error_brackE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:118    .rodata._ZNSt15regex_constantsL11error_parenE:0000000000000000 _ZNSt15regex_constantsL11error_parenE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:123    .rodata._ZNSt15regex_constantsL11error_braceE:0000000000000000 _ZNSt15regex_constantsL11error_braceE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:128    .rodata._ZNSt15regex_constantsL14error_badbraceE:0000000000000000 _ZNSt15regex_constantsL14error_badbraceE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:133    .rodata._ZNSt15regex_constantsL11error_rangeE:0000000000000000 _ZNSt15regex_constantsL11error_rangeE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:138    .rodata._ZNSt15regex_constantsL11error_spaceE:0000000000000000 _ZNSt15regex_constantsL11error_spaceE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:143    .rodata._ZNSt15regex_constantsL15error_badrepeatE:0000000000000000 _ZNSt15regex_constantsL15error_badrepeatE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:148    .rodata._ZNSt15regex_constantsL16error_complexityE:0000000000000000 _ZNSt15regex_constantsL16error_complexityE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:153    .rodata._ZNSt15regex_constantsL11error_stackE:0000000000000000 _ZNSt15regex_constantsL11error_stackE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:156    .rodata._ZNSt8__detailL19_S_invalid_state_idE:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:159    .rodata._ZNSt8__detailL19_S_invalid_state_idE:0000000000000000 _ZNSt8__detailL19_S_invalid_state_idE
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:162    .text._ZN3SMT7smt_addEii:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:168    .text._ZN3SMT7smt_addEii:0000000000000000 _ZN3SMT7smt_addEii
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:211    .text._ZN3SMTC2Ev:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:217    .text._ZN3SMTC2Ev:0000000000000000 _ZN3SMTC2Ev
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:217    .text._ZN3SMTC2Ev:0000000000000000 _ZN3SMTC1Ev
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:256    .text.SMT_create:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:262    .text.SMT_create:0000000000000000 SMT_create
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:293    .text._c_smt_add:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cce8Nc6h.s:299    .text._c_smt_add:0000000000000000 _c_smt_add
 
 UNDEFINED SYMBOLS
 _Znwj

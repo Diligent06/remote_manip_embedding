@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 1
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -20,11 +20,8 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 1
   17              		.section	.rodata
   18              		.align	2
   19              	.LC0:
-  20 0000 48656C6C 		.ascii	"Hello from STM32F103 via USB CDC\015\012\000"
-  20      6F206672 
-  20      6F6D2053 
-  20      544D3332 
-  20      46313033 
+  20 0000 01020304 		.ascii	"\001\002\003\004\005\006\007\010"
+  20      05060708 
   21              		.section	.text.main,"ax",%progbits
   22              		.align	1
   23              		.global	main
@@ -58,12 +55,12 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 1
   22:Core/Src/main.c **** #include "dma.h"
   23:Core/Src/main.c **** #include "usart.h"
   24:Core/Src/main.c **** #include "usb_device.h"
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 2
-
-
   25:Core/Src/main.c **** #include "gpio.h"
   26:Core/Src/main.c **** 
   27:Core/Src/main.c **** /* Private includes ----------------------------------------------------------*/
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 2
+
+
   28:Core/Src/main.c **** /* USER CODE BEGIN Includes */
   29:Core/Src/main.c **** #include "sms_c_api.h"
   30:Core/Src/main.c **** #include "stdio.h"
@@ -108,22 +105,22 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 1
   69:Core/Src/main.c **** {
   31              		.loc 1 69 1
   32              		.cfi_startproc
-  33              		@ args = 0, pretend = 0, frame = 16
+  33              		@ args = 0, pretend = 0, frame = 96
   34              		@ frame_needed = 1, uses_anonymous_args = 0
   35 0000 80B5     		push	{r7, lr}
   36              	.LCFI0:
   37              		.cfi_def_cfa_offset 8
   38              		.cfi_offset 7, -8
   39              		.cfi_offset 14, -4
-  40 0002 84B0     		sub	sp, sp, #16
+  40 0002 98B0     		sub	sp, sp, #96
   41              	.LCFI1:
-  42              		.cfi_def_cfa_offset 24
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 3
-
-
+  42              		.cfi_def_cfa_offset 104
   43 0004 00AF     		add	r7, sp, #0
   44              	.LCFI2:
   45              		.cfi_def_cfa_register 7
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 3
+
+
   70:Core/Src/main.c **** 
   71:Core/Src/main.c ****   /* USER CODE BEGIN 1 */
   72:Core/Src/main.c **** 
@@ -159,377 +156,707 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 1
   94:Core/Src/main.c ****   MX_USART2_UART_Init();
   54              		.loc 1 94 3
   55 0016 FFF7FEFF 		bl	MX_USART2_UART_Init
-  95:Core/Src/main.c ****   MX_USB_DEVICE_Init();
+  95:Core/Src/main.c ****   MX_CAN_Init();
   56              		.loc 1 95 3
-  57 001a FFF7FEFF 		bl	MX_USB_DEVICE_Init
-  96:Core/Src/main.c ****   MX_CAN_Init();
-  58              		.loc 1 96 3
-  59 001e FFF7FEFF 		bl	MX_CAN_Init
+  57 001a FFF7FEFF 		bl	MX_CAN_Init
+  96:Core/Src/main.c ****   // MX_USB_DEVICE_Init();
   97:Core/Src/main.c ****   /* USER CODE BEGIN 2 */
-  98:Core/Src/main.c ****   // HAL_UART_Receive_DMA(&huart2, rx_buffer, RX_BUFFER_SIZE);
-  99:Core/Src/main.c ****   char *msg = "Hello from STM32F103 via USB CDC\r\n";
-  60              		.loc 1 99 9
-  61 0022 244B     		ldr	r3, .L7
-  62 0024 7B60     		str	r3, [r7, #4]
- 100:Core/Src/main.c ****   CDC_Transmit_FS((uint8_t*)msg, strlen(msg));
-  63              		.loc 1 100 3
-  64 0026 7868     		ldr	r0, [r7, #4]
-  65 0028 FFF7FEFF 		bl	strlen
-  66 002c 0346     		mov	r3, r0
-  67 002e 1946     		mov	r1, r3
-  68 0030 7868     		ldr	r0, [r7, #4]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 4
+  98:Core/Src/main.c ****   // char *msg = "Hello from STM32F103 via USB CDC\r\n";
+  99:Core/Src/main.c ****   // CDC_Transmit_FS((uint8_t*)msg, strlen(msg));
+ 100:Core/Src/main.c ****   STS_control_init();
+  58              		.loc 1 100 3
+  59 001e FFF7FEFF 		bl	STS_control_init
+ 101:Core/Src/main.c ****   int cur_i = 0;
+  60              		.loc 1 101 7
+  61 0022 0023     		movs	r3, #0
+  62 0024 BB65     		str	r3, [r7, #88]
+ 102:Core/Src/main.c ****   int cur_target = 0;
+  63              		.loc 1 102 7
+  64 0026 0023     		movs	r3, #0
+  65 0028 7B65     		str	r3, [r7, #84]
+ 103:Core/Src/main.c **** 
+ 104:Core/Src/main.c ****   // set filter
+ 105:Core/Src/main.c ****   CAN_FilterTypeDef filterConfig;
+ 106:Core/Src/main.c ****   filterConfig.FilterActivation = ENABLE;
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 4
 
 
-  69 0032 FFF7FEFF 		bl	CDC_Transmit_FS
- 101:Core/Src/main.c ****   STS_control_init();
-  70              		.loc 1 101 3
-  71 0036 FFF7FEFF 		bl	STS_control_init
- 102:Core/Src/main.c ****   int action_period = 2000;
-  72              		.loc 1 102 7
-  73 003a 4FF4FA63 		mov	r3, #2000
-  74 003e 3B60     		str	r3, [r7]
- 103:Core/Src/main.c ****   int cur_i = 0;
-  75              		.loc 1 103 7
-  76 0040 0023     		movs	r3, #0
-  77 0042 FB60     		str	r3, [r7, #12]
- 104:Core/Src/main.c ****   int cur_target = 0;
-  78              		.loc 1 104 7
-  79 0044 0023     		movs	r3, #0
-  80 0046 BB60     		str	r3, [r7, #8]
-  81              	.L6:
- 105:Core/Src/main.c ****   // __HAL_UART_ENABLE_IT(&huart2, UART_IT_IDLE);
- 106:Core/Src/main.c ****   /* USER CODE END 2 */
- 107:Core/Src/main.c **** 
- 108:Core/Src/main.c ****   /* Infinite loop */
- 109:Core/Src/main.c ****   /* USER CODE BEGIN WHILE */
- 110:Core/Src/main.c ****   while (1)
- 111:Core/Src/main.c ****   {
- 112:Core/Src/main.c ****     if(cur_i % 200 == 0) {
-  82              		.loc 1 112 14
-  83 0048 FA68     		ldr	r2, [r7, #12]
-  84 004a 1B4B     		ldr	r3, .L7+4
-  85 004c 83FB0213 		smull	r1, r3, r3, r2
-  86 0050 9911     		asrs	r1, r3, #6
-  87 0052 D317     		asrs	r3, r2, #31
-  88 0054 CB1A     		subs	r3, r1, r3
-  89 0056 C821     		movs	r1, #200
-  90 0058 01FB03F3 		mul	r3, r1, r3
-  91 005c D31A     		subs	r3, r2, r3
-  92              		.loc 1 112 7
-  93 005e 002B     		cmp	r3, #0
-  94 0060 01D1     		bne	.L2
- 113:Core/Src/main.c ****       STS_syn_read();
-  95              		.loc 1 113 7
-  96 0062 FFF7FEFF 		bl	STS_syn_read
-  97              	.L2:
- 114:Core/Src/main.c ****     }
- 115:Core/Src/main.c ****     if(cur_i % 1000 == 0) {
-  98              		.loc 1 115 14
-  99 0066 FA68     		ldr	r2, [r7, #12]
- 100 0068 144B     		ldr	r3, .L7+8
- 101 006a 83FB0213 		smull	r1, r3, r3, r2
- 102 006e 9911     		asrs	r1, r3, #6
- 103 0070 D317     		asrs	r3, r2, #31
- 104 0072 CB1A     		subs	r3, r1, r3
- 105 0074 4FF47A71 		mov	r1, #1000
- 106 0078 01FB03F3 		mul	r3, r1, r3
- 107 007c D31A     		subs	r3, r2, r3
- 108              		.loc 1 115 7
- 109 007e 002B     		cmp	r3, #0
- 110 0080 0AD1     		bne	.L3
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 5
+  66              		.loc 1 106 33
+  67 002a 0123     		movs	r3, #1
+  68 002c 7B64     		str	r3, [r7, #68]
+ 107:Core/Src/main.c ****   filterConfig.FilterBank = 0;
+  69              		.loc 1 107 27
+  70 002e 0023     		movs	r3, #0
+  71 0030 BB63     		str	r3, [r7, #56]
+ 108:Core/Src/main.c ****   filterConfig.FilterFIFOAssignment = CAN_FILTER_FIFO1;
+  72              		.loc 1 108 37
+  73 0032 0123     		movs	r3, #1
+  74 0034 7B63     		str	r3, [r7, #52]
+ 109:Core/Src/main.c ****   filterConfig.FilterIdHigh = 0x0000;
+  75              		.loc 1 109 29
+  76 0036 0023     		movs	r3, #0
+  77 0038 7B62     		str	r3, [r7, #36]
+ 110:Core/Src/main.c ****   filterConfig.FilterIdLow = 0x0000;
+  78              		.loc 1 110 28
+  79 003a 0023     		movs	r3, #0
+  80 003c BB62     		str	r3, [r7, #40]
+ 111:Core/Src/main.c ****   filterConfig.FilterMaskIdHigh = 0x0000;
+  81              		.loc 1 111 33
+  82 003e 0023     		movs	r3, #0
+  83 0040 FB62     		str	r3, [r7, #44]
+ 112:Core/Src/main.c ****   filterConfig.FilterMaskIdLow = 0x0000;
+  84              		.loc 1 112 32
+  85 0042 0023     		movs	r3, #0
+  86 0044 3B63     		str	r3, [r7, #48]
+ 113:Core/Src/main.c ****   filterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
+  87              		.loc 1 113 27
+  88 0046 0023     		movs	r3, #0
+  89 0048 FB63     		str	r3, [r7, #60]
+ 114:Core/Src/main.c ****   filterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
+  90              		.loc 1 114 28
+  91 004a 0123     		movs	r3, #1
+  92 004c 3B64     		str	r3, [r7, #64]
+ 115:Core/Src/main.c ****   HAL_CAN_ConfigFilter(&hcan, &filterConfig);
+  93              		.loc 1 115 3
+  94 004e 07F12403 		add	r3, r7, #36
+  95 0052 1946     		mov	r1, r3
+  96 0054 6948     		ldr	r0, .L12
+  97 0056 FFF7FEFF 		bl	HAL_CAN_ConfigFilter
+ 116:Core/Src/main.c ****   
+ 117:Core/Src/main.c ****   HAL_CAN_Start(&hcan);
+  98              		.loc 1 117 3
+  99 005a 6848     		ldr	r0, .L12
+ 100 005c FFF7FEFF 		bl	HAL_CAN_Start
+ 118:Core/Src/main.c ****   HAL_CAN_ActivateNotification(&hcan, CAN_IT_RX_FIFO1_MSG_PENDING);
+ 101              		.loc 1 118 3
+ 102 0060 1021     		movs	r1, #16
+ 103 0062 6648     		ldr	r0, .L12
+ 104 0064 FFF7FEFF 		bl	HAL_CAN_ActivateNotification
+ 119:Core/Src/main.c **** 
+ 120:Core/Src/main.c ****   CAN_TxHeaderTypeDef TxHeader;
+ 121:Core/Src/main.c ****   uint8_t TxData[8] = {1, 2, 3, 4, 5, 6, 7, 8};
+ 105              		.loc 1 121 11
+ 106 0068 654A     		ldr	r2, .L12+4
+ 107 006a 3B1D     		adds	r3, r7, #4
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 5
 
 
- 116:Core/Src/main.c ****       if(cur_target == 0) {
- 111              		.loc 1 116 9
- 112 0082 BB68     		ldr	r3, [r7, #8]
- 113 0084 002B     		cmp	r3, #0
- 114 0086 03D1     		bne	.L4
- 117:Core/Src/main.c ****         cur_target = 4096;
- 115              		.loc 1 117 20
- 116 0088 4FF48053 		mov	r3, #4096
- 117 008c BB60     		str	r3, [r7, #8]
- 118 008e 01E0     		b	.L5
- 119              	.L4:
- 118:Core/Src/main.c ****       }
- 119:Core/Src/main.c ****       else {
- 120:Core/Src/main.c ****         cur_target = 0;
- 120              		.loc 1 120 20
- 121 0090 0023     		movs	r3, #0
- 122 0092 BB60     		str	r3, [r7, #8]
- 123              	.L5:
- 121:Core/Src/main.c ****       }
- 122:Core/Src/main.c ****       cur_i = 0;
- 124              		.loc 1 122 13
- 125 0094 0023     		movs	r3, #0
- 126 0096 FB60     		str	r3, [r7, #12]
- 127              	.L3:
- 123:Core/Src/main.c ****     }
- 124:Core/Src/main.c ****     servo_set_position[0] = cur_target;
- 128              		.loc 1 124 27
- 129 0098 BB68     		ldr	r3, [r7, #8]
- 130 009a 9AB2     		uxth	r2, r3
- 131 009c 084B     		ldr	r3, .L7+12
- 132 009e 1A80     		strh	r2, [r3]	@ movhi
- 125:Core/Src/main.c ****     STS_syn_write();
- 133              		.loc 1 125 5
- 134 00a0 FFF7FEFF 		bl	STS_syn_write
- 126:Core/Src/main.c ****     HAL_Delay(1);
- 135              		.loc 1 126 5
- 136 00a4 0120     		movs	r0, #1
- 137 00a6 FFF7FEFF 		bl	HAL_Delay
- 127:Core/Src/main.c ****     cur_i += 1;
- 138              		.loc 1 127 11
- 139 00aa FB68     		ldr	r3, [r7, #12]
- 140 00ac 0133     		adds	r3, r3, #1
- 141 00ae FB60     		str	r3, [r7, #12]
- 112:Core/Src/main.c ****       STS_syn_read();
- 142              		.loc 1 112 7
- 143 00b0 CAE7     		b	.L6
- 144              	.L8:
- 145 00b2 00BF     		.align	2
- 146              	.L7:
- 147 00b4 00000000 		.word	.LC0
- 148 00b8 1F85EB51 		.word	1374389535
- 149 00bc D34D6210 		.word	274877907
- 150 00c0 00000000 		.word	servo_set_position
- 151              		.cfi_endproc
- 152              	.LFE68:
- 154              		.section	.text.SystemClock_Config,"ax",%progbits
- 155              		.align	1
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 6
+ 108 006c 92E80300 		ldm	r2, {r0, r1}
+ 109 0070 83E80300 		stm	r3, {r0, r1}
+ 122:Core/Src/main.c ****   uint32_t TxMailbox;
+ 123:Core/Src/main.c **** 
+ 124:Core/Src/main.c ****   TxHeader.StdId = 0x000;
+ 110              		.loc 1 124 18
+ 111 0074 0023     		movs	r3, #0
+ 112 0076 FB60     		str	r3, [r7, #12]
+ 125:Core/Src/main.c ****   TxHeader.RTR = CAN_RTR_DATA;
+ 113              		.loc 1 125 16
+ 114 0078 0023     		movs	r3, #0
+ 115 007a BB61     		str	r3, [r7, #24]
+ 126:Core/Src/main.c ****   TxHeader.IDE = CAN_ID_STD;
+ 116              		.loc 1 126 16
+ 117 007c 0023     		movs	r3, #0
+ 118 007e 7B61     		str	r3, [r7, #20]
+ 127:Core/Src/main.c ****   TxHeader.DLC = 8;
+ 119              		.loc 1 127 16
+ 120 0080 0823     		movs	r3, #8
+ 121 0082 FB61     		str	r3, [r7, #28]
+ 122              	.L11:
+ 128:Core/Src/main.c ****   
+ 129:Core/Src/main.c ****   // while ((CAN1->TSR & CAN_TSR_TME) == 0) {
+ 130:Core/Src/main.c ****   //   int x = 0;
+ 131:Core/Src/main.c ****   // }
+ 132:Core/Src/main.c **** 
+ 133:Core/Src/main.c ****   /* USER CODE END 2 */
+ 134:Core/Src/main.c **** 
+ 135:Core/Src/main.c ****   /* Infinite loop */
+ 136:Core/Src/main.c ****   /* USER CODE BEGIN WHILE */
+ 137:Core/Src/main.c ****   while (1)
+ 138:Core/Src/main.c ****   {
+ 139:Core/Src/main.c **** 
+ 140:Core/Src/main.c ****     // if(HAL_CAN_AddTxMessage(&hcan, &TxHeader, TxData, &TxMailbox) != HAL_OK) {
+ 141:Core/Src/main.c ****     //   int test = 0;
+ 142:Core/Src/main.c ****     // }
+ 143:Core/Src/main.c ****     // HAL_Delay(1000);
+ 144:Core/Src/main.c **** 
+ 145:Core/Src/main.c ****     // STS_syn_read();
+ 146:Core/Src/main.c ****     // HAL_Delay(1000);
+ 147:Core/Src/main.c **** 
+ 148:Core/Src/main.c ****     if(servo_read_flag_12 == 1) {
+ 123              		.loc 1 148 27
+ 124 0084 5F4B     		ldr	r3, .L12+8
+ 125 0086 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 126              		.loc 1 148 7
+ 127 0088 012B     		cmp	r3, #1
+ 128 008a 50D1     		bne	.L2
+ 149:Core/Src/main.c ****       STS_syn_read();
+ 129              		.loc 1 149 7
+ 130 008c FFF7FEFF 		bl	STS_syn_read
+ 131              	.LBB4:
+ 150:Core/Src/main.c ****       // send first two servos' data
+ 151:Core/Src/main.c ****       for(uint8_t i = 0; i < 2; i++) {  
+ 132              		.loc 1 151 19
+ 133 0090 0023     		movs	r3, #0
+ 134 0092 87F85F30 		strb	r3, [r7, #95]
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 6
 
 
- 156              		.global	SystemClock_Config
- 157              		.syntax unified
- 158              		.thumb
- 159              		.thumb_func
- 161              	SystemClock_Config:
- 162              	.LFB69:
- 128:Core/Src/main.c ****     // HAL_Delay(2000);
- 129:Core/Src/main.c ****     // servo_set_position[0] = 4096;
- 130:Core/Src/main.c ****     // STS_syn_write();
- 131:Core/Src/main.c ****     // HAL_Delay(2000);
- 132:Core/Src/main.c ****     /* USER CODE END WHILE */
- 133:Core/Src/main.c **** 
- 134:Core/Src/main.c ****     /* USER CODE BEGIN 3 */
- 135:Core/Src/main.c ****   }
- 136:Core/Src/main.c ****   /* USER CODE END 3 */
- 137:Core/Src/main.c **** }
- 138:Core/Src/main.c **** 
- 139:Core/Src/main.c **** /**
- 140:Core/Src/main.c ****   * @brief System Clock Configuration
- 141:Core/Src/main.c ****   * @retval None
- 142:Core/Src/main.c ****   */
- 143:Core/Src/main.c **** void SystemClock_Config(void)
- 144:Core/Src/main.c **** {
- 163              		.loc 1 144 1
- 164              		.cfi_startproc
- 165              		@ args = 0, pretend = 0, frame = 80
- 166              		@ frame_needed = 1, uses_anonymous_args = 0
- 167 0000 80B5     		push	{r7, lr}
- 168              	.LCFI3:
- 169              		.cfi_def_cfa_offset 8
- 170              		.cfi_offset 7, -8
- 171              		.cfi_offset 14, -4
- 172 0002 94B0     		sub	sp, sp, #80
- 173              	.LCFI4:
- 174              		.cfi_def_cfa_offset 88
- 175 0004 00AF     		add	r7, sp, #0
- 176              	.LCFI5:
- 177              		.cfi_def_cfa_register 7
- 145:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
- 178              		.loc 1 145 22
- 179 0006 07F12803 		add	r3, r7, #40
- 180 000a 2822     		movs	r2, #40
- 181 000c 0021     		movs	r1, #0
- 182 000e 1846     		mov	r0, r3
- 183 0010 FFF7FEFF 		bl	memset
- 146:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 184              		.loc 1 146 22
- 185 0014 07F11403 		add	r3, r7, #20
- 186 0018 0022     		movs	r2, #0
- 187 001a 1A60     		str	r2, [r3]
- 188 001c 5A60     		str	r2, [r3, #4]
- 189 001e 9A60     		str	r2, [r3, #8]
- 190 0020 DA60     		str	r2, [r3, #12]
- 191 0022 1A61     		str	r2, [r3, #16]
- 147:Core/Src/main.c ****   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
- 192              		.loc 1 147 28
- 193 0024 3B1D     		adds	r3, r7, #4
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 7
+ 135              		.loc 1 151 7
+ 136 0096 37E0     		b	.L3
+ 137              	.L4:
+ 152:Core/Src/main.c ****         servo_can_tx[4 * i] = (uint8_t)(servo_position[i] >> 8);
+ 138              		.loc 1 152 55 discriminator 3
+ 139 0098 97F85F30 		ldrb	r3, [r7, #95]	@ zero_extendqisi2
+ 140 009c 5A4A     		ldr	r2, .L12+12
+ 141 009e 32F81330 		ldrh	r3, [r2, r3, lsl #1]
+ 142              		.loc 1 152 31 discriminator 3
+ 143 00a2 1B0A     		lsrs	r3, r3, #8
+ 144 00a4 9AB2     		uxth	r2, r3
+ 145              		.loc 1 152 24 discriminator 3
+ 146 00a6 97F85F30 		ldrb	r3, [r7, #95]	@ zero_extendqisi2
+ 147 00aa 9B00     		lsls	r3, r3, #2
+ 148              		.loc 1 152 31 discriminator 3
+ 149 00ac D1B2     		uxtb	r1, r2
+ 150              		.loc 1 152 29 discriminator 3
+ 151 00ae 574A     		ldr	r2, .L12+16
+ 152 00b0 D154     		strb	r1, [r2, r3]
+ 153:Core/Src/main.c ****         servo_can_tx[4 * i + 1] = (uint8_t)(servo_position[i] & 0xFF);
+ 153              		.loc 1 153 59 discriminator 3
+ 154 00b2 97F85F30 		ldrb	r3, [r7, #95]	@ zero_extendqisi2
+ 155 00b6 544A     		ldr	r2, .L12+12
+ 156 00b8 32F81320 		ldrh	r2, [r2, r3, lsl #1]
+ 157              		.loc 1 153 24 discriminator 3
+ 158 00bc 97F85F30 		ldrb	r3, [r7, #95]	@ zero_extendqisi2
+ 159 00c0 9B00     		lsls	r3, r3, #2
+ 160              		.loc 1 153 28 discriminator 3
+ 161 00c2 0133     		adds	r3, r3, #1
+ 162              		.loc 1 153 35 discriminator 3
+ 163 00c4 D1B2     		uxtb	r1, r2
+ 164              		.loc 1 153 33 discriminator 3
+ 165 00c6 514A     		ldr	r2, .L12+16
+ 166 00c8 D154     		strb	r1, [r2, r3]
+ 154:Core/Src/main.c ****         servo_can_tx[4 * i + 2] = (uint8_t)(servo_speed[i] >> 8);
+ 167              		.loc 1 154 56 discriminator 3
+ 168 00ca 97F85F30 		ldrb	r3, [r7, #95]	@ zero_extendqisi2
+ 169 00ce 504A     		ldr	r2, .L12+20
+ 170 00d0 32F81330 		ldrh	r3, [r2, r3, lsl #1]
+ 171              		.loc 1 154 35 discriminator 3
+ 172 00d4 1B0A     		lsrs	r3, r3, #8
+ 173 00d6 9AB2     		uxth	r2, r3
+ 174              		.loc 1 154 24 discriminator 3
+ 175 00d8 97F85F30 		ldrb	r3, [r7, #95]	@ zero_extendqisi2
+ 176 00dc 9B00     		lsls	r3, r3, #2
+ 177              		.loc 1 154 28 discriminator 3
+ 178 00de 0233     		adds	r3, r3, #2
+ 179              		.loc 1 154 35 discriminator 3
+ 180 00e0 D1B2     		uxtb	r1, r2
+ 181              		.loc 1 154 33 discriminator 3
+ 182 00e2 4A4A     		ldr	r2, .L12+16
+ 183 00e4 D154     		strb	r1, [r2, r3]
+ 155:Core/Src/main.c ****         servo_can_tx[4 * i + 3] = (uint8_t)(servo_speed[i] & 0xFF);
+ 184              		.loc 1 155 56 discriminator 3
+ 185 00e6 97F85F30 		ldrb	r3, [r7, #95]	@ zero_extendqisi2
+ 186 00ea 494A     		ldr	r2, .L12+20
+ 187 00ec 32F81320 		ldrh	r2, [r2, r3, lsl #1]
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 7
 
 
- 194 0026 0022     		movs	r2, #0
- 195 0028 1A60     		str	r2, [r3]
- 196 002a 5A60     		str	r2, [r3, #4]
- 197 002c 9A60     		str	r2, [r3, #8]
- 198 002e DA60     		str	r2, [r3, #12]
- 148:Core/Src/main.c **** 
- 149:Core/Src/main.c ****   /** Initializes the RCC Oscillators according to the specified parameters
- 150:Core/Src/main.c ****   * in the RCC_OscInitTypeDef structure.
- 151:Core/Src/main.c ****   */
- 152:Core/Src/main.c ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
- 199              		.loc 1 152 36
- 200 0030 0123     		movs	r3, #1
- 201 0032 BB62     		str	r3, [r7, #40]
- 153:Core/Src/main.c ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
- 202              		.loc 1 153 30
- 203 0034 4FF48033 		mov	r3, #65536
- 204 0038 FB62     		str	r3, [r7, #44]
- 154:Core/Src/main.c ****   RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
- 205              		.loc 1 154 36
- 206 003a 0023     		movs	r3, #0
- 207 003c 3B63     		str	r3, [r7, #48]
- 155:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
- 208              		.loc 1 155 30
- 209 003e 0123     		movs	r3, #1
- 210 0040 BB63     		str	r3, [r7, #56]
- 156:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
- 211              		.loc 1 156 34
- 212 0042 0223     		movs	r3, #2
- 213 0044 7B64     		str	r3, [r7, #68]
- 157:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
- 214              		.loc 1 157 35
- 215 0046 4FF48033 		mov	r3, #65536
- 216 004a BB64     		str	r3, [r7, #72]
- 158:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
- 217              		.loc 1 158 32
- 218 004c 4FF4E013 		mov	r3, #1835008
- 219 0050 FB64     		str	r3, [r7, #76]
- 159:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 220              		.loc 1 159 7
- 221 0052 07F12803 		add	r3, r7, #40
- 222 0056 1846     		mov	r0, r3
- 223 0058 FFF7FEFF 		bl	HAL_RCC_OscConfig
- 224 005c 0346     		mov	r3, r0
- 225              		.loc 1 159 6
- 226 005e 002B     		cmp	r3, #0
- 227 0060 01D0     		beq	.L10
- 160:Core/Src/main.c ****   {
- 161:Core/Src/main.c ****     Error_Handler();
- 228              		.loc 1 161 5
- 229 0062 FFF7FEFF 		bl	Error_Handler
- 230              	.L10:
- 162:Core/Src/main.c ****   }
- 163:Core/Src/main.c **** 
- 164:Core/Src/main.c ****   /** Initializes the CPU, AHB and APB buses clocks
- 165:Core/Src/main.c ****   */
- 166:Core/Src/main.c ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
- 231              		.loc 1 166 31
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 8
+ 188              		.loc 1 155 24 discriminator 3
+ 189 00f0 97F85F30 		ldrb	r3, [r7, #95]	@ zero_extendqisi2
+ 190 00f4 9B00     		lsls	r3, r3, #2
+ 191              		.loc 1 155 28 discriminator 3
+ 192 00f6 0333     		adds	r3, r3, #3
+ 193              		.loc 1 155 35 discriminator 3
+ 194 00f8 D1B2     		uxtb	r1, r2
+ 195              		.loc 1 155 33 discriminator 3
+ 196 00fa 444A     		ldr	r2, .L12+16
+ 197 00fc D154     		strb	r1, [r2, r3]
+ 151:Core/Src/main.c ****         servo_can_tx[4 * i] = (uint8_t)(servo_position[i] >> 8);
+ 198              		.loc 1 151 34 discriminator 3
+ 199 00fe 97F85F30 		ldrb	r3, [r7, #95]	@ zero_extendqisi2
+ 200 0102 0133     		adds	r3, r3, #1
+ 201 0104 87F85F30 		strb	r3, [r7, #95]
+ 202              	.L3:
+ 151:Core/Src/main.c ****         servo_can_tx[4 * i] = (uint8_t)(servo_position[i] >> 8);
+ 203              		.loc 1 151 7 discriminator 1
+ 204 0108 97F85F30 		ldrb	r3, [r7, #95]	@ zero_extendqisi2
+ 205 010c 012B     		cmp	r3, #1
+ 206 010e C3D9     		bls	.L4
+ 207              	.LBE4:
+ 156:Core/Src/main.c ****       }
+ 157:Core/Src/main.c ****       if(HAL_CAN_AddTxMessage(&hcan, &TxHeader, servo_can_tx, &TxMailbox) != HAL_OK) {
+ 208              		.loc 1 157 10
+ 209 0110 3B46     		mov	r3, r7
+ 210 0112 07F10C01 		add	r1, r7, #12
+ 211 0116 3D4A     		ldr	r2, .L12+16
+ 212 0118 3848     		ldr	r0, .L12
+ 213 011a FFF7FEFF 		bl	HAL_CAN_AddTxMessage
+ 214 011e 0346     		mov	r3, r0
+ 215              		.loc 1 157 9
+ 216 0120 002B     		cmp	r3, #0
+ 217 0122 01D0     		beq	.L5
+ 218              	.LBB5:
+ 158:Core/Src/main.c ****         int test = 0;
+ 219              		.loc 1 158 13
+ 220 0124 0023     		movs	r3, #0
+ 221 0126 3B65     		str	r3, [r7, #80]
+ 222              	.L5:
+ 223              	.LBE5:
+ 159:Core/Src/main.c ****       }
+ 160:Core/Src/main.c ****       servo_read_flag_12 = 0;
+ 224              		.loc 1 160 26
+ 225 0128 364B     		ldr	r3, .L12+8
+ 226 012a 0022     		movs	r2, #0
+ 227 012c 1A70     		strb	r2, [r3]
+ 228              	.L2:
+ 161:Core/Src/main.c ****     }
+ 162:Core/Src/main.c **** 
+ 163:Core/Src/main.c ****     if(servo_read_flag_3 == 1) {
+ 229              		.loc 1 163 26
+ 230 012e 394B     		ldr	r3, .L12+24
+ 231 0130 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 232              		.loc 1 163 7
+ 233 0132 012B     		cmp	r3, #1
+ 234 0134 34D1     		bne	.L6
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 8
 
 
- 232 0066 0F23     		movs	r3, #15
- 233 0068 7B61     		str	r3, [r7, #20]
- 167:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
- 168:Core/Src/main.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
- 234              		.loc 1 168 34
- 235 006a 0223     		movs	r3, #2
- 236 006c BB61     		str	r3, [r7, #24]
- 169:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 237              		.loc 1 169 35
- 238 006e 0023     		movs	r3, #0
- 239 0070 FB61     		str	r3, [r7, #28]
- 170:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
- 240              		.loc 1 170 36
- 241 0072 4FF48063 		mov	r3, #1024
- 242 0076 3B62     		str	r3, [r7, #32]
- 171:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 243              		.loc 1 171 36
- 244 0078 0023     		movs	r3, #0
- 245 007a 7B62     		str	r3, [r7, #36]
- 172:Core/Src/main.c **** 
- 173:Core/Src/main.c ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
- 246              		.loc 1 173 7
- 247 007c 07F11403 		add	r3, r7, #20
- 248 0080 0221     		movs	r1, #2
- 249 0082 1846     		mov	r0, r3
- 250 0084 FFF7FEFF 		bl	HAL_RCC_ClockConfig
- 251 0088 0346     		mov	r3, r0
- 252              		.loc 1 173 6
- 253 008a 002B     		cmp	r3, #0
- 254 008c 01D0     		beq	.L11
- 174:Core/Src/main.c ****   {
- 175:Core/Src/main.c ****     Error_Handler();
- 255              		.loc 1 175 5
- 256 008e FFF7FEFF 		bl	Error_Handler
- 257              	.L11:
- 176:Core/Src/main.c ****   }
- 177:Core/Src/main.c ****   PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
- 258              		.loc 1 177 38
- 259 0092 1023     		movs	r3, #16
- 260 0094 7B60     		str	r3, [r7, #4]
- 178:Core/Src/main.c ****   PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLL_DIV1_5;
- 261              		.loc 1 178 35
- 262 0096 0023     		movs	r3, #0
- 263 0098 3B61     		str	r3, [r7, #16]
- 179:Core/Src/main.c ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
- 264              		.loc 1 179 7
- 265 009a 3B1D     		adds	r3, r7, #4
- 266 009c 1846     		mov	r0, r3
- 267 009e FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
- 268 00a2 0346     		mov	r3, r0
- 269              		.loc 1 179 6
- 270 00a4 002B     		cmp	r3, #0
- 271 00a6 01D0     		beq	.L13
- 180:Core/Src/main.c ****   {
- 181:Core/Src/main.c ****     Error_Handler();
- 272              		.loc 1 181 5
- 273 00a8 FFF7FEFF 		bl	Error_Handler
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 9
+ 164:Core/Src/main.c ****       STS_syn_read();
+ 235              		.loc 1 164 7
+ 236 0136 FFF7FEFF 		bl	STS_syn_read
+ 165:Core/Src/main.c ****       // send third servo's data
+ 166:Core/Src/main.c ****       servo_can_tx[0] = (uint8_t)(servo_position[2] >> 8);
+ 237              		.loc 1 166 49
+ 238 013a 334B     		ldr	r3, .L12+12
+ 239 013c 9B88     		ldrh	r3, [r3, #4]
+ 240              		.loc 1 166 25
+ 241 013e 1B0A     		lsrs	r3, r3, #8
+ 242 0140 9BB2     		uxth	r3, r3
+ 243 0142 DAB2     		uxtb	r2, r3
+ 244              		.loc 1 166 23
+ 245 0144 314B     		ldr	r3, .L12+16
+ 246 0146 1A70     		strb	r2, [r3]
+ 167:Core/Src/main.c ****       servo_can_tx[1] = (uint8_t)(servo_position[2] & 0xFF);
+ 247              		.loc 1 167 49
+ 248 0148 2F4B     		ldr	r3, .L12+12
+ 249 014a 9B88     		ldrh	r3, [r3, #4]
+ 250              		.loc 1 167 25
+ 251 014c DAB2     		uxtb	r2, r3
+ 252              		.loc 1 167 23
+ 253 014e 2F4B     		ldr	r3, .L12+16
+ 254 0150 5A70     		strb	r2, [r3, #1]
+ 168:Core/Src/main.c ****       servo_can_tx[2] = (uint8_t)(servo_speed[2] >> 8);
+ 255              		.loc 1 168 46
+ 256 0152 2F4B     		ldr	r3, .L12+20
+ 257 0154 9B88     		ldrh	r3, [r3, #4]
+ 258              		.loc 1 168 25
+ 259 0156 1B0A     		lsrs	r3, r3, #8
+ 260 0158 9BB2     		uxth	r3, r3
+ 261 015a DAB2     		uxtb	r2, r3
+ 262              		.loc 1 168 23
+ 263 015c 2B4B     		ldr	r3, .L12+16
+ 264 015e 9A70     		strb	r2, [r3, #2]
+ 169:Core/Src/main.c ****       servo_can_tx[3] = (uint8_t)(servo_speed[2] & 0xFF);
+ 265              		.loc 1 169 46
+ 266 0160 2B4B     		ldr	r3, .L12+20
+ 267 0162 9B88     		ldrh	r3, [r3, #4]
+ 268              		.loc 1 169 25
+ 269 0164 DAB2     		uxtb	r2, r3
+ 270              		.loc 1 169 23
+ 271 0166 294B     		ldr	r3, .L12+16
+ 272 0168 DA70     		strb	r2, [r3, #3]
+ 170:Core/Src/main.c ****       servo_can_tx[4] = 0;
+ 273              		.loc 1 170 23
+ 274 016a 284B     		ldr	r3, .L12+16
+ 275 016c 0022     		movs	r2, #0
+ 276 016e 1A71     		strb	r2, [r3, #4]
+ 171:Core/Src/main.c ****       servo_can_tx[5] = 0;
+ 277              		.loc 1 171 23
+ 278 0170 264B     		ldr	r3, .L12+16
+ 279 0172 0022     		movs	r2, #0
+ 280 0174 5A71     		strb	r2, [r3, #5]
+ 172:Core/Src/main.c ****       servo_can_tx[6] = 0;
+ 281              		.loc 1 172 23
+ 282 0176 254B     		ldr	r3, .L12+16
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 9
 
 
- 274              	.L13:
- 182:Core/Src/main.c ****   }
- 183:Core/Src/main.c **** }
- 275              		.loc 1 183 1
- 276 00ac 00BF     		nop
- 277 00ae 5037     		adds	r7, r7, #80
- 278              	.LCFI6:
- 279              		.cfi_def_cfa_offset 8
- 280 00b0 BD46     		mov	sp, r7
- 281              	.LCFI7:
- 282              		.cfi_def_cfa_register 13
- 283              		@ sp needed
- 284 00b2 80BD     		pop	{r7, pc}
- 285              		.cfi_endproc
- 286              	.LFE69:
- 288              		.section	.text.Error_Handler,"ax",%progbits
- 289              		.align	1
- 290              		.global	Error_Handler
- 291              		.syntax unified
- 292              		.thumb
- 293              		.thumb_func
- 295              	Error_Handler:
- 296              	.LFB70:
- 184:Core/Src/main.c **** 
- 185:Core/Src/main.c **** /* USER CODE BEGIN 4 */
- 186:Core/Src/main.c **** 
- 187:Core/Src/main.c **** /* USER CODE END 4 */
+ 283 0178 0022     		movs	r2, #0
+ 284 017a 9A71     		strb	r2, [r3, #6]
+ 173:Core/Src/main.c ****       servo_can_tx[7] = 0;
+ 285              		.loc 1 173 23
+ 286 017c 234B     		ldr	r3, .L12+16
+ 287 017e 0022     		movs	r2, #0
+ 288 0180 DA71     		strb	r2, [r3, #7]
+ 174:Core/Src/main.c ****       if(HAL_CAN_AddTxMessage(&hcan, &TxHeader, servo_can_tx, &TxMailbox) != HAL_OK) {
+ 289              		.loc 1 174 10
+ 290 0182 3B46     		mov	r3, r7
+ 291 0184 07F10C01 		add	r1, r7, #12
+ 292 0188 204A     		ldr	r2, .L12+16
+ 293 018a 1C48     		ldr	r0, .L12
+ 294 018c FFF7FEFF 		bl	HAL_CAN_AddTxMessage
+ 295 0190 0346     		mov	r3, r0
+ 296              		.loc 1 174 9
+ 297 0192 002B     		cmp	r3, #0
+ 298 0194 01D0     		beq	.L7
+ 299              	.LBB6:
+ 175:Core/Src/main.c ****         int test = 0;
+ 300              		.loc 1 175 13
+ 301 0196 0023     		movs	r3, #0
+ 302 0198 FB64     		str	r3, [r7, #76]
+ 303              	.L7:
+ 304              	.LBE6:
+ 176:Core/Src/main.c ****       }
+ 177:Core/Src/main.c ****       servo_read_flag_3 = 0;
+ 305              		.loc 1 177 25
+ 306 019a 1E4B     		ldr	r3, .L12+24
+ 307 019c 0022     		movs	r2, #0
+ 308 019e 1A70     		strb	r2, [r3]
+ 309              	.L6:
+ 178:Core/Src/main.c ****     }
+ 179:Core/Src/main.c **** 
+ 180:Core/Src/main.c ****     if(servo_write_flag == 1) {
+ 310              		.loc 1 180 25
+ 311 01a0 1D4B     		ldr	r3, .L12+28
+ 312 01a2 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 313              		.loc 1 180 7
+ 314 01a4 012B     		cmp	r3, #1
+ 315 01a6 7FF46DAF 		bne	.L11
+ 316              	.LBB7:
+ 181:Core/Src/main.c ****       for(uint8_t i = 0; i < sizeof(servo_ID); i++) {
+ 317              		.loc 1 181 19
+ 318 01aa 0023     		movs	r3, #0
+ 319 01ac 87F85E30 		strb	r3, [r7, #94]
+ 320              		.loc 1 181 7
+ 321 01b0 1AE0     		b	.L9
+ 322              	.L10:
+ 182:Core/Src/main.c ****         servo_set_position[i] = ((uint16_t)servo_can_rx[i * 2] << 8) | servo_can_rx[i * 2 + 1];
+ 323              		.loc 1 182 59 discriminator 3
+ 324 01b2 97F85E30 		ldrb	r3, [r7, #94]	@ zero_extendqisi2
+ 325 01b6 5B00     		lsls	r3, r3, #1
+ 326              		.loc 1 182 56 discriminator 3
+ 327 01b8 184A     		ldr	r2, .L12+32
+ 328 01ba D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
+ 329              		.loc 1 182 64 discriminator 3
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 10
+
+
+ 330 01bc 1B02     		lsls	r3, r3, #8
+ 331              		.loc 1 182 70 discriminator 3
+ 332 01be 1AB2     		sxth	r2, r3
+ 333              		.loc 1 182 87 discriminator 3
+ 334 01c0 97F85E30 		ldrb	r3, [r7, #94]	@ zero_extendqisi2
+ 335 01c4 5B00     		lsls	r3, r3, #1
+ 336              		.loc 1 182 91 discriminator 3
+ 337 01c6 0133     		adds	r3, r3, #1
+ 338              		.loc 1 182 84 discriminator 3
+ 339 01c8 1449     		ldr	r1, .L12+32
+ 340 01ca CB5C     		ldrb	r3, [r1, r3]	@ zero_extendqisi2
+ 341 01cc 1BB2     		sxth	r3, r3
+ 342              		.loc 1 182 70 discriminator 3
+ 343 01ce 1343     		orrs	r3, r3, r2
+ 344 01d0 1AB2     		sxth	r2, r3
+ 345              		.loc 1 182 27 discriminator 3
+ 346 01d2 97F85E30 		ldrb	r3, [r7, #94]	@ zero_extendqisi2
+ 347              		.loc 1 182 70 discriminator 3
+ 348 01d6 91B2     		uxth	r1, r2
+ 349              		.loc 1 182 31 discriminator 3
+ 350 01d8 114A     		ldr	r2, .L12+36
+ 351 01da 22F81310 		strh	r1, [r2, r3, lsl #1]	@ movhi
+ 181:Core/Src/main.c ****       for(uint8_t i = 0; i < sizeof(servo_ID); i++) {
+ 352              		.loc 1 181 49 discriminator 3
+ 353 01de 97F85E30 		ldrb	r3, [r7, #94]	@ zero_extendqisi2
+ 354 01e2 0133     		adds	r3, r3, #1
+ 355 01e4 87F85E30 		strb	r3, [r7, #94]
+ 356              	.L9:
+ 181:Core/Src/main.c ****       for(uint8_t i = 0; i < sizeof(servo_ID); i++) {
+ 357              		.loc 1 181 7 discriminator 1
+ 358 01e8 97F85E30 		ldrb	r3, [r7, #94]	@ zero_extendqisi2
+ 359 01ec 022B     		cmp	r3, #2
+ 360 01ee E0D9     		bls	.L10
+ 361              	.LBE7:
+ 183:Core/Src/main.c ****       }
+ 184:Core/Src/main.c ****       STS_syn_write();
+ 362              		.loc 1 184 7
+ 363 01f0 FFF7FEFF 		bl	STS_syn_write
+ 185:Core/Src/main.c ****       servo_write_flag = 0;
+ 364              		.loc 1 185 24
+ 365 01f4 084B     		ldr	r3, .L12+28
+ 366 01f6 0022     		movs	r2, #0
+ 367 01f8 1A70     		strb	r2, [r3]
+ 148:Core/Src/main.c ****       STS_syn_read();
+ 368              		.loc 1 148 7
+ 369 01fa 43E7     		b	.L11
+ 370              	.L13:
+ 371              		.align	2
+ 372              	.L12:
+ 373 01fc 00000000 		.word	hcan
+ 374 0200 00000000 		.word	.LC0
+ 375 0204 00000000 		.word	servo_read_flag_12
+ 376 0208 00000000 		.word	servo_position
+ 377 020c 00000000 		.word	servo_can_tx
+ 378 0210 00000000 		.word	servo_speed
+ 379 0214 00000000 		.word	servo_read_flag_3
+ 380 0218 00000000 		.word	servo_write_flag
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 11
+
+
+ 381 021c 00000000 		.word	servo_can_rx
+ 382 0220 00000000 		.word	servo_set_position
+ 383              		.cfi_endproc
+ 384              	.LFE68:
+ 386              		.section	.text.SystemClock_Config,"ax",%progbits
+ 387              		.align	1
+ 388              		.global	SystemClock_Config
+ 389              		.syntax unified
+ 390              		.thumb
+ 391              		.thumb_func
+ 393              	SystemClock_Config:
+ 394              	.LFB69:
+ 186:Core/Src/main.c ****     }
+ 187:Core/Src/main.c **** 
  188:Core/Src/main.c **** 
- 189:Core/Src/main.c **** /**
- 190:Core/Src/main.c ****   * @brief  This function is executed in case of error occurrence.
- 191:Core/Src/main.c ****   * @retval None
- 192:Core/Src/main.c ****   */
- 193:Core/Src/main.c **** void Error_Handler(void)
- 194:Core/Src/main.c **** {
- 297              		.loc 1 194 1
- 298              		.cfi_startproc
- 299              		@ args = 0, pretend = 0, frame = 0
- 300              		@ frame_needed = 1, uses_anonymous_args = 0
- 301              		@ link register save eliminated.
- 302 0000 80B4     		push	{r7}
- 303              	.LCFI8:
- 304              		.cfi_def_cfa_offset 4
- 305              		.cfi_offset 7, -4
- 306 0002 00AF     		add	r7, sp, #0
- 307              	.LCFI9:
- 308              		.cfi_def_cfa_register 7
- 309              	.LBB4:
- 310              	.LBB5:
- 311              		.file 2 "Drivers/CMSIS/Include/cmsis_gcc.h"
+ 189:Core/Src/main.c ****     /* servo read and control demo
+ 190:Core/Src/main.c ****     if(cur_i % 200 == 0) {
+ 191:Core/Src/main.c ****       STS_syn_read();
+ 192:Core/Src/main.c ****     }
+ 193:Core/Src/main.c ****     if(cur_i % 1000 == 0) {
+ 194:Core/Src/main.c ****       if(cur_target == 0) {
+ 195:Core/Src/main.c ****         cur_target = 4096;
+ 196:Core/Src/main.c ****       }
+ 197:Core/Src/main.c ****       else {
+ 198:Core/Src/main.c ****         cur_target = 0;
+ 199:Core/Src/main.c ****       }
+ 200:Core/Src/main.c ****       cur_i = 0;
+ 201:Core/Src/main.c ****     }
+ 202:Core/Src/main.c ****     servo_set_position[0] = cur_target;
+ 203:Core/Src/main.c ****     STS_syn_write();
+ 204:Core/Src/main.c ****     HAL_Delay(1);
+ 205:Core/Src/main.c ****     cur_i += 1;
+ 206:Core/Src/main.c ****     */
+ 207:Core/Src/main.c **** 
+ 208:Core/Src/main.c ****     /* USER CODE END WHILE */
+ 209:Core/Src/main.c **** 
+ 210:Core/Src/main.c ****     /* USER CODE BEGIN 3 */
+ 211:Core/Src/main.c ****   }
+ 212:Core/Src/main.c ****   /* USER CODE END 3 */
+ 213:Core/Src/main.c **** }
+ 214:Core/Src/main.c **** 
+ 215:Core/Src/main.c **** /**
+ 216:Core/Src/main.c ****   * @brief System Clock Configuration
+ 217:Core/Src/main.c ****   * @retval None
+ 218:Core/Src/main.c ****   */
+ 219:Core/Src/main.c **** void SystemClock_Config(void)
+ 220:Core/Src/main.c **** {
+ 395              		.loc 1 220 1
+ 396              		.cfi_startproc
+ 397              		@ args = 0, pretend = 0, frame = 80
+ 398              		@ frame_needed = 1, uses_anonymous_args = 0
+ 399 0000 80B5     		push	{r7, lr}
+ 400              	.LCFI3:
+ 401              		.cfi_def_cfa_offset 8
+ 402              		.cfi_offset 7, -8
+ 403              		.cfi_offset 14, -4
+ 404 0002 94B0     		sub	sp, sp, #80
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 12
+
+
+ 405              	.LCFI4:
+ 406              		.cfi_def_cfa_offset 88
+ 407 0004 00AF     		add	r7, sp, #0
+ 408              	.LCFI5:
+ 409              		.cfi_def_cfa_register 7
+ 221:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 410              		.loc 1 221 22
+ 411 0006 07F12803 		add	r3, r7, #40
+ 412 000a 2822     		movs	r2, #40
+ 413 000c 0021     		movs	r1, #0
+ 414 000e 1846     		mov	r0, r3
+ 415 0010 FFF7FEFF 		bl	memset
+ 222:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 416              		.loc 1 222 22
+ 417 0014 07F11403 		add	r3, r7, #20
+ 418 0018 0022     		movs	r2, #0
+ 419 001a 1A60     		str	r2, [r3]
+ 420 001c 5A60     		str	r2, [r3, #4]
+ 421 001e 9A60     		str	r2, [r3, #8]
+ 422 0020 DA60     		str	r2, [r3, #12]
+ 423 0022 1A61     		str	r2, [r3, #16]
+ 223:Core/Src/main.c ****   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+ 424              		.loc 1 223 28
+ 425 0024 3B1D     		adds	r3, r7, #4
+ 426 0026 0022     		movs	r2, #0
+ 427 0028 1A60     		str	r2, [r3]
+ 428 002a 5A60     		str	r2, [r3, #4]
+ 429 002c 9A60     		str	r2, [r3, #8]
+ 430 002e DA60     		str	r2, [r3, #12]
+ 224:Core/Src/main.c **** 
+ 225:Core/Src/main.c ****   /** Initializes the RCC Oscillators according to the specified parameters
+ 226:Core/Src/main.c ****   * in the RCC_OscInitTypeDef structure.
+ 227:Core/Src/main.c ****   */
+ 228:Core/Src/main.c ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+ 431              		.loc 1 228 36
+ 432 0030 0123     		movs	r3, #1
+ 433 0032 BB62     		str	r3, [r7, #40]
+ 229:Core/Src/main.c ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+ 434              		.loc 1 229 30
+ 435 0034 4FF48033 		mov	r3, #65536
+ 436 0038 FB62     		str	r3, [r7, #44]
+ 230:Core/Src/main.c ****   RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+ 437              		.loc 1 230 36
+ 438 003a 0023     		movs	r3, #0
+ 439 003c 3B63     		str	r3, [r7, #48]
+ 231:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+ 440              		.loc 1 231 30
+ 441 003e 0123     		movs	r3, #1
+ 442 0040 BB63     		str	r3, [r7, #56]
+ 232:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 443              		.loc 1 232 34
+ 444 0042 0223     		movs	r3, #2
+ 445 0044 7B64     		str	r3, [r7, #68]
+ 233:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+ 446              		.loc 1 233 35
+ 447 0046 4FF48033 		mov	r3, #65536
+ 448 004a BB64     		str	r3, [r7, #72]
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 13
+
+
+ 234:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
+ 449              		.loc 1 234 32
+ 450 004c 4FF4E013 		mov	r3, #1835008
+ 451 0050 FB64     		str	r3, [r7, #76]
+ 235:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 452              		.loc 1 235 7
+ 453 0052 07F12803 		add	r3, r7, #40
+ 454 0056 1846     		mov	r0, r3
+ 455 0058 FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 456 005c 0346     		mov	r3, r0
+ 457              		.loc 1 235 6
+ 458 005e 002B     		cmp	r3, #0
+ 459 0060 01D0     		beq	.L15
+ 236:Core/Src/main.c ****   {
+ 237:Core/Src/main.c ****     Error_Handler();
+ 460              		.loc 1 237 5
+ 461 0062 FFF7FEFF 		bl	Error_Handler
+ 462              	.L15:
+ 238:Core/Src/main.c ****   }
+ 239:Core/Src/main.c **** 
+ 240:Core/Src/main.c ****   /** Initializes the CPU, AHB and APB buses clocks
+ 241:Core/Src/main.c ****   */
+ 242:Core/Src/main.c ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+ 463              		.loc 1 242 31
+ 464 0066 0F23     		movs	r3, #15
+ 465 0068 7B61     		str	r3, [r7, #20]
+ 243:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 244:Core/Src/main.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+ 466              		.loc 1 244 34
+ 467 006a 0223     		movs	r3, #2
+ 468 006c BB61     		str	r3, [r7, #24]
+ 245:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 469              		.loc 1 245 35
+ 470 006e 0023     		movs	r3, #0
+ 471 0070 FB61     		str	r3, [r7, #28]
+ 246:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+ 472              		.loc 1 246 36
+ 473 0072 4FF48063 		mov	r3, #1024
+ 474 0076 3B62     		str	r3, [r7, #32]
+ 247:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 475              		.loc 1 247 36
+ 476 0078 0023     		movs	r3, #0
+ 477 007a 7B62     		str	r3, [r7, #36]
+ 248:Core/Src/main.c **** 
+ 249:Core/Src/main.c ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+ 478              		.loc 1 249 7
+ 479 007c 07F11403 		add	r3, r7, #20
+ 480 0080 0221     		movs	r1, #2
+ 481 0082 1846     		mov	r0, r3
+ 482 0084 FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 483 0088 0346     		mov	r3, r0
+ 484              		.loc 1 249 6
+ 485 008a 002B     		cmp	r3, #0
+ 486 008c 01D0     		beq	.L16
+ 250:Core/Src/main.c ****   {
+ 251:Core/Src/main.c ****     Error_Handler();
+ 487              		.loc 1 251 5
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 14
+
+
+ 488 008e FFF7FEFF 		bl	Error_Handler
+ 489              	.L16:
+ 252:Core/Src/main.c ****   }
+ 253:Core/Src/main.c ****   PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
+ 490              		.loc 1 253 38
+ 491 0092 1023     		movs	r3, #16
+ 492 0094 7B60     		str	r3, [r7, #4]
+ 254:Core/Src/main.c ****   PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLL_DIV1_5;
+ 493              		.loc 1 254 35
+ 494 0096 0023     		movs	r3, #0
+ 495 0098 3B61     		str	r3, [r7, #16]
+ 255:Core/Src/main.c ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+ 496              		.loc 1 255 7
+ 497 009a 3B1D     		adds	r3, r7, #4
+ 498 009c 1846     		mov	r0, r3
+ 499 009e FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 500 00a2 0346     		mov	r3, r0
+ 501              		.loc 1 255 6
+ 502 00a4 002B     		cmp	r3, #0
+ 503 00a6 01D0     		beq	.L18
+ 256:Core/Src/main.c ****   {
+ 257:Core/Src/main.c ****     Error_Handler();
+ 504              		.loc 1 257 5
+ 505 00a8 FFF7FEFF 		bl	Error_Handler
+ 506              	.L18:
+ 258:Core/Src/main.c ****   }
+ 259:Core/Src/main.c **** }
+ 507              		.loc 1 259 1
+ 508 00ac 00BF     		nop
+ 509 00ae 5037     		adds	r7, r7, #80
+ 510              	.LCFI6:
+ 511              		.cfi_def_cfa_offset 8
+ 512 00b0 BD46     		mov	sp, r7
+ 513              	.LCFI7:
+ 514              		.cfi_def_cfa_register 13
+ 515              		@ sp needed
+ 516 00b2 80BD     		pop	{r7, pc}
+ 517              		.cfi_endproc
+ 518              	.LFE69:
+ 520              		.section	.text.Error_Handler,"ax",%progbits
+ 521              		.align	1
+ 522              		.global	Error_Handler
+ 523              		.syntax unified
+ 524              		.thumb
+ 525              		.thumb_func
+ 527              	Error_Handler:
+ 528              	.LFB70:
+ 260:Core/Src/main.c **** 
+ 261:Core/Src/main.c **** /* USER CODE BEGIN 4 */
+ 262:Core/Src/main.c **** 
+ 263:Core/Src/main.c **** /* USER CODE END 4 */
+ 264:Core/Src/main.c **** 
+ 265:Core/Src/main.c **** /**
+ 266:Core/Src/main.c ****   * @brief  This function is executed in case of error occurrence.
+ 267:Core/Src/main.c ****   * @retval None
+ 268:Core/Src/main.c ****   */
+ 269:Core/Src/main.c **** void Error_Handler(void)
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 15
+
+
+ 270:Core/Src/main.c **** {
+ 529              		.loc 1 270 1
+ 530              		.cfi_startproc
+ 531              		@ args = 0, pretend = 0, frame = 0
+ 532              		@ frame_needed = 1, uses_anonymous_args = 0
+ 533              		@ link register save eliminated.
+ 534 0000 80B4     		push	{r7}
+ 535              	.LCFI8:
+ 536              		.cfi_def_cfa_offset 4
+ 537              		.cfi_offset 7, -4
+ 538 0002 00AF     		add	r7, sp, #0
+ 539              	.LCFI9:
+ 540              		.cfi_def_cfa_register 7
+ 541              	.LBB8:
+ 542              	.LBB9:
+ 543              		.file 2 "Drivers/CMSIS/Include/cmsis_gcc.h"
    1:Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
    2:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
    3:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
@@ -538,9 +865,6 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 1
    6:Drivers/CMSIS/Include/cmsis_gcc.h ****  ******************************************************************************/
    7:Drivers/CMSIS/Include/cmsis_gcc.h **** /*
    8:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Copyright (c) 2009-2018 Arm Limited. All rights reserved.
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 10
-
-
    9:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
   10:Drivers/CMSIS/Include/cmsis_gcc.h ****  * SPDX-License-Identifier: Apache-2.0
   11:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
@@ -574,6 +898,9 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 1
   39:Drivers/CMSIS/Include/cmsis_gcc.h **** /* CMSIS compiler specific defines */
   40:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ASM
   41:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __ASM                                  __asm
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 16
+
+
   42:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   43:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __INLINE
   44:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __INLINE                               inline
@@ -598,9 +925,6 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 1
   63:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   64:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_STRUCT
   65:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_STRUCT                        struct __attribute__((packed, aligned(1)))
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 11
-
-
   66:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   67:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_UNION
   68:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
@@ -634,6 +958,9 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 1
   96:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
   97:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
   98:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_WRITE { uint32_t v; };
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 17
+
+
   99:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
  100:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_WRITE(addr, val)    (void)((((struct T_UINT32_WRITE *)(void *)(addr))-
  101:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -658,9 +985,6 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 1
  120:Drivers/CMSIS/Include/cmsis_gcc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
  121:Drivers/CMSIS/Include/cmsis_gcc.h ****   @{
  122:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 12
-
-
  123:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  124:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  125:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
@@ -681,62 +1005,77 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 1
  140:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
  141:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  142:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
- 312              		.loc 2 142 3
- 313              		.syntax unified
- 314              	@ 142 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 315 0004 72B6     		cpsid i
- 316              	@ 0 "" 2
+ 544              		.loc 2 142 3
+ 545              		.syntax unified
+ 546              	@ 142 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 547 0004 72B6     		cpsid i
+ 548              	@ 0 "" 2
  143:Drivers/CMSIS/Include/cmsis_gcc.h **** }
- 317              		.loc 2 143 1
- 318              		.thumb
- 319              		.syntax unified
- 320 0006 00BF     		nop
- 321              	.L15:
- 322              	.LBE5:
- 323              	.LBE4:
- 195:Core/Src/main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
- 196:Core/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
- 197:Core/Src/main.c ****   __disable_irq();
- 198:Core/Src/main.c ****   while (1)
- 324              		.loc 1 198 9 discriminator 1
- 325 0008 FEE7     		b	.L15
- 326              		.cfi_endproc
- 327              	.LFE70:
- 329              		.text
- 330              	.Letext0:
- 331              		.file 3 "/Applications/ARM/arm-none-eabi/include/machine/_default_types.h"
- 332              		.file 4 "/Applications/ARM/arm-none-eabi/include/sys/_stdint.h"
- 333              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
- 334              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
- 335              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 336              		.file 8 "User/SMS_STS_lib/STS_control.h"
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s 			page 13
+ 549              		.loc 2 143 1
+ 550              		.thumb
+ 551              		.syntax unified
+ 552 0006 00BF     		nop
+ 553              	.L20:
+ 554              	.LBE9:
+ 555              	.LBE8:
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 18
+
+
+ 271:Core/Src/main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
+ 272:Core/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
+ 273:Core/Src/main.c ****   __disable_irq();
+ 274:Core/Src/main.c ****   while (1)
+ 556              		.loc 1 274 9 discriminator 1
+ 557 0008 FEE7     		b	.L20
+ 558              		.cfi_endproc
+ 559              	.LFE70:
+ 561              		.text
+ 562              	.Letext0:
+ 563              		.file 3 "/Applications/ARM/arm-none-eabi/include/machine/_default_types.h"
+ 564              		.file 4 "/Applications/ARM/arm-none-eabi/include/sys/_stdint.h"
+ 565              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 566              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 567              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 568              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
+ 569              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
+ 570              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h"
+ 571              		.file 11 "Core/Inc/can.h"
+ 572              		.file 12 "User/SMS_STS_lib/STS_control.h"
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s:18     .rodata:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s:22     .text.main:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s:28     .text.main:0000000000000000 main
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s:161    .text.SystemClock_Config:0000000000000000 SystemClock_Config
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s:147    .text.main:00000000000000b4 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s:155    .text.SystemClock_Config:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s:295    .text.Error_Handler:0000000000000000 Error_Handler
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccFq0Kzg.s:289    .text.Error_Handler:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s:18     .rodata:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s:22     .text.main:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s:28     .text.main:0000000000000000 main
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s:393    .text.SystemClock_Config:0000000000000000 SystemClock_Config
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s:373    .text.main:00000000000001fc $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s:387    .text.SystemClock_Config:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s:527    .text.Error_Handler:0000000000000000 Error_Handler
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccGwmlgW.s:521    .text.Error_Handler:0000000000000000 $t
 
 UNDEFINED SYMBOLS
 HAL_Init
 MX_GPIO_Init
 MX_DMA_Init
 MX_USART2_UART_Init
-MX_USB_DEVICE_Init
 MX_CAN_Init
-strlen
-CDC_Transmit_FS
 STS_control_init
+HAL_CAN_ConfigFilter
+HAL_CAN_Start
+HAL_CAN_ActivateNotification
 STS_syn_read
+HAL_CAN_AddTxMessage
 STS_syn_write
-HAL_Delay
+hcan
+servo_read_flag_12
+servo_position
+servo_can_tx
+servo_speed
+servo_read_flag_3
+servo_write_flag
+servo_can_rx
 servo_set_position
 memset
 HAL_RCC_OscConfig

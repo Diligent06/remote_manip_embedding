@@ -92,23 +92,101 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_USART2_UART_Init();
-  MX_USB_DEVICE_Init();
   MX_CAN_Init();
+  // MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
-  // HAL_UART_Receive_DMA(&huart2, rx_buffer, RX_BUFFER_SIZE);
-  char *msg = "Hello from STM32F103 via USB CDC\r\n";
-  CDC_Transmit_FS((uint8_t*)msg, strlen(msg));
+  // char *msg = "Hello from STM32F103 via USB CDC\r\n";
+  // CDC_Transmit_FS((uint8_t*)msg, strlen(msg));
   STS_control_init();
-  int action_period = 2000;
   int cur_i = 0;
   int cur_target = 0;
-  // __HAL_UART_ENABLE_IT(&huart2, UART_IT_IDLE);
+
+  // set filter
+  CAN_FilterTypeDef filterConfig;
+  filterConfig.FilterActivation = ENABLE;
+  filterConfig.FilterBank = 0;
+  filterConfig.FilterFIFOAssignment = CAN_FILTER_FIFO1;
+  filterConfig.FilterIdHigh = 0x0000;
+  filterConfig.FilterIdLow = 0x0000;
+  filterConfig.FilterMaskIdHigh = 0x0000;
+  filterConfig.FilterMaskIdLow = 0x0000;
+  filterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
+  filterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
+  HAL_CAN_ConfigFilter(&hcan, &filterConfig);
+  
+  HAL_CAN_Start(&hcan);
+  HAL_CAN_ActivateNotification(&hcan, CAN_IT_RX_FIFO1_MSG_PENDING);
+
+  CAN_TxHeaderTypeDef TxHeader;
+  uint8_t TxData[8] = {1, 2, 3, 4, 5, 6, 7, 8};
+  uint32_t TxMailbox;
+
+  TxHeader.StdId = 0x000;
+  TxHeader.RTR = CAN_RTR_DATA;
+  TxHeader.IDE = CAN_ID_STD;
+  TxHeader.DLC = 8;
+  
+  // while ((CAN1->TSR & CAN_TSR_TME) == 0) {
+  //   int x = 0;
+  // }
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
+    // if(HAL_CAN_AddTxMessage(&hcan, &TxHeader, TxData, &TxMailbox) != HAL_OK) {
+    //   int test = 0;
+    // }
+    // HAL_Delay(1000);
+
+    // STS_syn_read();
+    // HAL_Delay(1000);
+
+    if(servo_read_flag_12 == 1) {
+      STS_syn_read();
+      // send first two servos' data
+      for(uint8_t i = 0; i < 2; i++) {  
+        servo_can_tx[4 * i] = (uint8_t)(servo_position[i] >> 8);
+        servo_can_tx[4 * i + 1] = (uint8_t)(servo_position[i] & 0xFF);
+        servo_can_tx[4 * i + 2] = (uint8_t)(servo_speed[i] >> 8);
+        servo_can_tx[4 * i + 3] = (uint8_t)(servo_speed[i] & 0xFF);
+      }
+      if(HAL_CAN_AddTxMessage(&hcan, &TxHeader, servo_can_tx, &TxMailbox) != HAL_OK) {
+        int test = 0;
+      }
+      servo_read_flag_12 = 0;
+    }
+
+    if(servo_read_flag_3 == 1) {
+      STS_syn_read();
+      // send third servo's data
+      servo_can_tx[0] = (uint8_t)(servo_position[2] >> 8);
+      servo_can_tx[1] = (uint8_t)(servo_position[2] & 0xFF);
+      servo_can_tx[2] = (uint8_t)(servo_speed[2] >> 8);
+      servo_can_tx[3] = (uint8_t)(servo_speed[2] & 0xFF);
+      servo_can_tx[4] = 0;
+      servo_can_tx[5] = 0;
+      servo_can_tx[6] = 0;
+      servo_can_tx[7] = 0;
+      if(HAL_CAN_AddTxMessage(&hcan, &TxHeader, servo_can_tx, &TxMailbox) != HAL_OK) {
+        int test = 0;
+      }
+      servo_read_flag_3 = 0;
+    }
+
+    if(servo_write_flag == 1) {
+      for(uint8_t i = 0; i < sizeof(servo_ID); i++) {
+        servo_set_position[i] = ((uint16_t)servo_can_rx[i * 2] << 8) | servo_can_rx[i * 2 + 1];
+      }
+      STS_syn_write();
+      servo_write_flag = 0;
+    }
+
+
+    /* servo read and control demo
     if(cur_i % 200 == 0) {
       STS_syn_read();
     }
@@ -125,10 +203,8 @@ int main(void)
     STS_syn_write();
     HAL_Delay(1);
     cur_i += 1;
-    // HAL_Delay(2000);
-    // servo_set_position[0] = 4096;
-    // STS_syn_write();
-    // HAL_Delay(2000);
+    */
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

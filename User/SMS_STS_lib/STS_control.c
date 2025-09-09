@@ -2,15 +2,21 @@
 
 
 
-uint8_t servo_ID[1] = {1};
+uint8_t servo_ID[3] = {1, 2, 3};
 uint16_t servo_position[sizeof(servo_ID)];
 uint16_t servo_speed[sizeof(servo_ID)];
 uint8_t servo_rxPacket[4];
 uint16_t servo_set_position[sizeof(servo_ID)];
 uint16_t servo_set_speed[sizeof(servo_ID)];
 uint16_t servo_set_acc[sizeof(servo_ID)];
-uint16_t default_speed = 6000;
-uint16_t default_acc = 5000;
+uint16_t default_speed = 3250;
+uint16_t default_acc = 0;
+uint8_t servo_can_rx[8] = {0};
+uint8_t servo_can_tx[8] = {0};
+uint8_t servo_read_flag_12 = 0;
+uint8_t servo_read_flag_3 = 0;
+uint8_t servo_write_flag = 0;
+
 
 char debug_message[32];
 void STS_control_init(void) {
@@ -34,7 +40,7 @@ void STS_syn_read(void) {
       servo_position[i] = syncReadRxPacketToWrod(15);
       servo_speed[i] = syncReadRxPacketToWrod(15);
       sprintf(debug_message, "ID:%d Position:%d Speed:%d", servo_ID[i], servo_position[i], servo_speed[i]);
-      CDC_Transmit_FS((uint8_t*)debug_message, strlen(debug_message));
+    //   CDC_Transmit_FS((uint8_t*)debug_message, strlen(debug_message));
     }
 }
 

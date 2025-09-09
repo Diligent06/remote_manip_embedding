@@ -19,5 +19,11 @@ extern uint16_t servo_speed[];
 extern uint16_t servo_set_position[];
 extern uint16_t default_speed;
 extern uint16_t default_acc;
+extern uint8_t servo_can_rx[8];
+extern uint8_t servo_can_tx[8];
+extern uint8_t servo_read_flag_12;
+extern uint8_t servo_read_flag_3;
+extern uint8_t servo_write_flag;
+extern uint8_t servo_ID[3];
 
 #endif

@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
   58 0000 1A0300   		.ascii	"\032\003\000"
   59 0003 00000000 		.space	23
   59      00000000 
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 2
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 2
 
 
   59      00000000 
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
   43:USB_DEVICE/App/usbd_desc.c **** /** @addtogroup USBD_DESC
   44:USB_DEVICE/App/usbd_desc.c ****   * @{
   45:USB_DEVICE/App/usbd_desc.c ****   */
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 3
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 3
 
 
   46:USB_DEVICE/App/usbd_desc.c **** 
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  100:USB_DEVICE/App/usbd_desc.c ****   * @{
  101:USB_DEVICE/App/usbd_desc.c ****   */
  102:USB_DEVICE/App/usbd_desc.c **** 
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 4
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 4
 
 
  103:USB_DEVICE/App/usbd_desc.c **** static void Get_SerialNum(void);
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  157:USB_DEVICE/App/usbd_desc.c ****   LOBYTE(USBD_VID),           /*idVendor*/
  158:USB_DEVICE/App/usbd_desc.c ****   HIBYTE(USBD_VID),           /*idVendor*/
  159:USB_DEVICE/App/usbd_desc.c ****   LOBYTE(USBD_PID_FS),        /*idProduct*/
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 5
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 5
 
 
  160:USB_DEVICE/App/usbd_desc.c ****   HIBYTE(USBD_PID_FS),        /*idProduct*/
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  214:USB_DEVICE/App/usbd_desc.c ****   */
  215:USB_DEVICE/App/usbd_desc.c **** 
  216:USB_DEVICE/App/usbd_desc.c **** /**
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 6
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 6
 
 
  217:USB_DEVICE/App/usbd_desc.c ****   * @brief  Return the device descriptor
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  113              	.LFE68:
  115              		.section	.text.USBD_FS_LangIDStrDescriptor,"ax",%progbits
  116              		.align	1
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 7
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 7
 
 
  117              		.global	USBD_FS_LangIDStrDescriptor
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  159              		.cfi_restore 7
  160              		.cfi_def_cfa_offset 0
  161 001c 7047     		bx	lr
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 8
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 8
 
 
  162              	.L8:
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  251:USB_DEVICE/App/usbd_desc.c ****   {
  252:USB_DEVICE/App/usbd_desc.c ****     USBD_GetString((uint8_t *)USBD_PRODUCT_STRING_FS, USBD_StrDesc, length);
  204              		.loc 1 252 5
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 9
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 9
 
 
  205 0012 3A68     		ldr	r2, [r7]
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  260:USB_DEVICE/App/usbd_desc.c **** 
  261:USB_DEVICE/App/usbd_desc.c **** /**
  262:USB_DEVICE/App/usbd_desc.c ****   * @brief  Return the manufacturer string descriptor
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 10
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 10
 
 
  263:USB_DEVICE/App/usbd_desc.c ****   * @param  speed : Current device speed
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  295              		.global	USBD_FS_SerialStrDescriptor
  296              		.syntax unified
  297              		.thumb
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 11
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 11
 
 
  298              		.thumb_func
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  333 001c BD46     		mov	sp, r7
  334              	.LCFI26:
  335              		.cfi_def_cfa_register 13
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 12
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 12
 
 
  336              		@ sp needed
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  303:USB_DEVICE/App/usbd_desc.c ****   {
  304:USB_DEVICE/App/usbd_desc.c ****     USBD_GetString((uint8_t *)USBD_CONFIGURATION_STRING_FS, USBD_StrDesc, length);
  380              		.loc 1 304 5
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 13
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 13
 
 
  381 0012 3A68     		ldr	r2, [r7]
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  313:USB_DEVICE/App/usbd_desc.c **** /**
  314:USB_DEVICE/App/usbd_desc.c ****   * @brief  Return the interface string descriptor
  315:USB_DEVICE/App/usbd_desc.c ****   * @param  speed : Current device speed
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 14
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 14
 
 
  316:USB_DEVICE/App/usbd_desc.c ****   * @param  length : Pointer to data length variable
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  465 002c 0837     		adds	r7, r7, #8
  466              	.LCFI35:
  467              		.cfi_def_cfa_offset 8
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 15
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 15
 
 
  468 002e BD46     		mov	sp, r7
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  510 000c 0E4B     		ldr	r3, .L38+4
  511              		.loc 1 344 17
  512 000e 1B68     		ldr	r3, [r3]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 16
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 16
 
 
  513 0010 BB60     		str	r3, [r7, #8]
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  557              		.cfi_endproc
  558              	.LFE75:
  560              		.section	.text.IntToUnicode,"ax",%progbits
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 17
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 17
 
 
  561              		.align	1
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  601 001e 0BD8     		bhi	.L42
  370:USB_DEVICE/App/usbd_desc.c ****     {
  371:USB_DEVICE/App/usbd_desc.c ****       pbuf[2 * idx] = (value >> 28) + '0';
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 18
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 18
 
 
  602              		.loc 1 371 30
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  647 0058 0133     		adds	r3, r3, #1
  648 005a BA68     		ldr	r2, [r7, #8]
  649 005c 1344     		add	r3, r3, r2
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 19
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 19
 
 
  650              		.loc 1 380 23 discriminator 2
@@ -1121,48 +1121,48 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 1
  684              		.file 3 "/Applications/ARM/arm-none-eabi/include/sys/_stdint.h"
  685              		.file 4 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
  686              		.file 5 "USB_DEVICE/App/usbd_desc.h"
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s 			page 20
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s 			page 20
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usbd_desc.c
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:22     .data.FS_Desc:0000000000000000 FS_Desc
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:19     .data.FS_Desc:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:67     .text.USBD_FS_DeviceDescriptor:0000000000000000 USBD_FS_DeviceDescriptor
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:122    .text.USBD_FS_LangIDStrDescriptor:0000000000000000 USBD_FS_LangIDStrDescriptor
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:248    .text.USBD_FS_ManufacturerStrDescriptor:0000000000000000 USBD_FS_ManufacturerStrDescriptor
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:180    .text.USBD_FS_ProductStrDescriptor:0000000000000000 USBD_FS_ProductStrDescriptor
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:300    .text.USBD_FS_SerialStrDescriptor:0000000000000000 USBD_FS_SerialStrDescriptor
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:356    .text.USBD_FS_ConfigStrDescriptor:0000000000000000 USBD_FS_ConfigStrDescriptor
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:424    .text.USBD_FS_InterfaceStrDescriptor:0000000000000000 USBD_FS_InterfaceStrDescriptor
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:35     .data.USBD_FS_DeviceDesc:0000000000000000 USBD_FS_DeviceDesc
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:32     .data.USBD_FS_DeviceDesc:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:43     .data.USBD_LangIDDesc:0000000000000000 USBD_LangIDDesc
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:40     .data.USBD_LangIDDesc:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:50     .bss.USBD_StrDesc:0000000000000000 USBD_StrDesc
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:47     .bss.USBD_StrDesc:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:57     .data.USBD_StringSerial:0000000000000000 USBD_StringSerial
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:54     .data.USBD_StringSerial:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:61     .text.USBD_FS_DeviceDescriptor:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:111    .text.USBD_FS_DeviceDescriptor:0000000000000020 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:116    .text.USBD_FS_LangIDStrDescriptor:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:165    .text.USBD_FS_LangIDStrDescriptor:0000000000000020 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:170    .rodata:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:174    .text.USBD_FS_ProductStrDescriptor:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:232    .text.USBD_FS_ProductStrDescriptor:0000000000000034 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:242    .text.USBD_FS_ManufacturerStrDescriptor:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:288    .text.USBD_FS_ManufacturerStrDescriptor:0000000000000020 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:294    .text.USBD_FS_SerialStrDescriptor:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:487    .text.Get_SerialNum:0000000000000000 Get_SerialNum
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:341    .text.USBD_FS_SerialStrDescriptor:0000000000000020 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:350    .text.USBD_FS_ConfigStrDescriptor:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:408    .text.USBD_FS_ConfigStrDescriptor:0000000000000034 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:418    .text.USBD_FS_InterfaceStrDescriptor:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:476    .text.USBD_FS_InterfaceStrDescriptor:0000000000000034 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:482    .text.Get_SerialNum:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:566    .text.IntToUnicode:0000000000000000 IntToUnicode
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:552    .text.Get_SerialNum:0000000000000044 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccawZkgJ.s:561    .text.IntToUnicode:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:22     .data.FS_Desc:0000000000000000 FS_Desc
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:19     .data.FS_Desc:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:67     .text.USBD_FS_DeviceDescriptor:0000000000000000 USBD_FS_DeviceDescriptor
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:122    .text.USBD_FS_LangIDStrDescriptor:0000000000000000 USBD_FS_LangIDStrDescriptor
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:248    .text.USBD_FS_ManufacturerStrDescriptor:0000000000000000 USBD_FS_ManufacturerStrDescriptor
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:180    .text.USBD_FS_ProductStrDescriptor:0000000000000000 USBD_FS_ProductStrDescriptor
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:300    .text.USBD_FS_SerialStrDescriptor:0000000000000000 USBD_FS_SerialStrDescriptor
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:356    .text.USBD_FS_ConfigStrDescriptor:0000000000000000 USBD_FS_ConfigStrDescriptor
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:424    .text.USBD_FS_InterfaceStrDescriptor:0000000000000000 USBD_FS_InterfaceStrDescriptor
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:35     .data.USBD_FS_DeviceDesc:0000000000000000 USBD_FS_DeviceDesc
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:32     .data.USBD_FS_DeviceDesc:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:43     .data.USBD_LangIDDesc:0000000000000000 USBD_LangIDDesc
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:40     .data.USBD_LangIDDesc:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:50     .bss.USBD_StrDesc:0000000000000000 USBD_StrDesc
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:47     .bss.USBD_StrDesc:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:57     .data.USBD_StringSerial:0000000000000000 USBD_StringSerial
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:54     .data.USBD_StringSerial:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:61     .text.USBD_FS_DeviceDescriptor:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:111    .text.USBD_FS_DeviceDescriptor:0000000000000020 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:116    .text.USBD_FS_LangIDStrDescriptor:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:165    .text.USBD_FS_LangIDStrDescriptor:0000000000000020 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:170    .rodata:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:174    .text.USBD_FS_ProductStrDescriptor:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:232    .text.USBD_FS_ProductStrDescriptor:0000000000000034 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:242    .text.USBD_FS_ManufacturerStrDescriptor:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:288    .text.USBD_FS_ManufacturerStrDescriptor:0000000000000020 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:294    .text.USBD_FS_SerialStrDescriptor:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:487    .text.Get_SerialNum:0000000000000000 Get_SerialNum
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:341    .text.USBD_FS_SerialStrDescriptor:0000000000000020 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:350    .text.USBD_FS_ConfigStrDescriptor:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:408    .text.USBD_FS_ConfigStrDescriptor:0000000000000034 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:418    .text.USBD_FS_InterfaceStrDescriptor:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:476    .text.USBD_FS_InterfaceStrDescriptor:0000000000000034 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:482    .text.Get_SerialNum:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:566    .text.IntToUnicode:0000000000000000 IntToUnicode
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:552    .text.Get_SerialNum:0000000000000044 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccXsCqg1.s:561    .text.IntToUnicode:0000000000000000 $t
 
 UNDEFINED SYMBOLS
 USBD_GetString

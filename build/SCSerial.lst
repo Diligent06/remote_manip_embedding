@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s 			page 1
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s 			page 1
   17:User/SCSLib/SCSerial.c **** void ftUart_Send(uint8_t *nDat, int nLen);
   18:User/SCSLib/SCSerial.c **** int ftUart_Read(uint8_t *nDat, int nLen);
   19:User/SCSLib/SCSerial.c **** void ftBus_Delay(void);
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s 			page 2
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s 			page 2
 
 
   20:User/SCSLib/SCSerial.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s 			page 1
   86              		@ args = 0, pretend = 0, frame = 8
   87              		@ frame_needed = 1, uses_anonymous_args = 0
   88              		@ link register save eliminated.
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s 			page 3
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s 			page 3
 
 
   89 0000 80B4     		push	{r7}
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s 			page 1
   30:User/SCSLib/SCSerial.c **** 		if(wLen<sizeof(wBuf)){
  137              		.loc 1 30 7
  138 003c 002B     		cmp	r3, #0
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s 			page 4
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s 			page 4
 
 
  139 003e E5D1     		bne	.L5
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s 			page 1
  188              		.cfi_def_cfa_register 7
  189 0006 0346     		mov	r3, r0
  190 0008 FB71     		strb	r3, [r7, #7]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s 			page 5
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s 			page 5
 
 
   42:User/SCSLib/SCSerial.c **** 	if(wLen<sizeof(wBuf)){
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s 			page 1
  240              		.align	1
  241              		.global	rFlushSCS
  242              		.syntax unified
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s 			page 6
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s 			page 6
 
 
  243              		.thumb
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s 			page 1
  289              		.loc 1 58 5
  290 0004 074B     		ldr	r3, .L18
  291 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s 			page 7
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s 			page 7
 
 
  292              		.loc 1 58 4
@@ -393,28 +393,28 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s 			page 1
  318              	.Letext0:
  319              		.file 2 "/Applications/ARM/arm-none-eabi/include/machine/_default_types.h"
  320              		.file 3 "/Applications/ARM/arm-none-eabi/include/sys/_stdint.h"
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s 			page 8
+ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 SCSerial.c
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:22     .bss.wBuf:0000000000000000 wBuf
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:19     .bss.wBuf:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:28     .bss.wLen:0000000000000000 wLen
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:29     .bss.wLen:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:31     .text.readSCS:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:37     .text.readSCS:0000000000000000 readSCS
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:76     .text.writeSCS:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:82     .text.writeSCS:0000000000000000 writeSCS
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:160    .text.writeSCS:0000000000000050 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:166    .text.writeByteSCS:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:172    .text.writeByteSCS:0000000000000000 writeByteSCS
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:234    .text.writeByteSCS:000000000000003c $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:240    .text.rFlushSCS:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:246    .text.rFlushSCS:0000000000000000 rFlushSCS
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:269    .text.wFlushSCS:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:275    .text.wFlushSCS:0000000000000000 wFlushSCS
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccATER01.s:312    .text.wFlushSCS:0000000000000024 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:22     .bss.wBuf:0000000000000000 wBuf
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:19     .bss.wBuf:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:28     .bss.wLen:0000000000000000 wLen
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:29     .bss.wLen:0000000000000000 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:31     .text.readSCS:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:37     .text.readSCS:0000000000000000 readSCS
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:76     .text.writeSCS:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:82     .text.writeSCS:0000000000000000 writeSCS
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:160    .text.writeSCS:0000000000000050 $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:166    .text.writeByteSCS:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:172    .text.writeByteSCS:0000000000000000 writeByteSCS
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:234    .text.writeByteSCS:000000000000003c $d
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:240    .text.rFlushSCS:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:246    .text.rFlushSCS:0000000000000000 rFlushSCS
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:269    .text.wFlushSCS:0000000000000000 $t
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:275    .text.wFlushSCS:0000000000000000 wFlushSCS
+/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccrAkPTY.s:312    .text.wFlushSCS:0000000000000024 $d
 
 UNDEFINED SYMBOLS
 ftUart_Read
