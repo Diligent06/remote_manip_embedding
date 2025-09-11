@@ -6,7 +6,7 @@
 #include "main.h"
 #include "stdio.h"
 #include "usart.h"
-#include "usb_device.h"
+// #include "usb_device.h"
 #include <stdlib.h>
 
 void STS_control_init(void);
