@@ -2,13 +2,13 @@
 
 
 
-uint8_t servo_ID[1] = {1 };
-uint16_t servo_position[sizeof(servo_ID)];
-uint16_t servo_speed[sizeof(servo_ID)];
-uint8_t servo_rxPacket[4];
-uint16_t servo_set_position[sizeof(servo_ID)];
-uint16_t servo_set_speed[sizeof(servo_ID)];
-uint16_t servo_set_acc[sizeof(servo_ID)];
+uint8_t servo_id[1] = {1, };
+uint16_t servo_position[sizeof(servo_id)];
+uint16_t servo_speed[sizeof(servo_id)];
+uint8_t servo_rxpacket[4];
+uint16_t servo_set_position[sizeof(servo_id)];
+uint16_t servo_set_speed[sizeof(servo_id)];
+uint16_t servo_set_acc[sizeof(servo_id)];
 uint16_t default_speed = 3250;
 uint16_t default_acc = 0;
 uint8_t servo_can_rx[8] = {0};

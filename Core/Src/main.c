@@ -25,9 +25,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "sms_c_api.h"
+// #include "sms_c_api.h"
 #include "stdio.h"
-#include "STS_control.h"
+#include "string.h"
+// #include "STS_control.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -45,6 +46,22 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+uint8_t servo_enable=0;
+uint8_t servo_id[1] = {1, };
+uint16_t servo_position[sizeof(servo_id)];
+uint16_t servo_speed[sizeof(servo_id)];
+uint8_t servo_rxpacket[4];
+uint16_t servo_set_position[sizeof(servo_id)];
+uint16_t servo_set_speed[sizeof(servo_id)];
+uint16_t servo_set_acc[sizeof(servo_id)];
+uint16_t default_speed = 3250;
+uint16_t default_acc = 0;
+uint8_t servo_can_rx[8] = {0};
+uint8_t servo_can_tx[8] = {0};
+uint8_t servo_read_flag_12 = 0;
+uint8_t servo_read_flag_3 = 0;
+uint8_t servo_write_flag = 0;
+
 
 /* USER CODE BEGIN PV */
 /* USER CODE END PV */
@@ -96,7 +113,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   // char *msg = "Hello from STM32F103 via USB CDC\r\n";
   // CDC_Transmit_FS((uint8_t*)msg, strlen(msg));
-  STS_control_init();
+  // STS_control_init(); // Removed STS dependency
   int cur_i = 0;
   int cur_target = 0;
 
@@ -136,6 +153,62 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  
+  // Servo control functions for ID=1
+  void servo_enable_torque(void) {
+    uint8_t cmd[] = {0xFF, 0xFF, 0x01, 0x04, 0x03, 0x28, 0x01, 0xCE};
+    HAL_UART_Transmit(&huart2, cmd, 8, 100);
+  }
+  
+  void servo_disable_torque(void) {
+    uint8_t cmd[] = {0xFF, 0xFF, 0x01, 0x04, 0x03, 0x28, 0x00, 0xCF};
+    HAL_UART_Transmit(&huart2, cmd, 8, 100);
+  }
+  
+  void servo_read_position(void) {
+    uint8_t cmd[] = {0xFF, 0xFF, 0x01, 0x04, 0x02, 0x38, 0x02, 0xBE};
+    uint8_t response[8];
+    HAL_UART_Transmit(&huart2, cmd, 8, 100);
+    if(HAL_UART_Receive(&huart2, response, 8, 100) == HAL_OK) {
+      // Validate response header
+      if(response[0] == 0xFF && response[1] == 0xFF) {
+        // Extract position from bytes 5 and 6 (0-indexed)
+        uint16_t position = response[5] | (response[6] << 8);  // Low byte first, then high byte
+        servo_position[0] = position;  // Store the angle
+      }
+    }
+  }
+  
+
+  void servo_position_control(uint16_t position, uint16_t velocity) {
+    // Based on the image: FF FF 01 09 03 2A E8 03 00 E8 03 F2 42
+    uint8_t cmd[13] = {0xFF, 0xFF, 0x01, 0x09, 0x03, 0x2A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+    
+    // Set position (low byte first, then high byte)
+    cmd[6] = (uint8_t)(position & 0xFF);
+    cmd[7] = (uint8_t)(position >> 8);
+    
+    // Time bytes are reserved (set to 00)
+    cmd[8] = 0x00;
+    cmd[9] = 0x00;
+    
+    // Set velocity (low byte first, then high byte)  
+    cmd[10] = (uint8_t)(velocity & 0xFF);
+    cmd[11] = (uint8_t)(velocity >> 8);
+    
+    // Calculate checksum using BITXOR method: XOR(SUM & 0xFF, 0xFF)
+    uint8_t sum = 0;
+    for(int i = 2; i < 12; i++) {
+      sum += cmd[i];
+    }
+    cmd[12] = (sum & 0xFF) ^ 0xFF;
+    
+    uint8_t response[6];
+    HAL_UART_Transmit(&huart2, cmd, 13, 100);
+    // Expected response: FF FF 01 02 00 FC
+    HAL_UART_Receive(&huart2, response, 6, 100);
+  }
+  
   uint8_t test_buffer[10] = {0x00, 0x0a, 0x00, 0x01, 0x00, 0x00, 0x01 ,0x00, 0x00, 0x00};
   uint8_t send_buffer[10] = {0x00, 0x09, 0x00, 0x01, 0x00, 0x00, 0x01 ,0x00, 0x00, 0x00}; // ID 7 means read servo 1 and 2's data
   while (1)
@@ -158,21 +231,39 @@ int main(void)
       uint16_t can_id = (uint16_t)(uart1_rec_buffer[0] << 8) | uart1_rec_buffer[1];
       switch(can_id) {
         case 0x06: 
-          servo_write_flag = 1;
-          memcpy(servo_can_rx, uart1_rec_buffer + 2, 8);
+          switch (uart1_rec_buffer[2])
+          {
+          case 0x00:
+            servo_enable = 0;
+            servo_disable_torque();
+            break;
+          
+          case 0x01:
+            servo_enable = 1;
+            servo_enable_torque();
+            
+            break;
+          case 0x02:
+            servo_write_flag =1 ; 
+            // servo_position_control();
+          // servo_write_flag = 1;
+          // memcpy(servo_can_rx, uart1_rec_buffer + 2, 8);
+          //   break;
+          }
           break;
+
         case 0x07:
           servo_read_flag_12 = 1;
           break;
-        case 0x08:
-          servo_read_flag_3 = 1;
-          break;
+        // case 0x08:
+        //   servo_read_flag_3 = 1;
+        //   break;
       }
     }
 
 
     if(servo_read_flag_12 == 1) {
-      STS_syn_read();
+      servo_read_position();
       // send first two servos' data
       for(uint8_t i = 0; i < 1; i++) {  
         servo_can_tx[4 * i] = (uint8_t)(servo_position[i] >> 8);
@@ -208,10 +299,16 @@ int main(void)
     // }
 
     if(servo_write_flag == 1) {
-      for(uint8_t i = 0; i < sizeof(servo_ID); i++) {
-        servo_set_position[i] = ((uint16_t)servo_can_rx[i * 2] << 8) | servo_can_rx[i * 2 + 1];
+      // Check if this is a position control command
+      if(uart1_rec_buffer[2] == 0x02) {
+        // Extract position from bytes 3-4 and velocity from bytes 5-6
+        uint16_t position = ((uint16_t)uart1_rec_buffer[4] << 8) | uart1_rec_buffer[3];
+        uint16_t velocity = ((uint16_t)uart1_rec_buffer[6] << 8) | uart1_rec_buffer[5];
+        
+        // Call servo position control with extracted data
+        servo_position_control(position, velocity);
       }
-      STS_syn_write();
+      
       servo_write_flag = 0;
     }
 

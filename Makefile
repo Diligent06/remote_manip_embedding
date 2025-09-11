@@ -43,11 +43,6 @@ Core/Src/usart.c \
 Core/Src/stm32f1xx_it.c \
 Core/Src/stm32f1xx_hal_msp.c \
 Core/Src/system_stm32f1xx.c \
-User/SCSLib/SCS.c \
-User/SCSLib/SCSCL.c \
-User/SCSLib/SCSerial.c \
-User/SCSLib/SMS_STS.c \
-User/SMS_STS_lib/STS_control.c \
 Core/Src/syscalls.c \
 Core/Src/sysmem.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c \
@@ -63,9 +58,14 @@ Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c \
 Core/Src/can.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.c
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.c \
+# User/SCSLib/SCS.c \
+# User/SCSLib/SCSCL.c \
+# User/SCSLib/SCSerial.c \
+# User/SCSLib/SMS_STS.c \
+# User/SMS_STS_lib/STS_control.c \
 
-# HAL_SRC_DIR := Drivers/STM32F1xx_HAL_Driver/Src
+HAL_SRC_DIR := Drivers/STM32F1xx_HAL_Driver/Src
 
 # # 获取所有 .c 文件
 # HAL_SOURCES := $(wildcard $(HAL_SRC_DIR)/*.c)
@@ -75,7 +75,7 @@ C_SOURCES += $(HAL_SOURCES) #$(patsubst %.c, build/%.o, $(HAL_SOURCES))
 
 # CPP sources
 CPP_SOURCES = \
-User/SMS_STS_lib/sms.cpp \
+# User/SMS_STS_lib/sms.cpp \
 
 
 # ASM sources
@@ -143,7 +143,7 @@ C_INCLUDES =  \
 -IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
 -IDrivers/CMSIS/Include \
 -IUser/SCSLib \
--IUser/SMS_STS_lib \
+# -IUser/SMS_STS_lib \
 -IUser
 
 
@@ -184,7 +184,8 @@ all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET
 # build the application
 #######################################
 # list of objects
-OBJECTS = $(addprefix $(BUILD_DIR)/,$(notdir $(C_SOURCES:.c=.o)))
+OBJECTS = $(C_SOURCES:.c=.o)
+OBJECTS := $(addprefix $(BUILD_DIR)/,$(OBJECTS))
 vpath %.c $(sort $(dir $(C_SOURCES)))
 # list of ASM program objects
 OBJECTS += $(addprefix $(BUILD_DIR)/,$(notdir $(ASM_SOURCES:.s=.o)))
@@ -198,6 +199,7 @@ vpath %.cpp $(sort $(dir $(CPP_SOURCES:.cpp=.o)))
 ALL_OBJECTS = $(OBJECTS) $(CPP_OBJECTS)
 
 $(BUILD_DIR)/%.o: %.c Makefile | $(BUILD_DIR) 
+	@mkdir -p $(dir $@)
 	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
 
 $(BUILD_DIR)/%.o: %.s Makefile | $(BUILD_DIR)

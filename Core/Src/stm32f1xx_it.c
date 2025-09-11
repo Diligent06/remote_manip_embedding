@@ -22,7 +22,8 @@
 #include "stm32f1xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "STS_control.h"
+#include "string.h"
+// #include "STS_control.h" // Removed STS dependency
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -271,29 +272,30 @@ void USART2_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
-void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan)
-{
-  if (hcan->Instance == CAN1)
-  {
-    HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO1, &RxHeader, RxData);
-    if (RxHeader.StdId == 0x06) // Only process CAN ID 0x06
-    {
-      if(RxHeader.RTR == CAN_RTR_DATA) {
-        memcpy(servo_can_rx, RxData, RxHeader.DLC);
-        servo_write_flag = 1;
-      }
-      else if (RxHeader.RTR == CAN_RTR_REMOTE) {
-        servo_read_flag_12 = 1;
-      }
-    }
-    else if (RxHeader.StdId == 0x07)
-    {
-      servo_read_flag_12 = 1;
-    }
-    else if (RxHeader.StdId == 0x08)
-    {
-      servo_read_flag_3 = 1;
-    }
-  }
-}
+// CAN callback function commented out due to STS dependency removal
+// void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan)
+// {
+//   if (hcan->Instance == CAN1)
+//   {
+//     HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO1, &RxHeader, RxData);
+//     if (RxHeader.StdId == 0x06) // Only process CAN ID 0x06
+//     {
+//       if(RxHeader.RTR == CAN_RTR_DATA) {
+//         memcpy(servo_can_rx, RxData, RxHeader.DLC);
+//         servo_write_flag = 1;
+//       }
+//       else if (RxHeader.RTR == CAN_RTR_REMOTE) {
+//         servo_read_flag_12 = 1;
+//       }
+//     }
+//     else if (RxHeader.StdId == 0x07)
+//     {
+//       servo_read_flag_12 = 1;
+//     }
+//     else if (RxHeader.StdId == 0x08)
+//     {
+//       servo_read_flag_3 = 1;
+//     }
+//   }
+// }
 /* USER CODE END 1 */
