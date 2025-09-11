@@ -2,7 +2,7 @@
 
 
 
-uint8_t servo_ID[3] = {1, 2, 3};
+uint8_t servo_ID[1] = {1 };
 uint16_t servo_position[sizeof(servo_ID)];
 uint16_t servo_speed[sizeof(servo_ID)];
 uint8_t servo_rxPacket[4];

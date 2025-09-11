@@ -136,19 +136,25 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  uint8_t test_buffer[10] = {1};
+  uint8_t test_buffer[10] = {0x00, 0x0a, 0x00, 0x01, 0x00, 0x00, 0x01 ,0x00, 0x00, 0x00};
+  uint8_t send_buffer[10] = {0x00, 0x09, 0x00, 0x01, 0x00, 0x00, 0x01 ,0x00, 0x00, 0x00}; // ID 7 means read servo 1 and 2's data
   while (1)
   {
+    // HAL_UART_Transmit(&huart1, send_buffer, 10, 100);
+    // HAL_Delay(300);  // 0.3s delay 
+    
+    // if(HAL_OK==HAL_UART_Receive(&huart1, uart1_rec_buffer, 10, 100)){ // len is 10 and timeout is 100
 
-    if(HAL_OK==HAL_UART_Receive(&huart1, uart1_rec_buffer, 10, 100)){ // len is 10 and timeout is 100
-
-      HAL_UART_Transmit(&huart1, uart1_rec_buffer, 10, 100);
-    }
+    //   HAL_UART_Transmit(&huart1, uart1_rec_buffer, 10, 100);
+    // }
 
     
-    if(HAL_OK!=HAL_UART_Receive(&huart1, uart1_rec_buffer, 1, 100)){ // len is 10 and timeout is 100
+    if(HAL_OK!=HAL_UART_Receive(&huart1, uart1_rec_buffer, 10, 100)){ // len is 10 and timeout is 100
+    // if(1==1){ // len is 10 and timeout is 100
       continue;
     }else{
+
+      HAL_UART_Transmit(&huart1, test_buffer, 10, 200);
       uint16_t can_id = (uint16_t)(uart1_rec_buffer[0] << 8) | uart1_rec_buffer[1];
       switch(can_id) {
         case 0x06: 
@@ -157,6 +163,7 @@ int main(void)
           break;
         case 0x07:
           servo_read_flag_12 = 1;
+          break;
         case 0x08:
           servo_read_flag_3 = 1;
           break;
@@ -167,7 +174,7 @@ int main(void)
     if(servo_read_flag_12 == 1) {
       STS_syn_read();
       // send first two servos' data
-      for(uint8_t i = 0; i < 2; i++) {  
+      for(uint8_t i = 0; i < 1; i++) {  
         servo_can_tx[4 * i] = (uint8_t)(servo_position[i] >> 8);
         servo_can_tx[4 * i + 1] = (uint8_t)(servo_position[i] & 0xFF);
         servo_can_tx[4 * i + 2] = (uint8_t)(servo_speed[i] >> 8);
@@ -181,24 +188,24 @@ int main(void)
       servo_read_flag_12 = 0;
     }
 
-    if(servo_read_flag_3 == 1) {
-      STS_syn_read();
-      // send third servo's data
-      servo_can_tx[0] = (uint8_t)(servo_position[2] >> 8);
-      servo_can_tx[1] = (uint8_t)(servo_position[2] & 0xFF);
-      servo_can_tx[2] = (uint8_t)(servo_speed[2] >> 8);
-      servo_can_tx[3] = (uint8_t)(servo_speed[2] & 0xFF);
-      servo_can_tx[4] = 0;
-      servo_can_tx[5] = 0;
-      servo_can_tx[6] = 0;
-      servo_can_tx[7] = 0;
-      // if(HAL_CAN_AddTxMessage(&hcan, &TxHeader, servo_can_tx, &TxMailbox) != HAL_OK) {
-      //   int test = 0;
-      // }
-      memcpy(uart1_trans_buffer + 2, servo_can_tx, 8);
-      HAL_UART_Transmit(&huart1, uart1_trans_buffer, 10, 100);
-      servo_read_flag_3 = 0;
-    }
+    // if(servo_read_flag_3 == 1) {
+    //   STS_syn_read();
+    //   // send third servo's data
+    //   servo_can_tx[0] = (uint8_t)(servo_position[2] >> 8);
+    //   servo_can_tx[1] = (uint8_t)(servo_position[2] & 0xFF);
+    //   servo_can_tx[2] = (uint8_t)(servo_speed[2] >> 8);
+    //   servo_can_tx[3] = (uint8_t)(servo_speed[2] & 0xFF);
+    //   servo_can_tx[4] = 0;
+    //   servo_can_tx[5] = 0;
+    //   servo_can_tx[6] = 0;
+    //   servo_can_tx[7] = 0;
+    //   // if(HAL_CAN_AddTxMessage(&hcan, &TxHeader, servo_can_tx, &TxMailbox) != HAL_OK) {
+    //   //   int test = 0;
+    //   // }
+    //   memcpy(uart1_trans_buffer + 2, servo_can_tx, 8);
+    //   HAL_UART_Transmit(&huart1, uart1_trans_buffer, 10, 100);
+    //   servo_read_flag_3 = 0;
+    // }
 
     if(servo_write_flag == 1) {
       for(uint8_t i = 0; i < sizeof(servo_ID); i++) {
