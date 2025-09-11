@@ -136,9 +136,17 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  uint8_t test_buffer[10] = {1};
   while (1)
   {
-    if(HAL_OK!=HAL_UART_Receive(&huart1, uart1_rec_buffer, 10, 100)){ // len is 10 and timeout is 100
+
+    if(HAL_OK==HAL_UART_Receive(&huart1, uart1_rec_buffer, 10, 100)){ // len is 10 and timeout is 100
+
+      HAL_UART_Transmit(&huart1, uart1_rec_buffer, 10, 100);
+    }
+
+    
+    if(HAL_OK!=HAL_UART_Receive(&huart1, uart1_rec_buffer, 1, 100)){ // len is 10 and timeout is 100
       continue;
     }else{
       uint16_t can_id = (uint16_t)(uart1_rec_buffer[0] << 8) | uart1_rec_buffer[1];

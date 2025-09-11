@@ -5,20 +5,20 @@
       "preLaunchTask": "build",
       "name": "Debug STM32 with ST-Link",
       "cwd": "${workspaceFolder}",
-      "executable": "${workspaceFolder}/build/FTServo_stm32f103c8t6.elf",
+      "executable": "/Users/lr-2002/project/instantcreation/remote_manip_embedding/build/FTServo_stm32f103c8t6.elf",
       "request": "launch",
       "type": "cortex-debug",
       "servertype": "openocd",
       "device": "STM32F103C8",
       "configFiles": [
-        "/opt/homebrew/opt/open-ocd/share/openocd/scripts/interface/stlink-v2.cfg",
+        "/opt/homebrew/opt/open-ocd/share/openocd/scripts/interface/stlink.cfg",
         // "/opt/homebrew/opt/open-ocd/share/openocd/scripts/interface/cmsis-dap.cfg",
         "/opt/homebrew/opt/open-ocd/share/openocd/scripts/target/stm32f1x.cfg" 
       ],
       "runToMain": true,
-      "svdFile": "/Users/srp/Documents/XMU_Robotics/STM32_svdfiles/STM32F103.svd", 
-      "preLaunchTask": "build",
-      "gdbPath": "/Applications/ARM/bin/arm-none-eabi-gdb"
+      "gdbTarget": "localhost:3334",
+      "svdFile": "/Users/lr-2002/project/instantcreation/remote_manip_embedding/STM32F103.svd", 
+      "gdbPath": "/Users/lr-2002/Applications/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gdb"
     }
   ]
 }

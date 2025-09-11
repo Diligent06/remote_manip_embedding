@@ -7,7 +7,7 @@
       "command": "make",
       "options": {
         "env": {
-          "PATH": "/Applications/ARM/bin:${env:PATH}"
+          "PATH": "/Users/lr-2002/Applications/gcc-arm-none-eabi-10.3-2021.10/bin:${env:PATH}"
         }
       },
       "group": "build"
