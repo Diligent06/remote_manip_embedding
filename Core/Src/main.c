@@ -143,7 +143,7 @@ int main(void)
   TxHeader.DLC = 8;
 
   uint8_t uart1_rec_buffer[100] = {0};
-  uint8_t uart1_trans_buffer[100] = {0};
+  uint8_t uart1_trans_buffer[100] = {0, 0x19};
   
   // while ((CAN1->TSR & CAN_TSR_TME) == 0) {
   //   int x = 0;
@@ -162,6 +162,10 @@ int main(void)
   
   void servo_disable_torque(void) {
     uint8_t cmd[] = {0xFF, 0xFF, 0x01, 0x04, 0x03, 0x28, 0x00, 0xCF};
+    HAL_UART_Transmit(&huart2, cmd, 8, 100);
+  }
+  void servo_set_mid(void) {
+    uint8_t cmd[] = {0xFF, 0xFF, 0x01, 0x04, 0x03, 0x28, 0x80, 0x4F};
     HAL_UART_Transmit(&huart2, cmd, 8, 100);
   }
   
@@ -227,10 +231,9 @@ int main(void)
       continue;
     }else{
 
-      HAL_UART_Transmit(&huart1, test_buffer, 10, 200);
+      // HAL_UART_Transmit(&huart1, test_buffer, 10, 200);
       uint16_t can_id = (uint16_t)(uart1_rec_buffer[0] << 8) | uart1_rec_buffer[1];
-      switch(can_id) {
-        case 0x06: 
+        if(can_id==0x09){
           switch (uart1_rec_buffer[2])
           {
           case 0x00:
@@ -246,20 +249,17 @@ int main(void)
           case 0x02:
             servo_write_flag =1 ; 
             // servo_position_control();
-          // servo_write_flag = 1;
-          // memcpy(servo_can_rx, uart1_rec_buffer + 2, 8);
-          //   break;
+            break;
+          case 0x03: 
+              servo_read_flag_12 = 1;
+              break;
+          case 0x04:
+              servo_set_mid();
+              break;
           }
-          break;
+        }
 
-        case 0x07:
-          servo_read_flag_12 = 1;
-          break;
-        // case 0x08:
-        //   servo_read_flag_3 = 1;
-        //   break;
-      }
-    }
+
 
 
     if(servo_read_flag_12 == 1) {
@@ -279,31 +279,12 @@ int main(void)
       servo_read_flag_12 = 0;
     }
 
-    // if(servo_read_flag_3 == 1) {
-    //   STS_syn_read();
-    //   // send third servo's data
-    //   servo_can_tx[0] = (uint8_t)(servo_position[2] >> 8);
-    //   servo_can_tx[1] = (uint8_t)(servo_position[2] & 0xFF);
-    //   servo_can_tx[2] = (uint8_t)(servo_speed[2] >> 8);
-    //   servo_can_tx[3] = (uint8_t)(servo_speed[2] & 0xFF);
-    //   servo_can_tx[4] = 0;
-    //   servo_can_tx[5] = 0;
-    //   servo_can_tx[6] = 0;
-    //   servo_can_tx[7] = 0;
-    //   // if(HAL_CAN_AddTxMessage(&hcan, &TxHeader, servo_can_tx, &TxMailbox) != HAL_OK) {
-    //   //   int test = 0;
-    //   // }
-    //   memcpy(uart1_trans_buffer + 2, servo_can_tx, 8);
-    //   HAL_UART_Transmit(&huart1, uart1_trans_buffer, 10, 100);
-    //   servo_read_flag_3 = 0;
-    // }
-
     if(servo_write_flag == 1) {
       // Check if this is a position control command
       if(uart1_rec_buffer[2] == 0x02) {
         // Extract position from bytes 3-4 and velocity from bytes 5-6
-        uint16_t position = ((uint16_t)uart1_rec_buffer[4] << 8) | uart1_rec_buffer[3];
-        uint16_t velocity = ((uint16_t)uart1_rec_buffer[6] << 8) | uart1_rec_buffer[5];
+        uint16_t position = ((uint16_t)uart1_rec_buffer[3] << 8) | uart1_rec_buffer[4];
+        uint16_t velocity = ((uint16_t)uart1_rec_buffer[5] << 8) | uart1_rec_buffer[6];
         
         // Call servo position control with extracted data
         servo_position_control(position, velocity);
@@ -313,12 +294,15 @@ int main(void)
     }
 
 
+
+      }
+    }
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
-}
 
 /**
   * @brief System Clock Configuration

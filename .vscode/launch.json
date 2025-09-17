@@ -9,6 +9,7 @@
       "request": "launch",
       "type": "cortex-debug",
       "servertype": "openocd",
+      "serverpath": "/opt/homebrew/bin/openocd",
       "device": "STM32F103C8",
       "configFiles": [
         "/opt/homebrew/opt/open-ocd/share/openocd/scripts/interface/stlink.cfg",
