@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -39,7 +39,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
   35              		.thumb
   36              		.thumb_func
   38              	NMI_Handler:
-  39              	.LFB68:
+  39              	.LFB65:
   40              		.file 1 "Core/Src/stm32f1xx_it.c"
    1:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN Header */
    2:Core/Src/stm32f1xx_it.c **** /**
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
   15:Core/Src/stm32f1xx_it.c ****   *
   16:Core/Src/stm32f1xx_it.c ****   ******************************************************************************
   17:Core/Src/stm32f1xx_it.c ****   */
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 2
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s 			page 2
 
 
   18:Core/Src/stm32f1xx_it.c **** /* USER CODE END Header */
@@ -68,41 +68,41 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
   22:Core/Src/stm32f1xx_it.c **** #include "stm32f1xx_it.h"
   23:Core/Src/stm32f1xx_it.c **** /* Private includes ----------------------------------------------------------*/
   24:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN Includes */
-  25:Core/Src/stm32f1xx_it.c **** #include "STS_control.h"
-  26:Core/Src/stm32f1xx_it.c **** /* USER CODE END Includes */
-  27:Core/Src/stm32f1xx_it.c **** 
-  28:Core/Src/stm32f1xx_it.c **** /* Private typedef -----------------------------------------------------------*/
-  29:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN TD */
-  30:Core/Src/stm32f1xx_it.c **** 
-  31:Core/Src/stm32f1xx_it.c **** /* USER CODE END TD */
-  32:Core/Src/stm32f1xx_it.c **** 
-  33:Core/Src/stm32f1xx_it.c **** /* Private define ------------------------------------------------------------*/
-  34:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN PD */
-  35:Core/Src/stm32f1xx_it.c **** 
-  36:Core/Src/stm32f1xx_it.c **** /* USER CODE END PD */
-  37:Core/Src/stm32f1xx_it.c **** 
-  38:Core/Src/stm32f1xx_it.c **** /* Private macro -------------------------------------------------------------*/
-  39:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN PM */
-  40:Core/Src/stm32f1xx_it.c **** 
-  41:Core/Src/stm32f1xx_it.c **** /* USER CODE END PM */
-  42:Core/Src/stm32f1xx_it.c **** 
-  43:Core/Src/stm32f1xx_it.c **** /* Private variables ---------------------------------------------------------*/
-  44:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN PV */
-  45:Core/Src/stm32f1xx_it.c **** CAN_RxHeaderTypeDef RxHeader;
-  46:Core/Src/stm32f1xx_it.c **** uint8_t RxData[8];
-  47:Core/Src/stm32f1xx_it.c **** /* USER CODE END PV */
-  48:Core/Src/stm32f1xx_it.c **** 
-  49:Core/Src/stm32f1xx_it.c **** /* Private function prototypes -----------------------------------------------*/
-  50:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN PFP */
-  51:Core/Src/stm32f1xx_it.c **** /* USER CODE END PFP */
-  52:Core/Src/stm32f1xx_it.c **** 
-  53:Core/Src/stm32f1xx_it.c **** /* Private user code ---------------------------------------------------------*/
-  54:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN 0 */
-  55:Core/Src/stm32f1xx_it.c **** 
-  56:Core/Src/stm32f1xx_it.c **** /* USER CODE END 0 */
-  57:Core/Src/stm32f1xx_it.c **** 
-  58:Core/Src/stm32f1xx_it.c **** /* External variables --------------------------------------------------------*/
-  59:Core/Src/stm32f1xx_it.c **** extern PCD_HandleTypeDef hpcd_USB_FS;
+  25:Core/Src/stm32f1xx_it.c **** #include "string.h"
+  26:Core/Src/stm32f1xx_it.c **** // #include "STS_control.h" // Removed STS dependency
+  27:Core/Src/stm32f1xx_it.c **** /* USER CODE END Includes */
+  28:Core/Src/stm32f1xx_it.c **** 
+  29:Core/Src/stm32f1xx_it.c **** /* Private typedef -----------------------------------------------------------*/
+  30:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN TD */
+  31:Core/Src/stm32f1xx_it.c **** 
+  32:Core/Src/stm32f1xx_it.c **** /* USER CODE END TD */
+  33:Core/Src/stm32f1xx_it.c **** 
+  34:Core/Src/stm32f1xx_it.c **** /* Private define ------------------------------------------------------------*/
+  35:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN PD */
+  36:Core/Src/stm32f1xx_it.c **** 
+  37:Core/Src/stm32f1xx_it.c **** /* USER CODE END PD */
+  38:Core/Src/stm32f1xx_it.c **** 
+  39:Core/Src/stm32f1xx_it.c **** /* Private macro -------------------------------------------------------------*/
+  40:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN PM */
+  41:Core/Src/stm32f1xx_it.c **** 
+  42:Core/Src/stm32f1xx_it.c **** /* USER CODE END PM */
+  43:Core/Src/stm32f1xx_it.c **** 
+  44:Core/Src/stm32f1xx_it.c **** /* Private variables ---------------------------------------------------------*/
+  45:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN PV */
+  46:Core/Src/stm32f1xx_it.c **** CAN_RxHeaderTypeDef RxHeader;
+  47:Core/Src/stm32f1xx_it.c **** uint8_t RxData[8];
+  48:Core/Src/stm32f1xx_it.c **** /* USER CODE END PV */
+  49:Core/Src/stm32f1xx_it.c **** 
+  50:Core/Src/stm32f1xx_it.c **** /* Private function prototypes -----------------------------------------------*/
+  51:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN PFP */
+  52:Core/Src/stm32f1xx_it.c **** /* USER CODE END PFP */
+  53:Core/Src/stm32f1xx_it.c **** 
+  54:Core/Src/stm32f1xx_it.c **** /* Private user code ---------------------------------------------------------*/
+  55:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN 0 */
+  56:Core/Src/stm32f1xx_it.c **** 
+  57:Core/Src/stm32f1xx_it.c **** /* USER CODE END 0 */
+  58:Core/Src/stm32f1xx_it.c **** 
+  59:Core/Src/stm32f1xx_it.c **** /* External variables --------------------------------------------------------*/
   60:Core/Src/stm32f1xx_it.c **** extern CAN_HandleTypeDef hcan;
   61:Core/Src/stm32f1xx_it.c **** extern DMA_HandleTypeDef hdma_usart2_rx;
   62:Core/Src/stm32f1xx_it.c **** extern DMA_HandleTypeDef hdma_usart2_tx;
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
   72:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Non maskable interrupt.
   73:Core/Src/stm32f1xx_it.c ****   */
   74:Core/Src/stm32f1xx_it.c **** void NMI_Handler(void)
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 3
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s 			page 3
 
 
   75:Core/Src/stm32f1xx_it.c **** {
@@ -143,7 +143,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
   54              		.loc 1 80 9 discriminator 1
   55 0004 FEE7     		b	.L2
   56              		.cfi_endproc
-  57              	.LFE68:
+  57              	.LFE65:
   59              		.section	.text.HardFault_Handler,"ax",%progbits
   60              		.align	1
   61              		.global	HardFault_Handler
@@ -151,7 +151,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
   63              		.thumb
   64              		.thumb_func
   66              	HardFault_Handler:
-  67              	.LFB69:
+  67              	.LFB66:
   81:Core/Src/stm32f1xx_it.c ****   {
   82:Core/Src/stm32f1xx_it.c ****   }
   83:Core/Src/stm32f1xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 1 */
@@ -178,14 +178,14 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
   91:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN HardFault_IRQn 0 */
   92:Core/Src/stm32f1xx_it.c **** 
   93:Core/Src/stm32f1xx_it.c ****   /* USER CODE END HardFault_IRQn 0 */
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 4
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s 			page 4
 
 
   94:Core/Src/stm32f1xx_it.c ****   while (1)
   81              		.loc 1 94 9 discriminator 1
   82 0004 FEE7     		b	.L4
   83              		.cfi_endproc
-  84              	.LFE69:
+  84              	.LFE66:
   86              		.section	.text.MemManage_Handler,"ax",%progbits
   87              		.align	1
   88              		.global	MemManage_Handler
@@ -193,7 +193,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
   90              		.thumb
   91              		.thumb_func
   93              	MemManage_Handler:
-  94              	.LFB70:
+  94              	.LFB67:
   95:Core/Src/stm32f1xx_it.c ****   {
   96:Core/Src/stm32f1xx_it.c ****     /* USER CODE BEGIN W1_HardFault_IRQn 0 */
   97:Core/Src/stm32f1xx_it.c ****     /* USER CODE END W1_HardFault_IRQn 0 */
@@ -225,7 +225,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  108              		.loc 1 109 9 discriminator 1
  109 0004 FEE7     		b	.L6
  110              		.cfi_endproc
- 111              	.LFE70:
+ 111              	.LFE67:
  113              		.section	.text.BusFault_Handler,"ax",%progbits
  114              		.align	1
  115              		.global	BusFault_Handler
@@ -233,12 +233,12 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  117              		.thumb
  118              		.thumb_func
  120              	BusFault_Handler:
- 121              	.LFB71:
+ 121              	.LFB68:
  110:Core/Src/stm32f1xx_it.c ****   {
  111:Core/Src/stm32f1xx_it.c ****     /* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
  112:Core/Src/stm32f1xx_it.c ****     /* USER CODE END W1_MemoryManagement_IRQn 0 */
  113:Core/Src/stm32f1xx_it.c ****   }
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 5
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s 			page 5
 
 
  114:Core/Src/stm32f1xx_it.c **** }
@@ -268,7 +268,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  135              		.loc 1 124 9 discriminator 1
  136 0004 FEE7     		b	.L8
  137              		.cfi_endproc
- 138              	.LFE71:
+ 138              	.LFE68:
  140              		.section	.text.UsageFault_Handler,"ax",%progbits
  141              		.align	1
  142              		.global	UsageFault_Handler
@@ -276,7 +276,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  144              		.thumb
  145              		.thumb_func
  147              	UsageFault_Handler:
- 148              	.LFB72:
+ 148              	.LFB69:
  125:Core/Src/stm32f1xx_it.c ****   {
  126:Core/Src/stm32f1xx_it.c ****     /* USER CODE BEGIN W1_BusFault_IRQn 0 */
  127:Core/Src/stm32f1xx_it.c ****     /* USER CODE END W1_BusFault_IRQn 0 */
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  156              		.cfi_def_cfa_offset 4
  157              		.cfi_offset 7, -4
  158 0002 00AF     		add	r7, sp, #0
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 6
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s 			page 6
 
 
  159              	.LCFI9:
@@ -311,7 +311,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  162              		.loc 1 139 9 discriminator 1
  163 0004 FEE7     		b	.L10
  164              		.cfi_endproc
- 165              	.LFE72:
+ 165              	.LFE69:
  167              		.section	.text.SVC_Handler,"ax",%progbits
  168              		.align	1
  169              		.global	SVC_Handler
@@ -319,7 +319,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  171              		.thumb
  172              		.thumb_func
  174              	SVC_Handler:
- 175              	.LFB73:
+ 175              	.LFB70:
  140:Core/Src/stm32f1xx_it.c ****   {
  141:Core/Src/stm32f1xx_it.c ****     /* USER CODE BEGIN W1_UsageFault_IRQn 0 */
  142:Core/Src/stm32f1xx_it.c ****     /* USER CODE END W1_UsageFault_IRQn 0 */
@@ -358,14 +358,14 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  193              		@ sp needed
  194 0008 80BC     		pop	{r7}
  195              	.LCFI13:
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 7
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s 			page 7
 
 
  196              		.cfi_restore 7
  197              		.cfi_def_cfa_offset 0
  198 000a 7047     		bx	lr
  199              		.cfi_endproc
- 200              	.LFE73:
+ 200              	.LFE70:
  202              		.section	.text.DebugMon_Handler,"ax",%progbits
  203              		.align	1
  204              		.global	DebugMon_Handler
@@ -373,7 +373,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  206              		.thumb
  207              		.thumb_func
  209              	DebugMon_Handler:
- 210              	.LFB74:
+ 210              	.LFB71:
  158:Core/Src/stm32f1xx_it.c **** 
  159:Core/Src/stm32f1xx_it.c **** /**
  160:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Debug monitor.
@@ -411,18 +411,18 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  232              		.cfi_def_cfa_offset 0
  233 000a 7047     		bx	lr
  234              		.cfi_endproc
- 235              	.LFE74:
+ 235              	.LFE71:
  237              		.section	.text.PendSV_Handler,"ax",%progbits
  238              		.align	1
  239              		.global	PendSV_Handler
  240              		.syntax unified
  241              		.thumb
  242              		.thumb_func
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 8
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s 			page 8
 
 
  244              	PendSV_Handler:
- 245              	.LFB75:
+ 245              	.LFB72:
  171:Core/Src/stm32f1xx_it.c **** 
  172:Core/Src/stm32f1xx_it.c **** /**
  173:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Pendable request for system service.
@@ -460,7 +460,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  267              		.cfi_def_cfa_offset 0
  268 000a 7047     		bx	lr
  269              		.cfi_endproc
- 270              	.LFE75:
+ 270              	.LFE72:
  272              		.section	.text.SysTick_Handler,"ax",%progbits
  273              		.align	1
  274              		.global	SysTick_Handler
@@ -468,7 +468,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  276              		.thumb
  277              		.thumb_func
  279              	SysTick_Handler:
- 280              	.LFB76:
+ 280              	.LFB73:
  184:Core/Src/stm32f1xx_it.c **** 
  185:Core/Src/stm32f1xx_it.c **** /**
  186:Core/Src/stm32f1xx_it.c ****   * @brief This function handles System tick timer.
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  281              		.loc 1 189 1
  282              		.cfi_startproc
  283              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 9
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s 			page 9
 
 
  284              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -504,7 +504,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  296 0008 00BF     		nop
  297 000a 80BD     		pop	{r7, pc}
  298              		.cfi_endproc
- 299              	.LFE76:
+ 299              	.LFE73:
  301              		.section	.text.DMA1_Channel6_IRQHandler,"ax",%progbits
  302              		.align	1
  303              		.global	DMA1_Channel6_IRQHandler
@@ -512,7 +512,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  305              		.thumb
  306              		.thumb_func
  308              	DMA1_Channel6_IRQHandler:
- 309              	.LFB77:
+ 309              	.LFB74:
  198:Core/Src/stm32f1xx_it.c **** 
  199:Core/Src/stm32f1xx_it.c **** /******************************************************************************/
  200:Core/Src/stm32f1xx_it.c **** /* STM32F1xx Peripheral Interrupt Handlers                                    */
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  319 0002 00AF     		add	r7, sp, #0
  320              	.LCFI25:
  321              		.cfi_def_cfa_register 7
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 10
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s 			page 10
 
 
  211:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DMA1_Channel6_IRQn 0 */
@@ -560,7 +560,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  330              	.L16:
  331 0010 00000000 		.word	hdma_usart2_rx
  332              		.cfi_endproc
- 333              	.LFE77:
+ 333              	.LFE74:
  335              		.section	.text.DMA1_Channel7_IRQHandler,"ax",%progbits
  336              		.align	1
  337              		.global	DMA1_Channel7_IRQHandler
@@ -568,7 +568,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  339              		.thumb
  340              		.thumb_func
  342              	DMA1_Channel7_IRQHandler:
- 343              	.LFB78:
+ 343              	.LFB75:
  219:Core/Src/stm32f1xx_it.c **** 
  220:Core/Src/stm32f1xx_it.c **** /**
  221:Core/Src/stm32f1xx_it.c ****   * @brief This function handles DMA1 channel7 global interrupt.
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  230:Core/Src/stm32f1xx_it.c **** 
  231:Core/Src/stm32f1xx_it.c ****   /* USER CODE END DMA1_Channel7_IRQn 1 */
  232:Core/Src/stm32f1xx_it.c **** }
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 11
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s 			page 11
 
 
  359              		.loc 1 232 1
@@ -609,7 +609,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  364              	.L19:
  365 0010 00000000 		.word	hdma_usart2_tx
  366              		.cfi_endproc
- 367              	.LFE78:
+ 367              	.LFE75:
  369              		.section	.text.USB_LP_CAN1_RX0_IRQHandler,"ax",%progbits
  370              		.align	1
  371              		.global	USB_LP_CAN1_RX0_IRQHandler
@@ -617,7 +617,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  373              		.thumb
  374              		.thumb_func
  376              	USB_LP_CAN1_RX0_IRQHandler:
- 377              	.LFB79:
+ 377              	.LFB76:
  233:Core/Src/stm32f1xx_it.c **** 
  234:Core/Src/stm32f1xx_it.c **** /**
  235:Core/Src/stm32f1xx_it.c ****   * @brief This function handles USB low priority or CAN RX0 interrupts.
@@ -639,42 +639,41 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  239:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN USB_LP_CAN1_RX0_IRQn 0 */
  240:Core/Src/stm32f1xx_it.c ****   
  241:Core/Src/stm32f1xx_it.c ****   /* USER CODE END USB_LP_CAN1_RX0_IRQn 0 */
- 242:Core/Src/stm32f1xx_it.c ****   // HAL_CAN_IRQHandler(&hcan);
- 243:Core/Src/stm32f1xx_it.c ****   HAL_PCD_IRQHandler(&hpcd_USB_FS);
- 390              		.loc 1 243 3
+ 242:Core/Src/stm32f1xx_it.c ****   HAL_CAN_IRQHandler(&hcan);
+ 390              		.loc 1 242 3
  391 0004 0248     		ldr	r0, .L22
- 392 0006 FFF7FEFF 		bl	HAL_PCD_IRQHandler
- 244:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN USB_LP_CAN1_RX0_IRQn 1 */
- 245:Core/Src/stm32f1xx_it.c **** 
- 246:Core/Src/stm32f1xx_it.c ****   /* USER CODE END USB_LP_CAN1_RX0_IRQn 1 */
- 247:Core/Src/stm32f1xx_it.c **** }
- 393              		.loc 1 247 1
+ 392 0006 FFF7FEFF 		bl	HAL_CAN_IRQHandler
+ 243:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN USB_LP_CAN1_RX0_IRQn 1 */
+ 244:Core/Src/stm32f1xx_it.c **** 
+ 245:Core/Src/stm32f1xx_it.c ****   /* USER CODE END USB_LP_CAN1_RX0_IRQn 1 */
+ 246:Core/Src/stm32f1xx_it.c **** }
+ 393              		.loc 1 246 1
  394 000a 00BF     		nop
  395 000c 80BD     		pop	{r7, pc}
  396              	.L23:
  397 000e 00BF     		.align	2
  398              	.L22:
- 399 0010 00000000 		.word	hpcd_USB_FS
+ 399 0010 00000000 		.word	hcan
  400              		.cfi_endproc
- 401              	.LFE79:
+ 401              	.LFE76:
  403              		.section	.text.CAN1_RX1_IRQHandler,"ax",%progbits
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 12
-
-
  404              		.align	1
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s 			page 12
+
+
  405              		.global	CAN1_RX1_IRQHandler
  406              		.syntax unified
  407              		.thumb
  408              		.thumb_func
  410              	CAN1_RX1_IRQHandler:
- 411              	.LFB80:
- 248:Core/Src/stm32f1xx_it.c **** 
- 249:Core/Src/stm32f1xx_it.c **** /**
- 250:Core/Src/stm32f1xx_it.c ****   * @brief This function handles CAN RX1 interrupt.
- 251:Core/Src/stm32f1xx_it.c ****   */
- 252:Core/Src/stm32f1xx_it.c **** void CAN1_RX1_IRQHandler(void)
- 253:Core/Src/stm32f1xx_it.c **** {
- 412              		.loc 1 253 1
+ 411              	.LFB77:
+ 247:Core/Src/stm32f1xx_it.c **** 
+ 248:Core/Src/stm32f1xx_it.c **** /**
+ 249:Core/Src/stm32f1xx_it.c ****   * @brief This function handles CAN RX1 interrupt.
+ 250:Core/Src/stm32f1xx_it.c ****   */
+ 251:Core/Src/stm32f1xx_it.c **** void CAN1_RX1_IRQHandler(void)
+ 252:Core/Src/stm32f1xx_it.c **** {
+ 412              		.loc 1 252 1
  413              		.cfi_startproc
  414              		@ args = 0, pretend = 0, frame = 0
  415              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -686,18 +685,18 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  421 0002 00AF     		add	r7, sp, #0
  422              	.LCFI31:
  423              		.cfi_def_cfa_register 7
- 254:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN CAN1_RX1_IRQn 0 */
- 255:Core/Src/stm32f1xx_it.c **** 
- 256:Core/Src/stm32f1xx_it.c ****   /* USER CODE END CAN1_RX1_IRQn 0 */
- 257:Core/Src/stm32f1xx_it.c ****   HAL_CAN_IRQHandler(&hcan);
- 424              		.loc 1 257 3
+ 253:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN CAN1_RX1_IRQn 0 */
+ 254:Core/Src/stm32f1xx_it.c **** 
+ 255:Core/Src/stm32f1xx_it.c ****   /* USER CODE END CAN1_RX1_IRQn 0 */
+ 256:Core/Src/stm32f1xx_it.c ****   HAL_CAN_IRQHandler(&hcan);
+ 424              		.loc 1 256 3
  425 0004 0248     		ldr	r0, .L25
  426 0006 FFF7FEFF 		bl	HAL_CAN_IRQHandler
- 258:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN CAN1_RX1_IRQn 1 */
- 259:Core/Src/stm32f1xx_it.c **** 
- 260:Core/Src/stm32f1xx_it.c ****   /* USER CODE END CAN1_RX1_IRQn 1 */
- 261:Core/Src/stm32f1xx_it.c **** }
- 427              		.loc 1 261 1
+ 257:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN CAN1_RX1_IRQn 1 */
+ 258:Core/Src/stm32f1xx_it.c **** 
+ 259:Core/Src/stm32f1xx_it.c ****   /* USER CODE END CAN1_RX1_IRQn 1 */
+ 260:Core/Src/stm32f1xx_it.c **** }
+ 427              		.loc 1 260 1
  428 000a 00BF     		nop
  429 000c 80BD     		pop	{r7, pc}
  430              	.L26:
@@ -705,7 +704,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  432              	.L25:
  433 0010 00000000 		.word	hcan
  434              		.cfi_endproc
- 435              	.LFE80:
+ 435              	.LFE77:
  437              		.section	.text.USART2_IRQHandler,"ax",%progbits
  438              		.align	1
  439              		.global	USART2_IRQHandler
@@ -713,17 +712,17 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  441              		.thumb
  442              		.thumb_func
  444              	USART2_IRQHandler:
- 445              	.LFB81:
- 262:Core/Src/stm32f1xx_it.c **** 
- 263:Core/Src/stm32f1xx_it.c **** /**
- 264:Core/Src/stm32f1xx_it.c ****   * @brief This function handles USART2 global interrupt.
- 265:Core/Src/stm32f1xx_it.c ****   */
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 13
+ 445              	.LFB78:
+ 261:Core/Src/stm32f1xx_it.c **** 
+ 262:Core/Src/stm32f1xx_it.c **** /**
+ 263:Core/Src/stm32f1xx_it.c ****   * @brief This function handles USART2 global interrupt.
+ 264:Core/Src/stm32f1xx_it.c ****   */
+ 265:Core/Src/stm32f1xx_it.c **** void USART2_IRQHandler(void)
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s 			page 13
 
 
- 266:Core/Src/stm32f1xx_it.c **** void USART2_IRQHandler(void)
- 267:Core/Src/stm32f1xx_it.c **** {
- 446              		.loc 1 267 1
+ 266:Core/Src/stm32f1xx_it.c **** {
+ 446              		.loc 1 266 1
  447              		.cfi_startproc
  448              		@ args = 0, pretend = 0, frame = 0
  449              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -735,16 +734,16 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  455 0002 00AF     		add	r7, sp, #0
  456              	.LCFI33:
  457              		.cfi_def_cfa_register 7
- 268:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN USART2_IRQn 0 */
- 269:Core/Src/stm32f1xx_it.c ****   /* USER CODE END USART2_IRQn 0 */
- 270:Core/Src/stm32f1xx_it.c ****   HAL_UART_IRQHandler(&huart2);
- 458              		.loc 1 270 3
+ 267:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN USART2_IRQn 0 */
+ 268:Core/Src/stm32f1xx_it.c ****   /* USER CODE END USART2_IRQn 0 */
+ 269:Core/Src/stm32f1xx_it.c ****   HAL_UART_IRQHandler(&huart2);
+ 458              		.loc 1 269 3
  459 0004 0248     		ldr	r0, .L28
  460 0006 FFF7FEFF 		bl	HAL_UART_IRQHandler
- 271:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN USART2_IRQn 1 */
- 272:Core/Src/stm32f1xx_it.c ****   /* USER CODE END USART2_IRQn 1 */
- 273:Core/Src/stm32f1xx_it.c **** }
- 461              		.loc 1 273 1
+ 270:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN USART2_IRQn 1 */
+ 271:Core/Src/stm32f1xx_it.c ****   /* USER CODE END USART2_IRQn 1 */
+ 272:Core/Src/stm32f1xx_it.c **** }
+ 461              		.loc 1 272 1
  462 000a 00BF     		nop
  463 000c 80BD     		pop	{r7, pc}
  464              	.L29:
@@ -752,252 +751,66 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 1
  466              	.L28:
  467 0010 00000000 		.word	huart2
  468              		.cfi_endproc
- 469              	.LFE81:
- 471              		.section	.text.HAL_CAN_RxFifo1MsgPendingCallback,"ax",%progbits
- 472              		.align	1
- 473              		.global	HAL_CAN_RxFifo1MsgPendingCallback
- 474              		.syntax unified
- 475              		.thumb
- 476              		.thumb_func
- 478              	HAL_CAN_RxFifo1MsgPendingCallback:
- 479              	.LFB82:
- 274:Core/Src/stm32f1xx_it.c **** 
- 275:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN 1 */
- 276:Core/Src/stm32f1xx_it.c **** void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan)
- 277:Core/Src/stm32f1xx_it.c **** {
- 480              		.loc 1 277 1
- 481              		.cfi_startproc
- 482              		@ args = 0, pretend = 0, frame = 8
- 483              		@ frame_needed = 1, uses_anonymous_args = 0
- 484 0000 80B5     		push	{r7, lr}
- 485              	.LCFI34:
- 486              		.cfi_def_cfa_offset 8
- 487              		.cfi_offset 7, -8
- 488              		.cfi_offset 14, -4
- 489 0002 82B0     		sub	sp, sp, #8
- 490              	.LCFI35:
- 491              		.cfi_def_cfa_offset 16
- 492 0004 00AF     		add	r7, sp, #0
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 14
-
-
- 493              	.LCFI36:
- 494              		.cfi_def_cfa_register 7
- 495 0006 7860     		str	r0, [r7, #4]
- 278:Core/Src/stm32f1xx_it.c ****   if (hcan->Instance == CAN1)
- 496              		.loc 1 278 11
- 497 0008 7B68     		ldr	r3, [r7, #4]
- 498 000a 1B68     		ldr	r3, [r3]
- 499              		.loc 1 278 6
- 500 000c 1B4A     		ldr	r2, .L36
- 501 000e 9342     		cmp	r3, r2
- 502 0010 2FD1     		bne	.L35
- 279:Core/Src/stm32f1xx_it.c ****   {
- 280:Core/Src/stm32f1xx_it.c ****     HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO1, &RxHeader, RxData);
- 503              		.loc 1 280 5
- 504 0012 1B4B     		ldr	r3, .L36+4
- 505 0014 1B4A     		ldr	r2, .L36+8
- 506 0016 0121     		movs	r1, #1
- 507 0018 7868     		ldr	r0, [r7, #4]
- 508 001a FFF7FEFF 		bl	HAL_CAN_GetRxMessage
- 281:Core/Src/stm32f1xx_it.c ****     if (RxHeader.StdId == 0x06) // Only process CAN ID 0x06
- 509              		.loc 1 281 17
- 510 001e 194B     		ldr	r3, .L36+8
- 511 0020 1B68     		ldr	r3, [r3]
- 512              		.loc 1 281 8
- 513 0022 062B     		cmp	r3, #6
- 514 0024 16D1     		bne	.L32
- 282:Core/Src/stm32f1xx_it.c ****     {
- 283:Core/Src/stm32f1xx_it.c ****       if(RxHeader.RTR == CAN_RTR_DATA) {
- 515              		.loc 1 283 18
- 516 0026 174B     		ldr	r3, .L36+8
- 517 0028 DB68     		ldr	r3, [r3, #12]
- 518              		.loc 1 283 9
- 519 002a 002B     		cmp	r3, #0
- 520 002c 0AD1     		bne	.L33
- 284:Core/Src/stm32f1xx_it.c ****         memcpy(servo_can_rx, RxData, RxHeader.DLC);
- 521              		.loc 1 284 46
- 522 002e 154B     		ldr	r3, .L36+8
- 523 0030 1B69     		ldr	r3, [r3, #16]
- 524              		.loc 1 284 9
- 525 0032 1A46     		mov	r2, r3
- 526 0034 1249     		ldr	r1, .L36+4
- 527 0036 1448     		ldr	r0, .L36+12
- 528 0038 FFF7FEFF 		bl	memcpy
- 285:Core/Src/stm32f1xx_it.c ****         servo_write_flag = 1;
- 529              		.loc 1 285 26
- 530 003c 134B     		ldr	r3, .L36+16
- 531 003e 0122     		movs	r2, #1
- 532 0040 1A70     		strb	r2, [r3]
- 286:Core/Src/stm32f1xx_it.c ****       }
- 287:Core/Src/stm32f1xx_it.c ****       else if (RxHeader.RTR == CAN_RTR_REMOTE) {
- 288:Core/Src/stm32f1xx_it.c ****         servo_read_flag_12 = 1;
- 289:Core/Src/stm32f1xx_it.c ****       }
- 290:Core/Src/stm32f1xx_it.c ****     }
- 291:Core/Src/stm32f1xx_it.c ****     else if (RxHeader.StdId == 0x07)
- 292:Core/Src/stm32f1xx_it.c ****     {
- 293:Core/Src/stm32f1xx_it.c ****       servo_read_flag_12 = 1;
- 294:Core/Src/stm32f1xx_it.c ****     }
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 15
-
-
- 295:Core/Src/stm32f1xx_it.c ****     else if (RxHeader.StdId == 0x08)
- 296:Core/Src/stm32f1xx_it.c ****     {
- 297:Core/Src/stm32f1xx_it.c ****       servo_read_flag_3 = 1;
- 298:Core/Src/stm32f1xx_it.c ****     }
- 299:Core/Src/stm32f1xx_it.c ****   }
- 300:Core/Src/stm32f1xx_it.c **** }
- 533              		.loc 1 300 1
- 534 0042 16E0     		b	.L35
- 535              	.L33:
- 287:Core/Src/stm32f1xx_it.c ****         servo_read_flag_12 = 1;
- 536              		.loc 1 287 24
- 537 0044 0F4B     		ldr	r3, .L36+8
- 538 0046 DB68     		ldr	r3, [r3, #12]
- 287:Core/Src/stm32f1xx_it.c ****         servo_read_flag_12 = 1;
- 539              		.loc 1 287 15
- 540 0048 022B     		cmp	r3, #2
- 541 004a 12D1     		bne	.L35
- 288:Core/Src/stm32f1xx_it.c ****       }
- 542              		.loc 1 288 28
- 543 004c 104B     		ldr	r3, .L36+20
- 544 004e 0122     		movs	r2, #1
- 545 0050 1A70     		strb	r2, [r3]
- 546              		.loc 1 300 1
- 547 0052 0EE0     		b	.L35
- 548              	.L32:
- 291:Core/Src/stm32f1xx_it.c ****     {
- 549              		.loc 1 291 22
- 550 0054 0B4B     		ldr	r3, .L36+8
- 551 0056 1B68     		ldr	r3, [r3]
- 291:Core/Src/stm32f1xx_it.c ****     {
- 552              		.loc 1 291 13
- 553 0058 072B     		cmp	r3, #7
- 554 005a 03D1     		bne	.L34
- 293:Core/Src/stm32f1xx_it.c ****     }
- 555              		.loc 1 293 26
- 556 005c 0C4B     		ldr	r3, .L36+20
- 557 005e 0122     		movs	r2, #1
- 558 0060 1A70     		strb	r2, [r3]
- 559              		.loc 1 300 1
- 560 0062 06E0     		b	.L35
- 561              	.L34:
- 295:Core/Src/stm32f1xx_it.c ****     {
- 562              		.loc 1 295 22
- 563 0064 074B     		ldr	r3, .L36+8
- 564 0066 1B68     		ldr	r3, [r3]
- 295:Core/Src/stm32f1xx_it.c ****     {
- 565              		.loc 1 295 13
- 566 0068 082B     		cmp	r3, #8
- 567 006a 02D1     		bne	.L35
- 297:Core/Src/stm32f1xx_it.c ****     }
- 568              		.loc 1 297 25
- 569 006c 094B     		ldr	r3, .L36+24
- 570 006e 0122     		movs	r2, #1
- 571 0070 1A70     		strb	r2, [r3]
- 572              	.L35:
- 573              		.loc 1 300 1
- 574 0072 00BF     		nop
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 16
-
-
- 575 0074 0837     		adds	r7, r7, #8
- 576              	.LCFI37:
- 577              		.cfi_def_cfa_offset 8
- 578 0076 BD46     		mov	sp, r7
- 579              	.LCFI38:
- 580              		.cfi_def_cfa_register 13
- 581              		@ sp needed
- 582 0078 80BD     		pop	{r7, pc}
- 583              	.L37:
- 584 007a 00BF     		.align	2
- 585              	.L36:
- 586 007c 00640040 		.word	1073767424
- 587 0080 00000000 		.word	RxData
- 588 0084 00000000 		.word	RxHeader
- 589 0088 00000000 		.word	servo_can_rx
- 590 008c 00000000 		.word	servo_write_flag
- 591 0090 00000000 		.word	servo_read_flag_12
- 592 0094 00000000 		.word	servo_read_flag_3
- 593              		.cfi_endproc
- 594              	.LFE82:
- 596              		.text
- 597              	.Letext0:
- 598              		.file 2 "/Applications/ARM/arm-none-eabi/include/machine/_default_types.h"
- 599              		.file 3 "/Applications/ARM/arm-none-eabi/include/sys/_stdint.h"
- 600              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 601              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
- 602              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 603              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
- 604              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h"
- 605              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
- 606              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h"
- 607              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h"
- 608              		.file 12 "Core/Inc/usart.h"
- 609              		.file 13 "User/SMS_STS_lib/STS_control.h"
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 17
+ 469              	.LFE78:
+ 471              		.text
+ 472              	.Letext0:
+ 473              		.file 2 "/Users/lr-2002/Applications/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/
+ 474              		.file 3 "/Users/lr-2002/Applications/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_std
+ 475              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 476              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 477              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 478              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 479              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h"
+ 480              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_it.c
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:22     .bss.RxHeader:0000000000000000 RxHeader
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:19     .bss.RxHeader:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:29     .bss.RxData:0000000000000000 RxData
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:26     .bss.RxData:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:32     .text.NMI_Handler:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:38     .text.NMI_Handler:0000000000000000 NMI_Handler
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:60     .text.HardFault_Handler:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:66     .text.HardFault_Handler:0000000000000000 HardFault_Handler
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:87     .text.MemManage_Handler:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:93     .text.MemManage_Handler:0000000000000000 MemManage_Handler
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:114    .text.BusFault_Handler:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:120    .text.BusFault_Handler:0000000000000000 BusFault_Handler
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:141    .text.UsageFault_Handler:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:147    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:168    .text.SVC_Handler:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:174    .text.SVC_Handler:0000000000000000 SVC_Handler
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:203    .text.DebugMon_Handler:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:209    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:238    .text.PendSV_Handler:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:244    .text.PendSV_Handler:0000000000000000 PendSV_Handler
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:273    .text.SysTick_Handler:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:279    .text.SysTick_Handler:0000000000000000 SysTick_Handler
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:302    .text.DMA1_Channel6_IRQHandler:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:308    .text.DMA1_Channel6_IRQHandler:0000000000000000 DMA1_Channel6_IRQHandler
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:331    .text.DMA1_Channel6_IRQHandler:0000000000000010 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:336    .text.DMA1_Channel7_IRQHandler:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:342    .text.DMA1_Channel7_IRQHandler:0000000000000000 DMA1_Channel7_IRQHandler
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:365    .text.DMA1_Channel7_IRQHandler:0000000000000010 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:370    .text.USB_LP_CAN1_RX0_IRQHandler:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:376    .text.USB_LP_CAN1_RX0_IRQHandler:0000000000000000 USB_LP_CAN1_RX0_IRQHandler
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:399    .text.USB_LP_CAN1_RX0_IRQHandler:0000000000000010 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:404    .text.CAN1_RX1_IRQHandler:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:410    .text.CAN1_RX1_IRQHandler:0000000000000000 CAN1_RX1_IRQHandler
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:433    .text.CAN1_RX1_IRQHandler:0000000000000010 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:438    .text.USART2_IRQHandler:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:444    .text.USART2_IRQHandler:0000000000000000 USART2_IRQHandler
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:467    .text.USART2_IRQHandler:0000000000000010 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:472    .text.HAL_CAN_RxFifo1MsgPendingCallback:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:478    .text.HAL_CAN_RxFifo1MsgPendingCallback:0000000000000000 HAL_CAN_RxFifo1MsgPendingCallback
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s:586    .text.HAL_CAN_RxFifo1MsgPendingCallback:000000000000007c $d
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:22     .bss.RxHeader:0000000000000000 RxHeader
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:19     .bss.RxHeader:0000000000000000 $d
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:29     .bss.RxData:0000000000000000 RxData
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:26     .bss.RxData:0000000000000000 $d
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:32     .text.NMI_Handler:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:38     .text.NMI_Handler:0000000000000000 NMI_Handler
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:60     .text.HardFault_Handler:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:66     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:87     .text.MemManage_Handler:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:93     .text.MemManage_Handler:0000000000000000 MemManage_Handler
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:114    .text.BusFault_Handler:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:120    .text.BusFault_Handler:0000000000000000 BusFault_Handler
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:141    .text.UsageFault_Handler:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:147    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:168    .text.SVC_Handler:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:174    .text.SVC_Handler:0000000000000000 SVC_Handler
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:203    .text.DebugMon_Handler:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:209    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:238    .text.PendSV_Handler:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:244    .text.PendSV_Handler:0000000000000000 PendSV_Handler
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:273    .text.SysTick_Handler:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:279    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:302    .text.DMA1_Channel6_IRQHandler:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:308    .text.DMA1_Channel6_IRQHandler:0000000000000000 DMA1_Channel6_IRQHandler
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:331    .text.DMA1_Channel6_IRQHandler:0000000000000010 $d
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:336    .text.DMA1_Channel7_IRQHandler:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:342    .text.DMA1_Channel7_IRQHandler:0000000000000000 DMA1_Channel7_IRQHandler
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:365    .text.DMA1_Channel7_IRQHandler:0000000000000010 $d
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:370    .text.USB_LP_CAN1_RX0_IRQHandler:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:376    .text.USB_LP_CAN1_RX0_IRQHandler:0000000000000000 USB_LP_CAN1_RX0_IRQHandler
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:399    .text.USB_LP_CAN1_RX0_IRQHandler:0000000000000010 $d
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:404    .text.CAN1_RX1_IRQHandler:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:410    .text.CAN1_RX1_IRQHandler:0000000000000000 CAN1_RX1_IRQHandler
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:433    .text.CAN1_RX1_IRQHandler:0000000000000010 $d
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:438    .text.USART2_IRQHandler:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:444    .text.USART2_IRQHandler:0000000000000000 USART2_IRQHandler
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//ccNsK1ia.s:467    .text.USART2_IRQHandler:0000000000000010 $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick
 HAL_DMA_IRQHandler
 hdma_usart2_rx
 hdma_usart2_tx
-HAL_PCD_IRQHandler
-hpcd_USB_FS
 HAL_CAN_IRQHandler
 hcan
 HAL_UART_IRQHandler
 huart2
-HAL_CAN_GetRxMessage
-memcpy
-servo_can_rx
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//ccAOFm8r.s 			page 18
-
-
-servo_write_flag
-servo_read_flag_12
-servo_read_flag_3

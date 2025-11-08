@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
   20:Core/Src/syscalls.c ****  ******************************************************************************
   21:Core/Src/syscalls.c ****  */
   22:Core/Src/syscalls.c **** 
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 2
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 2
 
 
   23:Core/Src/syscalls.c **** #ifdef __cplusplus
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
   68              		.align	1
   69              		.global	_getpid
   70              		.syntax unified
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 3
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 3
 
 
   71              		.thumb
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
  120              		.cfi_offset 7, -8
  121              		.cfi_offset 14, -4
  122 0002 82B0     		sub	sp, sp, #8
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 4
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 4
 
 
  123              	.LCFI9:
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
  173              	.LCFI15:
  174              		.cfi_def_cfa_register 7
  175 0006 7860     		str	r0, [r7, #4]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 5
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 5
 
 
   65:Core/Src/syscalls.c **** 	_kill(status, -1);
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
  221 0016 0146     		mov	r1, r0
  222              		.loc 1 75 7 discriminator 3
  223 0018 BB68     		ldr	r3, [r7, #8]
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 6
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 6
 
 
  224 001a 5A1C     		adds	r2, r3, #1
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
  271              		.cfi_offset 14, -4
  272 0002 86B0     		sub	sp, sp, #24
  273              	.LCFI22:
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 7
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 7
 
 
  274              		.cfi_def_cfa_offset 32
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
  318              		.cfi_endproc
  319              	.LFE30:
  321              		.section	.text._close,"ax",%progbits
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 8
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 8
 
 
  322              		.align	1
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
   96:Core/Src/syscalls.c **** 
   97:Core/Src/syscalls.c **** 
   98:Core/Src/syscalls.c **** int _fstat(int file, struct stat *st)
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 9
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 9
 
 
   99:Core/Src/syscalls.c **** {
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
  423              		.loc 1 105 1
  424              		.cfi_startproc
  425              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 10
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 10
 
 
  426              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
  477              	.LCFI45:
  478              		.cfi_def_cfa_offset 24
  479 0004 00AF     		add	r7, sp, #0
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 11
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 11
 
 
  480              	.LCFI46:
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
  531 0006 00AF     		add	r7, sp, #0
  532              	.LCFI53:
  533              		.cfi_def_cfa_register 7
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 12
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 12
 
 
  534 0008 7860     		str	r0, [r7, #4]
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
  584 0006 7860     		str	r0, [r7, #4]
  122:Core/Src/syscalls.c **** 	errno = ECHILD;
  585              		.loc 1 122 2
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 13
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 13
 
 
  586 0008 FFF7FEFF 		bl	__errno
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
  636 0010 1A60     		str	r2, [r3]
  129:Core/Src/syscalls.c **** 	return -1;
  637              		.loc 1 129 9
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 14
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 14
 
 
  638 0012 4FF0FF33 		mov	r3, #-1
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
  688 0012 80BC     		pop	{r7}
  689              	.LCFI73:
  690              		.cfi_restore 7
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 15
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 15
 
 
  691              		.cfi_def_cfa_offset 0
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
  741 001c 7047     		bx	lr
  742              		.cfi_endproc
  743              	.LFE39:
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 16
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 16
 
 
  745              		.section	.text._link,"ax",%progbits
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
  795              		.syntax unified
  796              		.thumb
  797              		.thumb_func
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 17
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 17
 
 
  799              	_fork:
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
  846              	.LCFI88:
  847              		.cfi_def_cfa_offset 24
  848 0004 00AF     		add	r7, sp, #0
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 18
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 18
 
 
  849              	.LCFI89:
@@ -1053,58 +1053,58 @@ ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 1
  876              		.weak	__io_getchar
  877              		.text
  878              	.Letext0:
- 879              		.file 2 "/Applications/ARM/arm-none-eabi/include/machine/_default_types.h"
- 880              		.file 3 "/Applications/ARM/arm-none-eabi/include/sys/_types.h"
- 881              		.file 4 "/Applications/ARM/arm-none-eabi/include/sys/_timeval.h"
- 882              		.file 5 "/Applications/ARM/arm-none-eabi/include/sys/_timespec.h"
- 883              		.file 6 "/Applications/ARM/arm-none-eabi/include/sys/types.h"
- 884              		.file 7 "/Applications/ARM/arm-none-eabi/include/sys/stat.h"
- 885              		.file 8 "/Applications/ARM/arm-none-eabi/include/sys/times.h"
-ARM GAS  /var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s 			page 19
+ 879              		.file 2 "/Users/lr-2002/Applications/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/
+ 880              		.file 3 "/Users/lr-2002/Applications/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_typ
+ 881              		.file 4 "/Users/lr-2002/Applications/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_tim
+ 882              		.file 5 "/Users/lr-2002/Applications/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_tim
+ 883              		.file 6 "/Users/lr-2002/Applications/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/type
+ 884              		.file 7 "/Users/lr-2002/Applications/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stat
+ 885              		.file 8 "/Users/lr-2002/Applications/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/time
+ARM GAS  /var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 syscalls.c
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:22     .bss.__env:0000000000000000 __env
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:19     .bss.__env:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:29     .data.environ:0000000000000000 environ
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:26     .data.environ:0000000000000000 $d
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:32     .text.initialise_monitor_handles:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:38     .text.initialise_monitor_handles:0000000000000000 initialise_monitor_handles
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:68     .text._getpid:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:74     .text._getpid:0000000000000000 _getpid
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:105    .text._kill:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:111    .text._kill:0000000000000000 _kill
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:152    .text._exit:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:158    .text._exit:0000000000000000 _exit
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:187    .text._read:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:193    .text._read:0000000000000000 _read
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:255    .text._write:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:261    .text._write:0000000000000000 _write
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:322    .text._close:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:328    .text._close:0000000000000000 _close
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:366    .text._fstat:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:372    .text._fstat:0000000000000000 _fstat
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:415    .text._isatty:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:421    .text._isatty:0000000000000000 _isatty
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:459    .text._lseek:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:465    .text._lseek:0000000000000000 _lseek
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:505    .text._open:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:511    .text._open:0000000000000000 _open
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:561    .text._wait:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:567    .text._wait:0000000000000000 _wait
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:607    .text._unlink:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:613    .text._unlink:0000000000000000 _unlink
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:653    .text._times:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:659    .text._times:0000000000000000 _times
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:697    .text._stat:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:703    .text._stat:0000000000000000 _stat
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:746    .text._link:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:752    .text._link:0000000000000000 _link
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:793    .text._fork:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:799    .text._fork:0000000000000000 _fork
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:828    .text._execve:0000000000000000 $t
-/var/folders/xf/tcndk8390ml5xdpfw93qkhpm0000gn/T//cc8AitDZ.s:834    .text._execve:0000000000000000 _execve
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:22     .bss.__env:0000000000000000 __env
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:19     .bss.__env:0000000000000000 $d
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:29     .data.environ:0000000000000000 environ
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:26     .data.environ:0000000000000000 $d
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:32     .text.initialise_monitor_handles:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:38     .text.initialise_monitor_handles:0000000000000000 initialise_monitor_handles
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:68     .text._getpid:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:74     .text._getpid:0000000000000000 _getpid
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:105    .text._kill:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:111    .text._kill:0000000000000000 _kill
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:152    .text._exit:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:158    .text._exit:0000000000000000 _exit
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:187    .text._read:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:193    .text._read:0000000000000000 _read
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:255    .text._write:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:261    .text._write:0000000000000000 _write
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:322    .text._close:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:328    .text._close:0000000000000000 _close
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:366    .text._fstat:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:372    .text._fstat:0000000000000000 _fstat
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:415    .text._isatty:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:421    .text._isatty:0000000000000000 _isatty
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:459    .text._lseek:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:465    .text._lseek:0000000000000000 _lseek
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:505    .text._open:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:511    .text._open:0000000000000000 _open
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:561    .text._wait:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:567    .text._wait:0000000000000000 _wait
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:607    .text._unlink:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:613    .text._unlink:0000000000000000 _unlink
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:653    .text._times:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:659    .text._times:0000000000000000 _times
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:697    .text._stat:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:703    .text._stat:0000000000000000 _stat
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:746    .text._link:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:752    .text._link:0000000000000000 _link
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:793    .text._fork:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:799    .text._fork:0000000000000000 _fork
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:828    .text._execve:0000000000000000 $t
+/var/folders/g3/s0qwt8r95936n9ghz4hhpdwm0000gn/T//cc8h3sif.s:834    .text._execve:0000000000000000 _execve
 
 UNDEFINED SYMBOLS
 __errno
